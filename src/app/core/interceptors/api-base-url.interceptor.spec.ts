@@ -1,8 +1,8 @@
 import { HttpClient, HttpContext, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { AppConfigService } from '../config/app-config.service';
-import { SKIP_BASE_URL } from '../http/http.context';
+import { AppConfigService } from '@core/config';
+import { SKIP_BASE_URL } from '@core/http';
 import { apiBaseUrlInterceptor } from './api-base-url.interceptor';
 
 describe('apiBaseUrlInterceptor', () => {
@@ -68,4 +68,3 @@ describe('apiBaseUrlInterceptor', () => {
     req.flush({});
   });
 });
-

@@ -4,19 +4,15 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { map, of, switchMap } from 'rxjs';
-import { APP_ASSETS } from '../core/assets/app-assets';
-import { AuthService } from '../core/auth/auth.service';
-import { LocaleService } from '../core/i18n/locale.service';
-import { LayoutService } from '../core/layout/layout.service';
-import { NavItem, NavService } from '../core/navigation/nav.service';
-import { APP_ROUTES } from '../core/routes/app-routes';
-import { ThemeService } from '../core/theme/theme.service';
+import { APP_ASSETS } from '@core/assets';
+import { AuthService } from '@core/auth';
+import { LocaleService } from '@core/i18n';
+import { LayoutService } from '@core/layout';
+import { NavItem, NavService } from '@core/navigation';
+import { APP_ROUTES } from '@core/routes';
+import { ThemeService } from '@core/theme';
 import { HAS_DEV_ROUTES } from '../dev/dev.routes';
-import { AppConfirmDialog } from '../shared/ui/confirm/confirm';
-import { UiNavItem } from '../shared/ui/foundation/ui-nav-item';
-import { AppNavbar } from '../shared/ui/navbar/navbar';
-import { AppSidebar } from '../shared/ui/sidebar/sidebar';
-import { AppToast } from '../shared/ui/toast/toast';
+import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@shared/ui';
 
 /**
  * غلاف التطبيق الرئيسي (App Shell):

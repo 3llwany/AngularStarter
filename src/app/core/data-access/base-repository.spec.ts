@@ -2,7 +2,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { Service, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { ApiClient } from '../http/api-client';
+import { ApiClient } from '@core/http';
 import { BaseRepository, RepositoryEndpoints } from './base-repository';
 
 interface StudentEntity {

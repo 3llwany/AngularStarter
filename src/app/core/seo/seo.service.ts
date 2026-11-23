@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { inject, RESPONSE_INIT, Service } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { LocaleService } from '../i18n/locale.service';
+import { LocaleService } from '@core/i18n';
 
 export type SeoPageType = 'website' | 'article' | 'profile' | 'video.other';
 
@@ -151,8 +151,7 @@ export class SeoService {
    */
   setTitle(title: string, rawTitle = false): void {
     const suffix = `${SEO_TITLE_SEPARATOR}${SEO_SITE_NAME}`;
-    const formatted =
-      rawTitle || !title || title.endsWith(suffix) ? title : `${title}${suffix}`;
+    const formatted = rawTitle || !title || title.endsWith(suffix) ? title : `${title}${suffix}`;
 
     this.title.setTitle(formatted);
     this.meta.updateTag({ property: 'og:title', content: formatted });

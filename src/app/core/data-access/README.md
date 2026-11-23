@@ -2,6 +2,10 @@
 
 يوفر `BaseRepository<TEntity, TId, TCreateDto, TUpdateDto>` كل عمليات الـ CRUD مع فك تلقائي لغلاف الريسبونس الموحد (`IResponse` و `IResponseList`) ودعم كامل لـ `httpResource`.
 
+> ⚠️ **حدود الملكية:** `BaseRepository` عام تماماً ولا يعرف أي دومين. لا تضف إليه أي دالة خاصة بكيان (مثل `getTeacherCourses()`).
+> الـ repositories والـ DTOs والـ mappers والـ stores الخاصة بكل دور تعيش داخل `features/<feature>/data-access/`،
+> وتستورد الأساس عبر `import { BaseRepository } from '@core/data-access';`. راجع "حدود الملكية" في `docs/http-and-api-architecture.md`.
+
 ---
 
 ## 1. المسارات الافتراضية (`DEFAULT_REPOSITORY_ENDPOINTS`)

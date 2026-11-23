@@ -1,8 +1,8 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { finalize } from 'rxjs';
-import { isStaticAssetUrl, SKIP_LOADING } from '../http/http.context';
-import { LoadingService } from '../loading/loading.service';
+import { isStaticAssetUrl, SKIP_LOADING } from '@core/http';
+import { LoadingService } from '@core/loading';
 
 /**
  * معترض تحميل عام اختياري (Opt-in):

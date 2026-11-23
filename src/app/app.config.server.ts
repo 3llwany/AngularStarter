@@ -5,8 +5,7 @@ import { provideServerRendering, withRoutes } from '@angular/ssr';
 import { TranslationObject } from '@ngx-translate/core';
 import { appConfig } from './app.config';
 import { serverRoutes } from './app.routes.server';
-import { SupportedLang } from './core/i18n/locale';
-import { SERVER_TRANSLATION_READER } from './core/i18n/ssr-translate.loader';
+import { SupportedLang, SERVER_TRANSLATION_READER } from '@core/i18n';
 
 async function readServerTranslations(lang: SupportedLang): Promise<TranslationObject> {
   const candidatePaths = [

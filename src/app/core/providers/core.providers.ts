@@ -12,7 +12,7 @@ import {
   withHttpTransferCacheOptions,
 } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
-import { provideMozErrors, TOAST_HANDLER, ToastHandler } from '../errors/global-error-handler';
+import { provideMozErrors, TOAST_HANDLER, ToastHandler } from '@core/errors';
 import { AuthOptions, provideMozAuth } from './auth.providers';
 import { provideMozHttp } from './http.providers';
 import { provideMozI18n } from './i18n.providers';

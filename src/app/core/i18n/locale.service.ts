@@ -1,7 +1,7 @@
 import { DOCUMENT, computed, inject, Service, Signal, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { firstValueFrom } from 'rxjs';
-import { CookieService } from '../platform/cookie';
+import { CookieService } from '@core/platform';
 import {
   DEFAULT_LANG,
   Direction,

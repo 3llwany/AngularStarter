@@ -7,9 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --watch=false",
     "serve:ssr:mozakrety": "node dist/mozakrety/server/server.mjs",
     "i18n:check": "node tools/i18n-check.mjs",
-    "lint": "ng lint && npm run i18n:check && node tools/lint-design-tokens.mjs",
+    "theme:a11y": "node tools/check-theme-a11y.mjs",
+    "lint": "ng lint && npm run i18n:check && node tools/lint-design-tokens.mjs && npm run theme:a11y",
     "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.spec.json",
     "format": "prettier --write .",
     "format:check": "prettier --check ."

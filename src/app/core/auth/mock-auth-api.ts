@@ -1,5 +1,5 @@
 import { Provider, Service } from '@angular/core';
-import { createAppError } from '../errors/app-error';
+import { createAppError } from '@core/errors';
 import { AuthApi } from './auth-api';
 import { AuthUser, LoginRequest } from './auth.models';
 
@@ -7,11 +7,21 @@ import { AuthUser, LoginRequest } from './auth.models';
 export const DEMO_PASSWORD = 'Password123!';
 
 const DEMO_USERS: readonly AuthUser[] = [
-  { id: 'usr-student-1', role: 'student', displayName: 'Sara Student', identifier: 'student@mozakrety.test' },
+  {
+    id: 'usr-student-1',
+    role: 'student',
+    displayName: 'Sara Student',
+    identifier: 'student@mozakrety.test',
+  },
   { id: 'usr-parent-1', role: 'parent', displayName: 'Hassan Parent', identifier: '01012345678' },
   { id: 'usr-teacher-1', role: 'teacher', displayName: 'Nour Teacher', identifier: 'TCH-1001' },
   { id: 'usr-school-1', role: 'school', displayName: 'Al-Nile School', identifier: 'SCH-2026' },
-  { id: 'usr-partner-1', role: 'partner', displayName: 'EduMall Partner', identifier: 'partner@mozakrety.test' },
+  {
+    id: 'usr-partner-1',
+    role: 'partner',
+    displayName: 'EduMall Partner',
+    identifier: 'partner@mozakrety.test',
+  },
 ];
 
 /**
@@ -31,7 +41,11 @@ export class MockAuthApi extends AuthApi {
     await this.simulateNetwork();
 
     if (request.password !== DEMO_PASSWORD) {
-      throw createAppError({ code: 'UNAUTHORIZED', status: 401, errorKey: 'auth.errors.invalid_credentials' });
+      throw createAppError({
+        code: 'UNAUTHORIZED',
+        status: 401,
+        errorKey: 'auth.errors.invalid_credentials',
+      });
     }
 
     this.currentUser = DEMO_USERS.find(

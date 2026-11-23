@@ -2,9 +2,9 @@ import { HttpClient, HttpContext, provideHttpClient, withInterceptors } from '@a
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { LocaleService } from '../i18n/locale.service';
-import { ThemeService } from '../theme/theme.service';
-import { SKIP_COMMON_PARAMS } from '../http/http.context';
+import { LocaleService } from '@core/i18n';
+import { ThemeService } from '@core/theme';
+import { SKIP_COMMON_PARAMS } from '@core/http';
 import { commonParamsInterceptor } from './common-params.interceptor';
 
 describe('commonParamsInterceptor', () => {
@@ -76,4 +76,3 @@ describe('commonParamsInterceptor', () => {
     req.flush('');
   });
 });
-

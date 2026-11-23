@@ -154,6 +154,11 @@ module.exports = defineConfig([
               message:
                 'Direct PrimeNG imports are forbidden outside src/app/shared/ui (and core theme config). Use moz-* wrapper components from shared/ui.',
             },
+            {
+              regex: '^\\.{1,2}/(?:\\.\\./)*(?:core|shared|domain)(?:/|$)',
+              message:
+                "Use the public path aliases instead of relative paths into core/shared/domain: '@core/<module>', '@shared/ui', or '@domain/<capability>'.",
+            },
           ],
         },
       ],

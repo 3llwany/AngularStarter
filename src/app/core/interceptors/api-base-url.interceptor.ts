@@ -1,8 +1,7 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { AppConfigService } from '../config/app-config.service';
-import { SKIP_BASE_URL } from '../http/http.context';
- 
+import { AppConfigService } from '@core/config';
+import { SKIP_BASE_URL } from '@core/http';
 
 const STATIC_PREFIXES = ['assets/', '/assets/', 'i18n/', '/i18n/', 'fonts/', '/fonts/'];
 
@@ -36,4 +35,3 @@ export const apiBaseUrlInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(req.clone({ url: fullUrl }));
 };
-

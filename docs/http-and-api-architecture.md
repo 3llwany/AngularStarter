@@ -22,6 +22,27 @@ flowchart TD
 > 1. **الكومبوننت (Component)** لا يحقن `ApiClient` مباشرة نهائياً ولا يكتب أي مسار URL لأي API؛ يتعامل **فقط** مع الـ Service / Repository في مجلد `data-access/`.
 > 2. **المستودعات (Repositories)** في الـ Features ترث من `BaseRepository` لعمليات الـ CRUD، بينما الخدمات المتخصصة تحقن `ApiClient` مباشرة بدون طبقات وراثة زائدة.
 
+### 1.1 حدود الملكية: مين يملك إيه؟ (Ownership Rules)
+
+طبقة النقل المشتركة (`core/http` + `core/data-access` + `core/interceptors`) مسؤولة عن **السلوك العام فقط**، وكل Feature تملك استعلاماتها وبياناتها:
+
+| المسؤولية | المالك | أمثلة |
+|---|---|---|
+| إرسال الطلب، الـ Base URL، الـ common params، الـ credentials، ترويسة اللغة، تحويل الأخطاء إلى `AppError` | `core` (عام، لا يعرف أي دومين) | `ApiClient.get/post/resource`، الـ interceptors، `BaseRepository` (CRUD عام مُعامَل بالأنواع) |
+| مسارات الـ endpoints الخاصة بدور واحد فقط | `features/<feature>/data-access/` | `TeacherScheduleRepository extends BaseRepository<Schedule>` |
+| مسارات الـ endpoints والعقود المشتركة بين **دورين أو أكثر** (عند وجود تداخل فعلي) | `domain/<capability>/` (عبر `@domain/<capability>`) | `CourseRepository` في `src/app/domain/courses/` |
+| الـ DTOs وتحويلها لنماذج الدومين (DTO → Model mapping) | بجوار الـ repository المالك له (`features/<feature>/data-access/` أو `domain/<capability>/`) | `toCourse(dto: CourseDto): Course` |
+| حالة البيانات (loading/list/selected/filters) | `features/<feature>/data-access/` عبر `@ngrx/signals` store خاص بالميزة | `StudentCoursesStore`، `TeacherCoursesStore` |
+| بيانات جلسة/مستخدم يحتاجها التطبيق كله | `core` (فقط البنية التحتية العابرة للأدوار) | `AuthService`، `NavService` |
+
+**ممنوع:**
+- ❌ إضافة دوال خاصة بدومين إلى `ApiClient` أو `BaseRepository` (مثل `getTeacherCourses()` أو `getWalletBalance()`).
+- ❌ إنشاء Store مركزي واحد في `core` يجمع بيانات كل الأدوار (كورسات + محفظة + طلاب...).
+- ❌ وضع DTOs أو mappers خاصة بميزة داخل `core` أو `shared`.
+- ❌ ميزة تستخدم repository أو store ميزة أخرى (Sheriff يمنع ذلك آلياً). لو نفس الـ endpoint أو المجال احتاجه دوران أو أكثر فعلياً، انقل الـ repository والعقد والـ DTOs إلى `src/app/domain/<capability>/` (راجع `src/app/domain/README.md`) بدلاً من نسخ الكود أو وضعه في `core`.
+
+**متى أضيف شيئاً إلى `core`؟** فقط لو كان سلوكاً عاماً يحتاجه **كل** طلب أو **كل** الميزات بدون معرفة بالدومين (interceptor جديد، خيار جديد في `ApiRequestOptions`، دعم رفع ملفات عام). أي شيء فيه اسم كيان من الدومين مكانه الـ Feature.
+
 ---
 
 ## 2. المصدر الوحيد لعنوان الـ API (`apiBaseUrl`)
@@ -97,7 +118,7 @@ flowchart TD
 ```typescript
 // src/app/features/student/data-access/student.repository.ts
 import { Service } from '@angular/core';
-import { BaseRepository, RepositoryEndpoints } from '../../../core/data-access/base-repository';
+import { BaseRepository, RepositoryEndpoints } from '@core/data-access';
 import { Observable } from 'rxjs';
 
 export interface StudentProfile {
@@ -143,7 +164,7 @@ export class StudentRepository extends BaseRepository<StudentProfile, string, Cr
 // src/app/features/student/data-access/ai-tutor.service.ts
 import { inject, Service } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiClient } from '../../../core/http/api-client';
+import { ApiClient } from '@core/http';
 
 @Service()
 export class AiTutorService {
@@ -199,7 +220,7 @@ export class StudentDetailsComponent {
 ```typescript
 // src/app/features/student/data-access/student-state.service.ts
 import { inject, Service, signal } from '@angular/core';
-import { ApiClient } from '../../../core/http/api-client';
+import { ApiClient } from '@core/http';
 import { StudentProfile } from './student.repository';
 
 @Service()

@@ -2,18 +2,13 @@ import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { disabled, form, required } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ArrowRight } from '@primeicons/angular/arrow-right';
-import { LoginRole } from '../core/auth/auth.models';
-import { AuthService } from '../core/auth/auth.service';
-import { LOGIN_METHODS } from '../core/auth/login-methods';
-import { DEMO_PASSWORD } from '../core/auth/mock-auth-api';
-import { isAppError } from '../core/errors/app-error';
-import { FileService } from '../core/file/file.service';
-import { SupportedLang } from '../core/i18n/locale';
-import { LocaleService } from '../core/i18n/locale.service';
-import { LayoutService, ROLE_LAYOUT_MODE } from '../core/layout/layout.service';
-import { LoadingService } from '../core/loading/loading.service';
-import { Role } from '../core/theme/role';
-import { ThemeService } from '../core/theme/theme.service';
+import { LoginRole, AuthService, LOGIN_METHODS, DEMO_PASSWORD } from '@core/auth';
+import { isAppError } from '@core/errors';
+import { FileService } from '@core/file';
+import { SupportedLang, LocaleService } from '@core/i18n';
+import { LayoutService, ROLE_LAYOUT_MODE } from '@core/layout';
+import { LoadingService } from '@core/loading';
+import { Role, ThemeService } from '@core/theme';
 import {
   AppBanner,
   AppBottomNavTab,
@@ -41,7 +36,7 @@ import {
   ImgFallbackDirective,
   type StepItem,
   ToastService,
-} from '../shared/ui';
+} from '@shared/ui';
 
 interface GradeOption {
   readonly value: string;
@@ -199,9 +194,7 @@ export class FoundationPageComponent {
 
   protected readonly authUserDisplay = computed(() => {
     const current = this.authService.user();
-    return current
-      ? `${current.displayName} (${current.role}) — ${current.identifier}`
-      : 'null';
+    return current ? `${current.displayName} (${current.role}) — ${current.identifier}` : 'null';
   });
 
   protected readonly loginRoleOptions: readonly {
@@ -300,9 +293,7 @@ export class FoundationPageComponent {
     >(SampleDynamicModalComponent, {
       header: 'dev.foundation.utilities_section.dialog_header',
     });
-    this.dynamicDialogResult.set(
-      result ? JSON.stringify(result) : 'Dismissed / Canceled',
-    );
+    this.dynamicDialogResult.set(result ? JSON.stringify(result) : 'Dismissed / Canceled');
   }
 
   protected async simulateLoading(): Promise<void> {

@@ -1,14 +1,7 @@
 import { Component, computed, input, linkedSignal, model, output } from '@angular/core';
 import { form, required } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
-import {
-  AppButton,
-  AppDatepicker,
-  AppDialog,
-  AppInput,
-  AppSelect,
-  AppSwitch,
-} from '../../../shared/ui';
+import { AppButton, AppDatepicker, AppDialog, AppInput, AppSelect, AppSwitch } from '@shared/ui';
 import {
   MockCreateStudentDto,
   MockStudent,
@@ -23,15 +16,7 @@ interface GradeOption {
 
 @Component({
   selector: 'app-student-form-dialog',
-  imports: [
-    TranslatePipe,
-    AppDialog,
-    AppInput,
-    AppSelect,
-    AppDatepicker,
-    AppSwitch,
-    AppButton,
-  ],
+  imports: [TranslatePipe, AppDialog, AppInput, AppSelect, AppDatepicker, AppSwitch, AppButton],
   templateUrl: './student-form-dialog.component.html',
 })
 export class StudentFormDialogComponent {

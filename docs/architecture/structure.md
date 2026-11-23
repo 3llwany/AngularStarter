@@ -27,6 +27,7 @@ src/app/
 │   └── theme/             # ThemeService ولوحات ألوان الأدوار الستة
 ├── layout/                # غلاف التطبيق التكيفي (AppShellComponent) الرابط بين core و shared/ui
 ├── shared/                # مكتبة المكونات والأدوات المشتركة (shared/ui/*)
+├── domain/                # مجالات الأعمال المشتركة بين أكثر من دور (تُضاف عند التداخل الفعلي فقط — راجع src/app/domain/README.md)
 ├── features/
 │   ├── public/            # صفحات العرض العام و SSR و SEO وصفحة 404 (not-found.page.ts)
 │   ├── auth/              # شاشات تسجيل الدخول والتسجيل واستعادة الحساب
@@ -50,13 +51,14 @@ src/app/
 
 ## مصفوفة الاعتماديات المسموحة (Dependency Matrix)
 
-| الطبقة / المسار المصدر | الاستيراد من `core` | الاستيراد من `shared` | الاستيراد داخل نفس الميزة | الاستيراد من ميزة أخرى | استيراد `primeng/*` |
-|---|:---:|:---:|:---:|:---:|:---:|
-| `core` | نعم | **لا** | غير منطبق | **لا** | فقط في `core/theme` و `core/config` |
-| `shared` | **لا** | نعم | غير منطبق | **لا** | فقط في `shared/ui` |
-| `features/public` | نعم | نعم | نعم | **لا** (ممنوع تماماً استيراد مساحات الأدوار) | **لا** |
-| `features/auth` | نعم | نعم | نعم | **لا** | **لا** |
-| `features/<role>` | نعم | نعم | نعم | **لا** | **لا** |
+| الطبقة / المسار المصدر | الاستيراد من `core` | الاستيراد من `shared` | الاستيراد من `domain` | الاستيراد داخل نفس الميزة | الاستيراد من ميزة أخرى | استيراد `primeng/*` |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| `core` | نعم | **لا** | **لا** | غير منطبق | **لا** | فقط في `core/theme` و `core/config` |
+| `shared` | **لا** | نعم | **لا** | غير منطبق | **لا** | فقط في `shared/ui` |
+| `domain/<capability>` | نعم | نعم | **لا** (نفس المجال فقط) | غير منطبق | **لا** | **لا** |
+| `features/public` | نعم | نعم | نعم | نعم | **لا** (ممنوع تماماً استيراد مساحات الأدوار) | **لا** |
+| `features/auth` | نعم | نعم | نعم | نعم | **لا** | **لا** |
+| `features/<role>` | نعم | نعم | نعم | نعم | **لا** | **لا** |
 
 ---
 
@@ -70,7 +72,41 @@ src/app/
 - **`type:core` (`src/app/core/**`)**: يستورد من `core` فقط. **ممنوع** استيراد أي ملف من `shared` أو `features/*`.
 - **`type:shared` (`src/app/shared/**` و `src/app/shared/ui/**`)**: يستورد من `shared` فقط. **ممنوع** استيراد `core` (مثل `AuthService` أو `ApiClient`) أو `features/*`.
 - **`feature:public` / `feature:auth` / `feature:<role>`**: كل ميزة تستورد من **نفسها فقط** (`sameTag`) بالإضافة إلى `core` و `shared`. **ممنوع تماماً** أن تستورد ميزة ملفاً من ميزة أخرى (مثلاً: `student` لا يستورد من `teacher`، و`public` لا يستورد من أي دور).
-- **`noTag`**: أي مجلد تحت `src/` لا يطابق قاعدة في `modules` (أو مكوّن داخل `shared/ui/` لم يطابق النمط)؛ يرى فقط `noTag` و`core` و`shared`. وبوجود `'src/app/shared/ui/<component>': 'type:shared'` يظل أي مكوّن مستقبلي يمتلك `index.ts` داخل `shared/ui/` معرّفاً تلقائياً كـ `type:shared`.
+- **`noTag`**: أي مجلد تحت `src/` لا يطابق قاعدة في `modules`؛ يرى فقط `noTag` و`core` و`shared`.
+
+### 1.1 مسارات الاستيراد العامة (Public API) ومنع الـ Deep Imports
+
+كل وحدة لها **مدخل عام واحد** (`index.ts`)، والاستيراد من خارجها يتم عبر الـ path aliases المعرّفة في `tsconfig.json`:
+
+| الوحدة | مسار الاستيراد المسموح | ممنوع |
+|---|---|---|
+| أي مجلد داخل `core` (`auth`, `http`, `data-access`, `theme`, `i18n`, ...) | `@core/<module>` مثل `@core/http` | `@core/http/api-client` أو `../../../core/http/api-client` |
+| مكتبة الواجهات `shared/ui` | `@shared/ui` | `@shared/ui/button/button` أو `../shared/ui/navbar/navbar` |
+| أي مجال مشترك داخل `domain` (`courses`, `exams`, ...) | `@domain/<capability>` مثل `@domain/courses` | `@domain/courses/course.dto` أو `../../../domain/courses` |
+
+- **Sheriff** (`enableBarrelLess` + وجود `index.ts`) يعتبر أي استيراد لملف داخلي في وحدة لها `index.ts` **Encapsulation Violation** ويوقف `npm run lint`.
+- **ESLint** (`no-restricted-imports`) يمنع المسارات النسبية الداخلة إلى `core` أو `shared` أو `domain` ويطلب استخدام `@core/*` و `@shared/*` و `@domain/*`.
+- داخل نفس الوحدة استخدم المسارات النسبية العادية (`./locale`)، وبين الوحدات استخدم الـ aliases العامة.
+- **إضافة ملف جديد في `core/<module>` أو `domain/<capability>`**: لو المطلوب استخدامه من خارج الوحدة، أضف `export * from './file';` في `index.ts`. لو داخلي فقط، لا تصدّره.
+- **إضافة وحدة جديدة في `core` أو `domain`**: أنشئ المجلد مع `index.ts`؛ الأنماط في `sheriff.config.ts` تلتقطها تلقائياً.
+
+### 1.2 أين توضع الأنواع (Types & Models)؟
+
+القاعدة: **النوع يعيش بجوار من يملكه**، و`shared` ليست مكان تجميع.
+
+| نوع النوع | مكانه |
+|---|---|
+| نموذج نطاق خاص بميزة واحدة (`StudentProgress`, `TeacherSettings`) | `features/<feature>/models/` |
+| نموذج نطاق أو عقد API مشترك بين **دورين أو أكثر** (`Course`, `ExamSummary`) | `domain/<capability>/` (راجع `src/app/domain/README.md`) |
+| DTO قادم من الباك إند ومحوّله | بجوار الـ repository المالك له (`features/<feature>/data-access/` أو `domain/<capability>/`) ولا يتسرب للقوالب |
+| Props/حالة خاصة بمكوّن عرض واحد | داخل ملف المكوّن نفسه في `features/<feature>/ui/` |
+| عقود البنية التحتية (`IResponse`, `AppError`, `AuthUser`, `Role`) | داخل وحدة `core/<module>` المالكة لها وتُصدَّر من `index.ts` |
+| أنواع عامة لمكونات الواجهة (`UiNavItem`, `FieldError`) | `shared/ui/foundation/` |
+| نوع عام فعلاً بلا أي معنى دومين (مثل `Nullable<T>`, `Brand<T>`) | `shared/models/` |
+
+- **ممنوع** وضع أي نوع فيه معنى دومين خاص بمذاكرتي (طالب، مدرس، محفظة، كورس...) في `shared/models`.
+- لو نوع أو repository احتاجته ميزتان أو أكثر فعلياً: انقله إلى `domain/<capability>/` مع `index.ts` وصدّره عبر `@domain/<capability>` (لا تنسخه ولا تضعه في `core`).
+- لا تنشئ ملف `models.ts` أو `types.ts` عام يجمع كل شيء؛ ملف لكل مفهوم (`course.model.ts`).
 
 ---
 
@@ -80,12 +116,16 @@ src/app/
 
 ```ts
 // ✅ مسموح: الاستيراد من core، من shared، أو من نفس الميزة (student)
-import { AuthService } from '../../../core/auth/auth.service';
-import { AppButton } from '../../../shared/ui';
+import { AuthService } from '@core/auth';
+import { AppButton } from '@shared/ui';
 import { StudentCourseCardComponent } from '../ui/student-course-card.component';
 
 // ❌ ممنوع ويوقف الـ lint: الاستيراد من ميزة أخرى (teacher أو auth)
 import { TeacherCourseService } from '../../teacher/data-access/teacher-course.service';
+
+// ❌ ممنوع ويوقف الـ lint: deep import أو مسار نسبي داخل core/shared
+import { AuthService } from '@core/auth/auth.service';
+import { AppButton } from '../../../shared/ui/button/button';
 ```
 
 #### مثال 2: داخل مكتبة المكونات المشتركة (`src/app/shared/ui/...`)
@@ -95,17 +135,17 @@ import { TeacherCourseService } from '../../teacher/data-access/teacher-course.s
 import { createUniqueId } from '../foundation/utils';
 
 // ❌ ممنوع ويوقف الـ lint: استيراد خدمات النواة أو النماذج الخاصة بالمشروع داخل shared
-import { AuthService } from '../../core/auth/auth.service';
+import { AuthService } from '@core/auth';
 ```
 
 #### مثال 3: داخل النواة (`src/app/core/...`)
 
 ```ts
-// ✅ مسموح: الاستيراد بين خدمات core وبعضها
-import { AppError } from '../errors/app-error';
+// ✅ مسموح: الاستيراد بين وحدات core عبر الـ Public API
+import { AppError } from '@core/errors';
 
 // ❌ ممنوع ويوقف الـ lint: استيراد مكوّن أو خدمة عرض من shared داخل core
-import { ToastService } from '../../shared/ui/toast/toast.service';
+import { ToastService } from '@shared/ui';
 ```
 
 > **ملاحظة إضافية (ESLint بجانب Sheriff)**: استيراد `primeng/*` و `@primeuix/*` مسموح فقط داخل `src/app/shared/ui/**` و `src/app/core/{theme,config}/**`؛ فلا تستورد عناصر PrimeNG مباشرة في `features/*`.
@@ -150,8 +190,8 @@ import { ToastService } from '../../shared/ui/toast/toast.service';
 
 - **إضافة مساحة دور جديدة** (مثلاً `supervisor` تحت `src/app/features/supervisor/`):
   **لا تحتاج لأي تعديل في `sheriff.config.ts`**! النمط `'src/app/features/<role>'` يلتقطها تلقائياً ويعطيها `['type:role-feature', 'feature:supervisor']`.
-- **إضافة مكوّن جديد داخل `shared/ui/` له `index.ts` خاص**:
-  **لا تحتاج لأي تعديل أيضاً**! النمط `'src/app/shared/ui/<component>': 'type:shared'` يغطيه تلقائياً.
+- **إضافة مكوّن جديد داخل `shared/ui/`**:
+  **لا تحتاج لأي تعديل في Sheriff**؛ فقط صدّره من `src/app/shared/ui/index.ts` ليصبح متاحاً عبر `@shared/ui`.
 - **إضافة ميزة عامة جديدة ليست دوراً** (أو مجلد قطاع مستقل خارج `features/`):
   إذا أنشأت مثلاً ميزة مستقلة باسم `src/app/features/courses` لها تعامل خاص مختلف عن `<role>`، يمكنك تعريفها هكذا في `sheriff.config.ts`:
   ```ts

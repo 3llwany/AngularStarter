@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { CookieService } from '../platform/cookie';
+import { CookieService } from '@core/platform';
 import { LocaleService } from './locale.service';
 
 describe('LocaleService', () => {

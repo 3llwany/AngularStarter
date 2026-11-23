@@ -6,11 +6,9 @@ import {
   Provider,
   provideAppInitializer,
 } from '@angular/core';
-import { AuthApi, HttpAuthApi } from '../auth/auth-api';
-import { AuthService, SESSION_HINT_COOKIE } from '../auth/auth.service';
-import { MockAuthApi } from '../auth/mock-auth-api';
-import { CookieService } from '../platform/cookie';
-import { ROLES } from '../theme/role';
+import { AuthApi, HttpAuthApi, AuthService, SESSION_HINT_COOKIE, MockAuthApi } from '@core/auth';
+import { CookieService } from '@core/platform';
+import { ROLES } from '@core/theme';
 
 export interface AuthOptions {
   /** `mock` (default) until the backend is ready, then `http`. */

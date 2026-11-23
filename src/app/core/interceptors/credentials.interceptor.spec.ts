@@ -2,7 +2,7 @@ import { HttpClient, provideHttpClient, withInterceptors } from '@angular/common
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
-import { createApiContext } from '../http/http.context';
+import { createApiContext } from '@core/http';
 import { credentialsInterceptor } from './credentials.interceptor';
 
 describe('credentialsInterceptor', () => {

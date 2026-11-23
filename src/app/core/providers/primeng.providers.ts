@@ -1,7 +1,7 @@
 import { EnvironmentProviders, Provider } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { providePrimeNG } from 'primeng/config';
-import { MozAuraPreset } from '../theme/moz-preset';
+import { MozAuraPreset } from '@core/theme';
 
 export function provideMozPrimeNG(): (Provider | EnvironmentProviders)[] {
   return [

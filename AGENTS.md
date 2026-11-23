@@ -62,13 +62,17 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 ## Mozakrety Architecture & Day-to-Day Conventions
 
 ### Folder Structure & Module Boundaries (Sheriff)
-- Single Angular application (`src/app/core`, `src/app/shared`, `src/app/features/{public,auth,student,parent,teacher,school,partner,admin}`).
+- Single Angular application (`src/app/core`, `src/app/shared`, `src/app/domain`, `src/app/features/{public,auth,student,parent,teacher,school,partner,admin}`).
 - Every feature directory has four sub-layers: `pages/` (smart routed containers), `ui/` (presentational components), `data-access/` (`@ngrx/signals` stores, abstract repositories, DTO mappers), and `models/` (domain types).
 - Module boundaries are enforced by `@softarc/eslint-plugin-sheriff` (`sheriff.config.ts`):
   - Features NEVER import from other features (`feature:x` cannot import `feature:y`).
   - `public` NEVER imports role features.
-  - `shared` NEVER imports `core` or `features`.
-  - `core` NEVER imports `shared` or `features`.
+  - `shared` NEVER imports `core`, `domain`, or `features`.
+  - `core` NEVER imports `shared`, `domain`, or `features`.
+  - `domain` (`src/app/domain/<capability>/`) holds shared cross-role contracts, models, and repositories **only when 2+ roles genuinely share the same domain/endpoint** (see `src/app/domain/README.md`). `domain` can import `core` and `shared` only (never `features` or other `domain` modules).
+- **Public import paths only**: every `src/app/core/<module>` and `src/app/domain/<capability>` folder has an `index.ts` public API. Import via `@core/<module>`, `@domain/<capability>`, and `@shared/ui` — never deep paths (`@core/http/api-client`, `@domain/courses/course.dto`, `../shared/ui/button/button`) and never relative paths into `core`/`shared`/`domain`. Sheriff encapsulation + ESLint `no-restricted-imports` enforce this. Export new public files from the module's `index.ts`.
+- **Type ownership**: types live next to their owner — single-feature models in `features/<feature>/models/`, cross-role shared domain models in `domain/<capability>/`, DTOs + mappers next to their owning repository, infrastructure contracts in `core/<module>`, generic UI types in `shared/ui/foundation/`. `shared/models` is ONLY for truly generic, domain-free types.
+- **API ownership**: `ApiClient`, `BaseRepository`, and interceptors stay generic (transport behaviour only). Never add domain-specific methods to them or create a central cross-role store in `core`; single-role endpoints live in `features/<feature>/data-access/`, and genuinely shared cross-role repositories/contracts live in `domain/<capability>/` (while each role keeps its own `@ngrx/signals` screen state in its feature).
 
 ### UI Library-First Rule (`src/app/shared/ui` — `github.com/3llwany/ng-ui-components`)
 - `src/app/shared/ui` is a copy of the reusable UI library (`github.com/3llwany/ng-ui-components`), brought in via `git ui-add <name>`. Each component lives in `src/app/shared/ui/<kebab-name>/` alongside `src/app/shared/ui/foundation/`.
@@ -115,4 +119,6 @@ You are an expert in TypeScript, Angular, and scalable web application developme
   - `npm run lint`
   - `npm test`
   - `npm run build`
+- `npm run lint` also runs `npm run theme:a11y` (`tools/check-theme-a11y.mjs`): WCAG AA contrast for all 6 role palettes + drift check between `src/styles/roles.css` and `core/theme/role-palettes.ts`. Any change to role colors must keep it green. Role × RTL/LTR behaviour is covered by `core/theme/theme-locale-matrix.spec.ts`.
+- CI (`.github/workflows/ci.yml`) runs all four gates on every PR (`npm run test:ci` for non-watch tests).
 

@@ -1,12 +1,19 @@
-import { HttpInterceptorFn, provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
+import {
+  HttpInterceptorFn,
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
+} from '@angular/common/http';
 import { EnvironmentProviders, inject, Provider, provideAppInitializer } from '@angular/core';
-import { AppConfigService } from '../config/app-config.service';
-import { apiBaseUrlInterceptor } from '../interceptors/api-base-url.interceptor';
-import { commonParamsInterceptor } from '../interceptors/common-params.interceptor';
-import { credentialsInterceptor } from '../interceptors/credentials.interceptor';
-import { errorMappingInterceptor } from '../interceptors/error-mapping.interceptor';
-import { localeHeaderInterceptor } from '../interceptors/locale-header.interceptor';
- 
+import { AppConfigService } from '@core/config';
+import {
+  apiBaseUrlInterceptor,
+  commonParamsInterceptor,
+  credentialsInterceptor,
+  errorMappingInterceptor,
+  localeHeaderInterceptor,
+} from '@core/interceptors';
+
 /**
  * Registers the core HTTP client and standardized interceptor chain.
  *
@@ -29,7 +36,7 @@ export function provideMozHttp(
         commonParamsInterceptor,
         credentialsInterceptor,
         localeHeaderInterceptor,
-        // Optional opt-in: import { loadingInterceptor } from '../interceptors/loading.interceptor';
+        // Optional opt-in: import { loadingInterceptor } from '@core/interceptors';
         ...extraInterceptors,
         errorMappingInterceptor,
       ]),

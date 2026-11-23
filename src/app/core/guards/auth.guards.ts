@@ -1,15 +1,12 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, CanMatchFn, Router, UrlTree } from '@angular/router';
-import { Role } from '../theme/role';
-import { roleHomePath } from '../auth/auth.models';
-import { AuthService } from '../auth/auth.service';
-import { APP_ROUTES } from '../routes/app-routes';
+import { Role } from '@core/theme';
+import { roleHomePath, AuthService } from '@core/auth';
+import { APP_ROUTES } from '@core/routes';
 
 function loginPage(router: Router, returnUrl?: string): UrlTree {
   const keepReturnUrl =
-    returnUrl &&
-    returnUrl !== APP_ROUTES.root.full &&
-    !returnUrl.startsWith(APP_ROUTES.auth.full);
+    returnUrl && returnUrl !== APP_ROUTES.root.full && !returnUrl.startsWith(APP_ROUTES.auth.full);
   return router.createUrlTree([APP_ROUTES.auth.login.full], {
     queryParams: keepReturnUrl ? { returnUrl } : undefined,
   });

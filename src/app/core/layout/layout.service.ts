@@ -1,6 +1,6 @@
 import { computed, effect, inject, Service, signal } from '@angular/core';
-import { AuthService } from '../auth/auth.service';
-import { Role } from '../theme/role';
+import { AuthService } from '@core/auth';
+import { Role } from '@core/theme';
 
 /** أوضاع عرض روابط التنقل الرئيسية في الغلاف (Shell). */
 export type NavLayoutMode = 'navbar' | 'sidebar';

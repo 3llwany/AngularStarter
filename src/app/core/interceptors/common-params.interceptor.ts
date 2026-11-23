@@ -1,8 +1,8 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { SKIP_COMMON_PARAMS } from '../http/http.context';
-import { LocaleService } from '../i18n/locale.service';
-import { ThemeService } from '../theme/theme.service';
+import { SKIP_COMMON_PARAMS } from '@core/http';
+import { LocaleService } from '@core/i18n';
+import { ThemeService } from '@core/theme';
 
 const STATIC_PREFIXES = ['assets/', '/assets/', 'i18n/', '/i18n/', 'fonts/', '/fonts/'];
 

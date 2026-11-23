@@ -1,4 +1,4 @@
-import { Role } from '../theme/role';
+import { Role } from '@core/theme';
 
 /** جذور مسارات الأدوار الستة (مُستخدمة في `app.routes.ts` و الحراس). */
 export const ROLE_ROUTE_ROOTS = {

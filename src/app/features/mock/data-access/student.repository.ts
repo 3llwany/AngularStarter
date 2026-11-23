@@ -1,5 +1,5 @@
 import { Service } from '@angular/core';
-import { BaseRepository } from '../../../core/data-access/base-repository';
+import { BaseRepository } from '@core/data-access';
 import { MockCreateStudentDto, MockStudent, MockUpdateStudentDto } from '../models/student.model';
 
 /**

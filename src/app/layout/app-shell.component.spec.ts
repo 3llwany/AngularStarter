@@ -4,10 +4,10 @@ import { signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { provideTranslateService } from '@ngx-translate/core';
-import { provideMockAuthApi } from '../core/auth/mock-auth-api';
-import { LayoutService } from '../core/layout/layout.service';
-import { NavItem, NavService } from '../core/navigation/nav.service';
-import { provideMozPrimeNG } from '../core/providers/primeng.providers';
+import { provideMockAuthApi } from '@core/auth';
+import { LayoutService } from '@core/layout';
+import { NavItem, NavService } from '@core/navigation';
+import { provideMozPrimeNG } from '@core/providers';
 import { AppShellComponent } from './app-shell.component';
 
 describe('AppShellComponent', () => {

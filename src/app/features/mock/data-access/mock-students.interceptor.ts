@@ -1,6 +1,6 @@
 import { HttpHandlerFn, HttpInterceptorFn, HttpRequest, HttpResponse } from '@angular/common/http';
 import { delay, of } from 'rxjs';
-import { IMetaModel, IResponse, IResponseList, MESSAGE_TYPES } from '../../../core/http/api-response';
+import { IMetaModel, IResponse, IResponseList, MESSAGE_TYPES } from '@core/http';
 import { MockCreateStudentDto, MockStudent, MockUpdateStudentDto } from '../models/student.model';
 
 const INITIAL_STUDENTS: MockStudent[] = [
@@ -130,7 +130,11 @@ function wrapResponse<T>(data: T, status = 200): HttpResponse<IResponse<T>> {
   return new HttpResponse({ status, body: envelope });
 }
 
-function wrapListResponse<T>(data: T, meta: IMetaModel, status = 200): HttpResponse<IResponseList<T>> {
+function wrapListResponse<T>(
+  data: T,
+  meta: IMetaModel,
+  status = 200,
+): HttpResponse<IResponseList<T>> {
   const envelope: IResponseList<T> = {
     message: {
       messageType: MESSAGE_TYPES.Success,

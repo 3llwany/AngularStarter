@@ -3,7 +3,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
-import { LocaleService } from '../i18n/locale.service';
+import { LocaleService } from '@core/i18n';
 import { localeHeaderInterceptor } from './locale-header.interceptor';
 
 describe('localeHeaderInterceptor', () => {

@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { ConfirmationService, MessageService } from '../shared/ui';
+import { ConfirmationService, MessageService } from '@shared/ui';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { provideMockAuthApi } from '../core/auth/mock-auth-api';
+import { provideMockAuthApi } from '@core/auth';
 import { FoundationPageComponent } from './foundation.page';
 
 describe('FoundationPageComponent', () => {

@@ -1,13 +1,12 @@
 import { Routes } from '@angular/router';
-import { guestGuard, roleGuard, roleRedirectGuard } from './core/guards/auth.guards';
-import { APP_ROUTES } from './core/routes/app-routes';
+import { guestGuard, roleGuard, roleRedirectGuard } from '@core/guards';
+import { APP_ROUTES } from '@core/routes';
 import { devRoutes } from './dev/dev.routes';
 
 export const routes: Routes = [
   {
     path: APP_ROUTES.root.base,
-    loadComponent: () =>
-      import('./layout/app-shell.component').then((m) => m.AppShellComponent),
+    loadComponent: () => import('./layout/app-shell.component').then((m) => m.AppShellComponent),
     children: [
       ...devRoutes,
       {

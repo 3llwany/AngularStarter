@@ -1,8 +1,8 @@
 import { HttpClient, HttpContext, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { SKIP_LOADING } from '../http/http.context';
-import { LoadingService } from '../loading/loading.service';
+import { SKIP_LOADING } from '@core/http';
+import { LoadingService } from '@core/loading';
 import { loadingInterceptor } from './loading.interceptor';
 
 describe('loadingInterceptor', () => {

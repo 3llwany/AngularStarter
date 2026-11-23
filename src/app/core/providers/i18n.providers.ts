@@ -4,11 +4,14 @@ import {
   provideTranslateLoader,
   provideTranslateService,
 } from '@ngx-translate/core';
-import { DEFAULT_LANG, SUPPORTED_LANGS } from '../i18n/locale';
-import { LocaleService } from '../i18n/locale.service';
-import { MozMissingTranslationHandler } from '../i18n/missing-translation.handler';
-import { SSRTranslateLoader } from '../i18n/ssr-translate.loader';
-import { ThemeService } from '../theme/theme.service';
+import {
+  DEFAULT_LANG,
+  SUPPORTED_LANGS,
+  LocaleService,
+  MozMissingTranslationHandler,
+  SSRTranslateLoader,
+} from '@core/i18n';
+import { ThemeService } from '@core/theme';
 
 export function provideMozI18n(): (Provider | EnvironmentProviders)[] {
   return [

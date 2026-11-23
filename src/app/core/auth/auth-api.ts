@@ -1,8 +1,7 @@
 import { inject, Service } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { isAppError } from '../errors/app-error';
-import { ApiClient } from '../http/api-client';
-import { createApiContext } from '../http/http.context';
+import { isAppError } from '@core/errors';
+import { ApiClient, createApiContext } from '@core/http';
 import { AuthUser, LoginRequest } from './auth.models';
 
 /**

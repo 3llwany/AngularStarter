@@ -1,7 +1,7 @@
 import { computed, inject, Service, signal } from '@angular/core';
-import { createAppError } from '../errors/app-error';
-import { CookieService } from '../platform/cookie';
-import { ThemeService } from '../theme/theme.service';
+import { createAppError } from '@core/errors';
+import { CookieService } from '@core/platform';
+import { ThemeService } from '@core/theme';
 import { AuthApi } from './auth-api';
 import { AuthStatus, AuthUser, LoginForm, LoginRole } from './auth.models';
 import { buildLoginRequest, isValidIdentifier, LOGIN_METHODS } from './login-methods';

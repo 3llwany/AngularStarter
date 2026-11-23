@@ -1,4 +1,4 @@
-import { Role } from '../theme/role';
+import { Role } from '@core/theme';
 
 /** Roles that sign in through the login screen (admin has no public login yet). */
 export type LoginRole = Exclude<Role, 'admin'>;

@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
-import { AuthService, SESSION_HINT_COOKIE } from '../auth/auth.service';
-import { DEMO_PASSWORD, provideMockAuthApi } from '../auth/mock-auth-api';
+import { AuthService, SESSION_HINT_COOKIE, DEMO_PASSWORD, provideMockAuthApi } from '@core/auth';
 import { DEFAULT_GUEST_LAYOUT, LayoutService, ROLE_LAYOUT_MODE } from './layout.service';
 
 describe('LayoutService', () => {

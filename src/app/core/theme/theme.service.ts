@@ -1,5 +1,5 @@
 import { DOCUMENT, inject, Service, signal, Signal } from '@angular/core';
-import { CookieService } from '../platform/cookie';
+import { CookieService } from '@core/platform';
 import { DEFAULT_ROLE, isRole, Role, ROLE_COOKIE_NAME } from './role';
 
 @Service()

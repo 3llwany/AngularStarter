@@ -1,7 +1,7 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { isStaticAssetUrl } from '../http/http.context';
-import { LocaleService } from '../i18n/locale.service';
+import { isStaticAssetUrl } from '@core/http';
+import { LocaleService } from '@core/i18n';
 
 /**
  * Sets the `Accept-Language` header from the active LocaleService on outbound API calls,

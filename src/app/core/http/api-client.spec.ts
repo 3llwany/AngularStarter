@@ -1,12 +1,10 @@
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { AppConfigService } from '../config/app-config.service';
+import { AppConfigService } from '@core/config';
 import { ApiClient } from './api-client';
 import { SKIP_BASE_URL, SKIP_COMMON_PARAMS } from './http.context';
-import { apiBaseUrlInterceptor } from '../interceptors/api-base-url.interceptor';
-import { commonParamsInterceptor } from '../interceptors/common-params.interceptor';
- 
+import { apiBaseUrlInterceptor, commonParamsInterceptor } from '@core/interceptors';
 
 interface TestUser {
   readonly id: string;

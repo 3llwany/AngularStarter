@@ -3,11 +3,9 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 import { vi } from 'vitest';
-import { AuthService } from '../auth/auth.service';
-import { isAppError } from '../errors/app-error';
-import { TOAST_HANDLER, ToastHandler } from '../errors/global-error-handler';
-import { IResponse, MESSAGE_TYPES } from '../http/api-response';
-import { createApiContext } from '../http/http.context';
+import { AuthService } from '@core/auth';
+import { isAppError, TOAST_HANDLER, ToastHandler } from '@core/errors';
+import { IResponse, MESSAGE_TYPES, createApiContext } from '@core/http';
 import { errorMappingInterceptor } from './error-mapping.interceptor';
 
 describe('errorMappingInterceptor', () => {
@@ -139,7 +137,9 @@ describe('errorMappingInterceptor', () => {
       data: { count: 5 },
     };
 
-    const reqPromise = firstValueFrom(http.get<IResponse<{ readonly count: number }>>('/api/students'));
+    const reqPromise = firstValueFrom(
+      http.get<IResponse<{ readonly count: number }>>('/api/students'),
+    );
     const req = httpMock.expectOne('/api/students');
     req.flush(body, { status: 200, statusText: 'OK' });
 

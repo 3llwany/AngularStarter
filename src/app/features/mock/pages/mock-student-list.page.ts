@@ -9,7 +9,7 @@ import {
   ConfirmService,
   TableColumn,
   ToastService,
-} from '../../../shared/ui';
+} from '@shared/ui';
 import { StudentStore } from '../data-access/student.store';
 import {
   MockCreateStudentDto,

@@ -1,15 +1,20 @@
 import { HttpErrorResponse, HttpInterceptorFn, HttpResponse } from '@angular/common/http';
 import { inject, Injector } from '@angular/core';
 import { catchError, map, throwError } from 'rxjs';
-import { AuthService } from '../auth/auth.service';
-import { createAppError, isAppError, mapHttpErrorToAppError } from '../errors/app-error';
-import { TOAST_HANDLER, ToastHandler } from '../errors/global-error-handler';
+import { AuthService } from '@core/auth';
+import {
+  createAppError,
+  isAppError,
+  mapHttpErrorToAppError,
+  TOAST_HANDLER,
+  ToastHandler,
+} from '@core/errors';
 import {
   formatResponseMessage,
   isApiResponseEnvelope,
   MESSAGE_TYPES,
-} from '../http/api-response';
-import { SKIP_ERROR_TOAST } from '../http/http.context';
+  SKIP_ERROR_TOAST,
+} from '@core/http';
 
 function extractEnvelopeMessages(body: unknown): string[] {
   if (!isApiResponseEnvelope(body)) {

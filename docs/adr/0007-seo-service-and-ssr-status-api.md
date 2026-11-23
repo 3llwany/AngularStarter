@@ -55,7 +55,7 @@
 
 ```ts
 import { Component, DestroyRef, effect, inject, input } from '@angular/core';
-import { SEO_SITE_NAME, SeoService } from '../../../core/seo/seo.service';
+import { SEO_SITE_NAME, SeoService } from '@core/seo';
 import { CoursesRepository } from '../data-access/courses.repository';
 
 @Component({

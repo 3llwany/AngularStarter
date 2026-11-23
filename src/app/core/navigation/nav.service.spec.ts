@@ -2,13 +2,18 @@ import { DOCUMENT } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { AuthService, SESSION_HINT_COOKIE } from '../auth/auth.service';
-import { DEMO_PASSWORD, provideMockAuthApi } from '../auth/mock-auth-api';
-import { IResponse, MESSAGE_TYPES } from '../http/api-response';
+import { AuthService, SESSION_HINT_COOKIE, DEMO_PASSWORD, provideMockAuthApi } from '@core/auth';
+import { IResponse, MESSAGE_TYPES } from '@core/http';
 import { NavItem, NavService, USER_MENU_ENDPOINT } from './nav.service';
 
 const MOCK_MENU: readonly NavItem[] = [
-  { id: 'courses', labelKey: 'nav.courses', route: '/student/courses', order: 20, icon: 'pi pi-book' },
+  {
+    id: 'courses',
+    labelKey: 'nav.courses',
+    route: '/student/courses',
+    order: 20,
+    icon: 'pi pi-book',
+  },
   { id: 'home', labelKey: 'nav.home', route: '/student', order: 10, icon: 'pi pi-home' },
   { id: 'passport', labelKey: 'nav.passport', route: '/student/passport' },
 ];

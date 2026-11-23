@@ -1,6 +1,6 @@
 import { Service, computed, inject } from '@angular/core';
-import { AuthService } from '../auth/auth.service';
-import { ApiClient } from '../http/api-client';
+import { AuthService } from '@core/auth';
+import { ApiClient } from '@core/http';
 
 /** عنصر قائمة تنقل يُرجعه الباك إند للمستخدم الحالي. */
 export interface NavItem {

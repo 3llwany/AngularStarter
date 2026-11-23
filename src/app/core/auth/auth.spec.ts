@@ -2,10 +2,10 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Injector, PLATFORM_ID } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, Router, UrlTree } from '@angular/router';
-import { CookieService } from '../platform/cookie';
-import { ThemeService } from '../theme/theme.service';
+import { CookieService } from '@core/platform';
+import { ThemeService } from '@core/theme';
 import { AuthApi } from './auth-api';
-import { guestGuard, roleGuard, roleRedirectGuard } from '../guards/auth.guards';
+import { guestGuard, roleGuard, roleRedirectGuard } from '@core/guards';
 import { AuthService, SESSION_HINT_COOKIE } from './auth.service';
 import { buildLoginRequest, isValidIdentifier, LOGIN_METHODS } from './login-methods';
 import { DEMO_PASSWORD, MockAuthApi, provideMockAuthApi } from './mock-auth-api';
@@ -27,7 +27,11 @@ describe('Auth (login-methods, AuthService, guards)', () => {
       expect(isValidIdentifier('student', 'student@mozakrety.test')).toBe(true);
       expect(isValidIdentifier('student', 'not-an-email')).toBe(false);
       expect(
-        buildLoginRequest('student', { email: undefined, identifier: '  Student@Example.com ', password: 'secret' } as { identifier: string; password: string }),
+        buildLoginRequest('student', {
+          email: undefined,
+          identifier: '  Student@Example.com ',
+          password: 'secret',
+        } as { identifier: string; password: string }),
       ).toEqual({
         role: 'student',
         identifier: 'student@example.com',
@@ -59,14 +63,14 @@ describe('Auth (login-methods, AuthService, guards)', () => {
 
       expect(isValidIdentifier('school', 'sch-2026')).toBe(true);
       expect(isValidIdentifier('school', 'a')).toBe(false);
-      expect(
-        buildLoginRequest('school', { identifier: ' sch-2026 ', password: 'secret' }),
-      ).toEqual({
-        role: 'school',
-        identifier: 'SCH-2026',
-        identifierType: 'schoolCode',
-        password: 'secret',
-      });
+      expect(buildLoginRequest('school', { identifier: ' sch-2026 ', password: 'secret' })).toEqual(
+        {
+          role: 'school',
+          identifier: 'SCH-2026',
+          identifierType: 'schoolCode',
+          password: 'secret',
+        },
+      );
 
       expect(isValidIdentifier('partner', 'ops@company.com')).toBe(true);
       expect(isValidIdentifier('partner', 'invalid')).toBe(false);

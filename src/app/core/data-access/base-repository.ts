@@ -1,8 +1,7 @@
 import { HttpResourceOptions, HttpResourceRef } from '@angular/common/http';
 import { computed, inject, signal, WritableSignal } from '@angular/core';
 import { defer, finalize, Observable } from 'rxjs';
-import { ApiClient, ApiRequestOptions } from '../http/api-client';
-import { PaginatedResult } from '../http/api-response';
+import { ApiClient, ApiRequestOptions, PaginatedResult } from '@core/http';
 
 export interface RepositoryEndpoints {
   readonly getAll: string;
@@ -154,10 +153,7 @@ export abstract class BaseRepository<
   delete(id: TId, options?: ApiRequestOptions): Observable<void>;
   /** Deletes an entity passing ID via `options.params` (`DELETE /endpoint/Delete`). */
   delete(options?: ApiRequestOptions): Observable<void>;
-  delete(
-    idOrOptions?: TId | ApiRequestOptions,
-    options?: ApiRequestOptions,
-  ): Observable<void> {
+  delete(idOrOptions?: TId | ApiRequestOptions, options?: ApiRequestOptions): Observable<void> {
     const hasPathId = isPrimitiveId(idOrOptions);
     const url = hasPathId ? this.buildUrl('delete', idOrOptions as TId) : this.buildUrl('delete');
     const reqOptions = hasPathId ? options : (idOrOptions as ApiRequestOptions | undefined);
