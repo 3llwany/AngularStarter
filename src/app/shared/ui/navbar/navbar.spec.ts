@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { UiNavItem } from '../foundation/ui-nav-item';
+import { UiNavItem } from '../foundation';
 import { AppNavbar } from './navbar';
 
 const MOCK_ITEMS: readonly UiNavItem[] = [

@@ -38,7 +38,7 @@ function trackSignalCounter<T>(
 }
 
 /**
- * Generic abstract CRUD repository for domain entities in Mozakrety.
+ * Generic abstract CRUD repository for domain entities in Starter.
  * Injects `ApiClient` (which automatically unwraps `IResponse<T>` / `IResponseList<T>`),
  * tracks `isLoading` / `isSaving` / `isDeleting` signals, and provides reactive `httpResource` helpers.
  */

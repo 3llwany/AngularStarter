@@ -7,11 +7,9 @@ import { InputIcon } from 'primeng/inputicon';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputPasswordModule } from 'primeng/inputpassword';
 import { InputText } from 'primeng/inputtext';
-import { ValidationMessageService } from '../foundation/validation-message.service';
 import { Eye } from '@primeicons/angular/eye';
 import { EyeSlash } from '@primeicons/angular/eye-slash';
-import { APP_VARIANT } from '../foundation/input-config';
-import { createUniqueId, getDirection } from '../foundation/utils';
+import { APP_VARIANT, createUniqueId, getDirection, ValidationMessageService } from '../foundation';
 import { PIcon } from '@primeicons/angular/p-icon';
 /**
  * Reusable input component built on Angular 22 Signal Forms.

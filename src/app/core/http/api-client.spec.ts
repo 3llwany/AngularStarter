@@ -28,7 +28,7 @@ describe('ApiClient', () => {
         {
           provide: AppConfigService,
           useValue: {
-            apiBaseUrl: () => 'https://api.mozakrety.com',
+            apiBaseUrl: () => 'https://api.starter.com',
           },
         },
       ],

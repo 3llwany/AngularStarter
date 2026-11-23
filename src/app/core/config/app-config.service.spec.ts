@@ -19,7 +19,7 @@ describe('AppConfigService', () => {
     beforeEach(() => {
       const env = getProcessEnv();
       if (env) {
-        env['API_BASE_URL'] = 'https://docker-env-api.mozakrety.com';
+        env['API_BASE_URL'] = 'https://docker-env-api.starter.com';
       }
       TestBed.configureTestingModule({
         providers: [
@@ -47,8 +47,8 @@ describe('AppConfigService', () => {
 
     it('reads API_BASE_URL from server environment and stores in TransferState', async () => {
       const config = await service.loadConfig();
-      expect(config.apiBaseUrl).toBe('https://docker-env-api.mozakrety.com');
-      expect(service.apiBaseUrl()).toBe('https://docker-env-api.mozakrety.com');
+      expect(config.apiBaseUrl).toBe('https://docker-env-api.starter.com');
+      expect(service.apiBaseUrl()).toBe('https://docker-env-api.starter.com');
       expect(transferState.hasKey(APP_CONFIG_STATE_KEY)).toBe(true);
     });
   });
@@ -64,7 +64,7 @@ describe('AppConfigService', () => {
         ],
       });
       transferState = TestBed.inject(TransferState);
-      transferState.set(APP_CONFIG_STATE_KEY, { apiBaseUrl: 'https://staging.mozakrety.com/' });
+      transferState.set(APP_CONFIG_STATE_KEY, { apiBaseUrl: 'https://staging.starter.com/' });
       service = TestBed.inject(AppConfigService);
     });
 
@@ -74,8 +74,8 @@ describe('AppConfigService', () => {
 
     it('reads config from TransferState and trims trailing slashes without making HTTP calls', async () => {
       const config = await service.loadConfig();
-      expect(config.apiBaseUrl).toBe('https://staging.mozakrety.com/');
-      expect(service.apiBaseUrl()).toBe('https://staging.mozakrety.com');
+      expect(config.apiBaseUrl).toBe('https://staging.starter.com/');
+      expect(service.apiBaseUrl()).toBe('https://staging.starter.com');
       expect(transferState.hasKey(APP_CONFIG_STATE_KEY)).toBe(false);
     });
   });
@@ -104,11 +104,11 @@ describe('AppConfigService', () => {
 
       const req = httpTesting.expectOne('/config.json');
       expect(req.request.method).toBe('GET');
-      req.flush({ apiBaseUrl: 'https://api.mozakrety.com' });
+      req.flush({ apiBaseUrl: 'https://api.starter.com' });
 
       const config = await loadPromise;
-      expect(config.apiBaseUrl).toBe('https://api.mozakrety.com');
-      expect(service.apiBaseUrl()).toBe('https://api.mozakrety.com');
+      expect(config.apiBaseUrl).toBe('https://api.starter.com');
+      expect(service.apiBaseUrl()).toBe('https://api.starter.com');
     });
 
     it('falls back gracefully to empty string if /config.json fails', async () => {

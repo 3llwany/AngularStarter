@@ -1,8 +1,7 @@
 import { Component, computed, inject, input, output, signal } from '@angular/core';
 import { type Field, type ValidationError } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ValidationMessageService } from '../foundation/validation-message.service';
-import { createUniqueId } from '../foundation/utils';
+import { createUniqueId, ValidationMessageService } from '../foundation';
 
 /** Visual state of the upload field (mirrors the Figma `State` variants). */
 export type FieldUploadState = 'default' | 'uploading' | 'uploaded' | 'error';

@@ -8,7 +8,7 @@ export const DEFAULT_APP_CONFIG: AppConfig = {
   apiBaseUrl: '',
 };
 
-export const APP_CONFIG_STATE_KEY = makeStateKey<AppConfig>('moz.app_config');
+export const APP_CONFIG_STATE_KEY = makeStateKey<AppConfig>('app.config');
 
 export const APP_CONFIG = new InjectionToken<AppConfig>('APP_CONFIG', {
   providedIn: 'root',

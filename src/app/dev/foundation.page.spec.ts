@@ -34,7 +34,7 @@ describe('FoundationPageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders design system verification controls and role switcher', () => {
+  it('renders the design system showcase and fixed theme description', () => {
     const el = fixture.nativeElement as HTMLElement;
     expect(el.querySelector('h1')).toBeTruthy();
   });

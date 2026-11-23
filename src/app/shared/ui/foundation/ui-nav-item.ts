@@ -2,7 +2,7 @@ import type { MenuItem } from 'primeng/api';
 
 /**
  * Generic navigation item contract for reusable UI navigation components (`AppNavbar`, `AppSidebar`).
- * Keeps `shared/ui` completely decoupled from Mozakrety domain roles, APIs, or translation keys.
+ * Keeps `shared/ui` completely decoupled from product domains, APIs, or translation keys.
  */
 export interface UiNavItem {
   readonly id: string;

@@ -26,12 +26,12 @@ export interface PageSeoConfig {
 
 export type JsonLdSchema = Record<string, unknown>;
 
-export const SEO_SITE_NAME = 'Mozakrety';
+export const SEO_SITE_NAME = 'Starter';
 export const SEO_TITLE_SEPARATOR = ' | ';
 
-const JSON_LD_SCRIPT_ID = 'moz-seo-jsonld';
+const JSON_LD_SCRIPT_ID = 'app-seo-jsonld';
 const CANONICAL_SELECTOR = 'link[rel="canonical"]';
-const HREFLANG_ATTR = 'data-moz-seo';
+const HREFLANG_ATTR = 'data-app-seo';
 
 /**
  * خدمة الـ SEO الموحّدة والمتوافقة مع SSR لإدارة عناوين الصفحات، ووسوم Open Graph / Twitter،
@@ -39,8 +39,8 @@ const HREFLANG_ATTR = 'data-moz-seo';
  *
  * ### متى تُستخدم؟
  * - تُستخدم فقط داخل مكونات الصفحات المرتبطة بالمسارات (`pages/` مثل `*.page.ts`)، وممنوع حقنها في مكونات الـ UI الفرعية (`ui/` أو `shared/ui/`).
- * - **الصفحات العامة وصفحات الكورسات/المدرسين**: استخدم `setPage()` واختيارياً `setJsonLd()`.
- * - **صفحات لوحات التحكم بعد تسجيل الدخول (`student/`، `teacher/`...)**: يكفي `setTitle()` لتحديث عنوان التبويب (أو `noindex: true`).
+ * - **Public pages**: use `setPage()` and optionally `setJsonLd()`.
+ * - **Private application pages**: use `setTitle()` or `noindex: true` as appropriate.
  *
  * @example
  * // 1) صفحة عامة ثابتة مترجمة (استخدام toSignal + effect)
@@ -54,7 +54,7 @@ const HREFLANG_ATTR = 'data-moz-seo';
  *     this.seo.setPage({
  *       title: this.title(),
  *       description: this.description() || undefined,
- *       canonical: 'https://mozakrety.com/',
+ *       canonical: 'https://starter.com/',
  *     });
  *   });
  * }
@@ -80,7 +80,7 @@ const HREFLANG_ATTR = 'data-moz-seo';
  *         title: course.title,
  *         description: course.shortDescription,
  *         image: course.thumbnailUrl,
- *         canonical: `https://mozakrety.com/courses/${course.slug}`,
+ *         canonical: `https://starter.com/courses/${course.slug}`,
  *         type: 'article',
  *       });
  *       this.seo.setJsonLd({
@@ -146,7 +146,7 @@ export class SeoService {
   }
 
   /**
-   * يحدّث عنوان التبويب (`<title>` و `og:title` و `twitter:title`) فقط مع لاحقة `| Mozakrety`
+   * يحدّث عنوان التبويب (`<title>` و `og:title` و `twitter:title`) فقط مع لاحقة `| Starter`
    * ما لم يُمرّر `rawTitle: true`. مناسبة لصفحات لوحات التحكم بعد تسجيل الدخول.
    */
   setTitle(title: string, rawTitle = false): void {
@@ -180,7 +180,7 @@ export class SeoService {
   }
 
   /**
-   * يدرج أو يحدّث وسم البيانات المنظمة `<script id="moz-seo-jsonld" type="application/ld+json">`
+   * يدرج أو يحدّث وسم البيانات المنظمة `<script id="app-seo-jsonld" type="application/ld+json">`
    * في `<head>` لمساعدة Google على فهم نوع المحتوى (مثل `Course`) وعرض نتائج غنية (Rich Results
    * كالنجوم والسعر واسم المدرس). اختيارية ومخصصة للصفحات العامة المهمة.
    */

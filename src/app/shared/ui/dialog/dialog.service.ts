@@ -4,7 +4,7 @@ import {
   DialogService as PrimeDialogService,
   DynamicDialogRef,
 } from 'primeng/dynamicdialog';
-import { translateText } from '../foundation/utils';
+import { translateText } from '../foundation';
 
 export { DynamicDialogRef };
 export interface ModalDialogOptions<TData = unknown> {

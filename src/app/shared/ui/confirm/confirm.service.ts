@@ -1,7 +1,7 @@
 import { inject, Service } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ConfirmationService } from 'primeng/api';
-import { translateText } from '../foundation/utils';
+import { translateText } from '../foundation';
 
 export interface ConfirmDialogOptions {
   readonly message?: string;

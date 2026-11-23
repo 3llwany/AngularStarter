@@ -13,9 +13,7 @@ import { Field, FormField, ValidationError } from '@angular/forms/signals';
 import { SelectModule } from 'primeng/select';
 import { FloatLabel } from 'primeng/floatlabel';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ValidationMessageService } from '../foundation/validation-message.service';
-import { APP_VARIANT } from '../foundation/input-config';
-import { createUniqueId } from '../foundation/utils';
+import { APP_VARIANT, createUniqueId, ValidationMessageService } from '../foundation';
 
 @Component({
   imports: [SelectModule, FloatLabel, TranslatePipe, FormField, FormsModule],

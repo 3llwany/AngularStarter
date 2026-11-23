@@ -36,7 +36,7 @@ describe('FileService', () => {
         .spyOn(HTMLAnchorElement.prototype, 'click')
         .mockImplementation(() => undefined);
 
-      service.downloadFile('https://api.mozakrety.com/files/sample.pdf', 'sample.pdf');
+      service.downloadFile('https://api.starter.com/files/sample.pdf', 'sample.pdf');
 
       expect(clickSpy).toHaveBeenCalled();
       clickSpy.mockRestore();
@@ -53,7 +53,7 @@ describe('FileService', () => {
 
     it('safely no-ops downloadFile on server without accessing document', () => {
       expect(() => {
-        service.downloadFile('https://api.mozakrety.com/file.pdf', 'file.pdf');
+        service.downloadFile('https://api.starter.com/file.pdf', 'file.pdf');
       }).not.toThrow();
     });
   });

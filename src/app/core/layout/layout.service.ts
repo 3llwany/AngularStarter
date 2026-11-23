@@ -1,48 +1,23 @@
-import { computed, effect, inject, Service, signal } from '@angular/core';
-import { AuthService } from '@core/auth';
-import { Role } from '@core/theme';
+import { computed, Service, signal } from '@angular/core';
 
 /** أوضاع عرض روابط التنقل الرئيسية في الغلاف (Shell). */
 export type NavLayoutMode = 'navbar' | 'sidebar';
 
-/**
- * خريطة تحديد وضع التخطيط الافتراضي لكل دور بعد تسجيل الدخول:
- * - أدوار `navbar`: تظهر روابطها في الشريط العلوي المدمج مع الهيدر بدون قائمة جانبية.
- * - أدوار `sidebar`: تظهر روابطها في القائمة الجانبية مع هيدر علوي مضغوط.
- */
-export const ROLE_LAYOUT_MODE: Record<Role, NavLayoutMode> = {
-  student: 'navbar',
-  parent: 'navbar',
-  teacher: 'sidebar',
-  school: 'sidebar',
-  partner: 'sidebar',
-  admin: 'sidebar',
-};
-
-/** الوضع الافتراضي للزائر غير المسجّل. */
-export const DEFAULT_GUEST_LAYOUT: NavLayoutMode = 'navbar';
+/** Default shell layout; consumers can choose another mode for their product. */
+export const DEFAULT_LAYOUT_MODE: NavLayoutMode = 'navbar';
 
 /**
  * خدمة تخطيط الواجهة — تحدد هل تظهر روابط التنقل في `Navbar` أم في `Sidebar`
- * تلقائياً حسب دور المستخدم بعد تسجيل الدخول، مع إمكانية التبديل اليدوي في أي وقت.
+ * مع إمكانية التبديل اليدوي بين الشريط العلوي والقائمة الجانبية.
  */
 @Service()
 export class LayoutService {
-  private readonly auth = inject(AuthService);
-
   private readonly _manualOverride = signal<NavLayoutMode | null>(null);
   private readonly _sidebarCollapsed = signal(false);
   private readonly _mobileDrawerOpen = signal(false);
 
   /** الوضع الفعلي الحالي (`'navbar'` أو `'sidebar'`). */
-  readonly mode = computed<NavLayoutMode>(() => {
-    const manual = this._manualOverride();
-    if (manual !== null) {
-      return manual;
-    }
-    const role = this.auth.role();
-    return role ? (ROLE_LAYOUT_MODE[role] ?? DEFAULT_GUEST_LAYOUT) : DEFAULT_GUEST_LAYOUT;
-  });
+  readonly mode = computed<NavLayoutMode>(() => this._manualOverride() ?? DEFAULT_LAYOUT_MODE);
 
   /** هل القائمة الجانبية مفعّلة في الوضع الحالي. */
   readonly hasSidebar = computed(() => this.mode() === 'sidebar');
@@ -55,16 +30,6 @@ export class LayoutService {
 
   /** حالة فتح القائمة الجانبية (Drawer) على الجوال. */
   readonly mobileDrawerOpen = this._mobileDrawerOpen.asReadonly();
-
-  constructor() {
-    // إعادة ضبط التجاوز اليدوي وحالة الدرج عند تسجيل الخروج حتى لا تتسرب لجلسة أخرى
-    effect(() => {
-      if (!this.auth.isAuthenticated()) {
-        this._manualOverride.set(null);
-        this._mobileDrawerOpen.set(false);
-      }
-    });
-  }
 
   /** تعيين وضع العرض يدوياً (`'navbar'` أو `'sidebar'`). */
   setMode(mode: NavLayoutMode): void {
@@ -79,7 +44,7 @@ export class LayoutService {
     this.setMode(this.mode() === 'sidebar' ? 'navbar' : 'sidebar');
   }
 
-  /** إلغاء التجاوز اليدوي والعودة للاختيار التلقائي حسب الدور. */
+  /** Reset to the configured default layout. */
   clearOverride(): void {
     this._manualOverride.set(null);
   }

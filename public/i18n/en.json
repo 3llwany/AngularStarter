@@ -1,21 +1,12 @@
 {
   "common": {
-    "app_name": "Mozakrety",
-    "tagline": "Student-Centered Social Learning Platform",
+    "app_name": "Angular Starter",
+    "tagline": "A reusable starting point for Angular web applications",
     "language": {
       "label": "Language",
       "ar": "العربية",
       "en": "English",
       "current_dir": "Left-to-Right (LTR)"
-    },
-    "roles": {
-      "label": "Select user role to preview theme",
-      "student": "Student",
-      "parent": "Parent",
-      "teacher": "Teacher",
-      "school": "School",
-      "partner": "Mall Partner",
-      "admin": "System Admin"
     },
     "actions": {
       "search": "Search...",
@@ -64,35 +55,15 @@
     }
   },
   "auth": {
-    "fields": {
-      "email": {
-        "label": "Email Address",
-        "placeholder": "student@example.com",
-        "error": "Please enter a valid email address."
-      },
-      "mobile_number": {
-        "label": "Mobile Number",
-        "placeholder": "01012345678",
-        "error": "Please enter a valid 11-digit Egyptian mobile number."
-      },
-      "teacher_id": {
-        "label": "Teacher ID",
-        "placeholder": "TCH-1042",
-        "error": "Please enter a valid teacher ID."
-      },
-      "school_code": {
-        "label": "School Code",
-        "placeholder": "SCH-2026",
-        "error": "Please enter a valid school code."
-      },
-      "business_email": {
-        "label": "Business Email",
-        "placeholder": "partner@company.com",
-        "error": "Please enter a valid business email address."
-      }
-    },
     "errors": {
       "invalid_credentials": "Invalid credentials. Please check your details and try again."
+    }
+  },
+  "starter": {
+    "home": {
+      "title": "Your Angular starter is ready",
+      "description": "This reusable foundation includes routing, server rendering, localization, shared UI components, and core application services.",
+      "next_step": "Add your first feature under src/app/features."
     }
   },
   "errors": {
@@ -119,21 +90,21 @@
   },
   "dev": {
     "foundation": {
-      "removable_banner": "TEMPORARY DEV-ONLY VERIFICATION PAGE (Automatically tree-shaken from production builds)",
-      "title": "Phase 1 Foundation & Design System Verification",
-      "subtitle": "Live showcase of moz-* PrimeNG wrappers, runtime role theming, and Arabic/English RTL/LTR mirroring.",
+      "removable_banner": "Development-only showcase. It is excluded from production builds.",
+      "title": "Application Foundation Showcase",
+      "subtitle": "Explore the shared UI components and Angular services before building product features.",
       "theme_section": {
-        "title": "Role Palette Switcher (6 Roles)",
-        "description": "Primary shades update immediately via CSS variables across both Tailwind utilities and PrimeNG without reloading.",
-        "active_role": "Currently active role",
-        "contrast_badge": "WCAG AA Contrast Verified"
+        "title": "Application Theme",
+        "description": "One shared color palette for the application and PrimeNG components.",
+        "contrast_badge": "WCAG AA Contrast Verified",
+        "single_theme": "One fixed application theme"
       },
       "i18n_section": {
         "title": "Language & Direction Switcher (RTL / LTR)",
         "description": "Updates html lang and dir attributes and persists the choice in an SSR-compatible cookie."
       },
       "buttons_section": {
-        "title": "Buttons (moz-button)",
+        "title": "Buttons (app-button)",
         "primary": "Primary Button",
         "secondary": "Secondary Button",
         "outlined": "Outlined Button",
@@ -144,30 +115,30 @@
         "directional": "Continue (Directional Icon)"
       },
       "inputs_section": {
-        "title": "Inputs & Selects (moz-input & moz-select)",
-        "name_label": "Student Name",
-        "name_placeholder": "Enter student name...",
-        "name_helper": "Standard text input bound via Angular model() signal",
+        "title": "Inputs & Selects (app-input & app-select)",
+        "name_label": "Sample Name",
+        "name_placeholder": "Enter a value...",
+        "name_helper": "Text input bound to an Angular signal",
         "invalid_label": "Invalid State Input",
         "invalid_placeholder": "Invalid value",
         "invalid_error": "Please enter a valid value in this field.",
         "disabled_label": "Disabled Input",
         "disabled_placeholder": "Read-only / disabled",
-        "grade_label": "Academic Stage",
-        "grade_placeholder": "Select academic stage",
-        "grade_options": {
-          "primary": "Primary Stage",
-          "preparatory": "Preparatory Stage",
-          "secondary": "Secondary Stage"
+        "option_label": "Option",
+        "option_placeholder": "Select an option",
+        "options": {
+          "option_a": "First option",
+          "option_b": "Second option",
+          "option_c": "Third option"
         }
       },
       "cards_dialog_section": {
-        "title": "Cards & Dialogs (moz-card & moz-dialog)",
+        "title": "Cards & Dialogs (app-card & app-dialog)",
         "card_title": "Unified Design-System Card",
         "card_subtitle": "Third-party UI encapsulated inside shared/ui",
-        "card_body": "Feature modules never import PrimeNG directly; they consume moz-* components for strict consistency and maintainability.",
-        "dialog_header": "Sample Modal Dialog (moz-dialog)",
-        "dialog_body": "This modal verifies keyboard focus management, RTL/LTR layout mirroring, and active role palette styling."
+        "card_body": "Feature modules use shared UI components to keep the interface consistent.",
+        "dialog_header": "Sample Modal Dialog",
+        "dialog_body": "Example of focus management and RTL/LTR layout support."
       },
       "utilities_section": {
         "title": "Utilities & Core Services Showcase",
@@ -198,23 +169,24 @@
         "fallback_valid_label": "Valid Source Image"
       },
       "auth_section": {
-        "title": "Auth & Session Cycle Demo (AuthService & LOGIN_METHODS)",
-        "subtitle": "Switch the login role to see the input field and validation adapt, then sign in to watch signals, theme, and domain events update live.",
-        "select_role_label": "1. Choose Login Role (field adapts via LOGIN_METHODS)",
+        "title": "Authentication & Session Demo",
+        "subtitle": "Try sign-in, sign-out, and session expiry with an in-memory demo provider.",
         "fill_demo_btn": "Fill Valid Demo Credentials",
         "password_label": "Password (Demo: Password123!)",
         "password_placeholder": "Enter password...",
         "login_btn": "Sign In (login)",
         "logout_btn": "Sign Out (logout)",
         "expire_btn": "Simulate 401 Expiry",
-        "state_title": "Live Session State (AuthService Signals)",
+        "state_title": "Session State",
         "status_label": "Status",
         "user_label": "Current User",
-        "last_error_label": "Last Auth Error"
+        "last_error_label": "Last Auth Error",
+        "identifier_label": "User Identifier",
+        "identifier_placeholder": "demo@example.test"
       },
       "figma_section": {
-        "title": "Phase 1.5 — Figma Design System Components & Container Harness",
-        "subtitle": "All 20 library primitives matched to Figma design tokens and verified in @container widths",
+        "title": "Design System Components & Responsive Preview",
+        "subtitle": "Preview shared UI components at different widths using container queries.",
         "container_harness": "Container Query Harness (@container):",
         "current_max_width": "Current Max Width:",
         "btn_primary_large": "Primary Large (56px)",
@@ -235,20 +207,20 @@
         "sec_steps": "8. Progress Steps",
         "sec_skeletons": "9. Skeletons (Circle, Line, Row, Card)",
         "sec_nav_links": "10. Links, Divider, Social Auth & Bottom Nav",
-        "banner_info_title": "Important Academic Notice",
-        "banner_info_msg": "First semester examination schedule has been updated.",
+        "banner_info_title": "Sample Notice",
+        "banner_info_msg": "This is an example information banner.",
         "banner_warn_title": "Deadline Approaching",
-        "banner_warn_msg": "2 days remaining for course registration.",
+        "banner_warn_msg": "This is an example warning banner.",
         "banner_error_title": "Connection Error",
         "banner_error_msg": "Please check your internet connection and try again.",
         "plan_standard_title": "Standard Plan",
-        "plan_standard_desc": "Full access to recorded lectures and interactive question bank",
+        "plan_standard_desc": "A basic set of preferences.",
         "plan_premium_title": "Premium Plan",
-        "plan_premium_desc": "Periodic follow-up with teachers and weekly live reviews",
-        "notif_lessons_title": "Lesson & Schedule Notifications",
-        "notif_lessons_desc": "Receive instant alerts when new learning content is uploaded",
+        "plan_premium_desc": "An extended set of preferences.",
+        "notif_lessons_title": "Application Notifications",
+        "notif_lessons_desc": "Receive alerts when updates are available.",
         "notif_digest_title": "Weekly Email Digest",
-        "notif_digest_desc": "Detailed weekly report on student progress and homework scores",
+        "notif_digest_desc": "A periodic summary of activity and updates.",
         "chip_math": "Mathematics",
         "chip_physics": "Physics",
         "chip_chemistry": "Chemistry",
@@ -284,20 +256,8 @@
     },
     "menu": {
       "overview": "Overview",
-      "courses": "Courses",
-      "lessons": "Lessons",
-      "assignments": "Assignments",
-      "exams": "Exams",
-      "students": "Students",
-      "calendar": "Schedule",
-      "wallet": "Wallet & Payments",
-      "certificates": "Certificates",
-      "messages": "Messages",
-      "notifications": "Notifications",
-      "analytics": "Analytics",
-      "reports": "Reports",
-      "support": "Support",
-      "settings": "Settings"
+      "settings": "Settings",
+      "components": "Components"
     }
   },
   "shell": {
@@ -306,84 +266,11 @@
       "collapse_sidebar": "Collapse sidebar",
       "expand_sidebar": "Expand sidebar",
       "switch_language": "Switch language",
-      "sign_in": "Sign In",
       "sign_out": "Sign Out"
     },
     "layout": {
       "skip_to_content": "Skip to main content",
       "sidebar_label": "Sidebar navigation"
-    }
-  },
-  "mock": {
-    "students": {
-      "nav_title": "Students (Mock)",
-      "title": "Student Management (Mock Environment)",
-      "subtitle": "Comprehensive practical showcase of modern Angular 22: Signal Forms, SignalStore, BaseRepository, and HttpResource",
-      "stats": {
-        "total": "Total Students",
-        "active": "Active Students",
-        "inactive": "Inactive Students",
-        "avg_gpa": "Average GPA"
-      },
-      "table": {
-        "id": "Student ID",
-        "name": "Student",
-        "contact": "Contact Info",
-        "grade": "Grade Level",
-        "enrollment_date": "Enrollment Date",
-        "gpa": "GPA",
-        "status": "Status",
-        "actions": "Actions"
-      },
-      "grades": {
-        "first_sec": "1st Secondary",
-        "second_sec": "2nd Secondary",
-        "third_sec": "3rd Secondary"
-      },
-      "status": {
-        "active": "Active",
-        "inactive": "Inactive"
-      },
-      "actions": {
-        "add": "Add New Student",
-        "edit": "Edit",
-        "delete": "Delete",
-        "view": "View Details",
-        "refresh": "Refresh Data",
-        "search_placeholder": "Search by name, email, or phone...",
-        "filter_all_grades": "All Grade Levels",
-        "filter_all_statuses": "All Statuses"
-      },
-      "form": {
-        "add_title": "Add New Student",
-        "edit_title": "Edit Student Details",
-        "name_label": "Full Name",
-        "name_placeholder": "e.g. Ahmed Mohamed Ali",
-        "email_label": "Email Address",
-        "email_placeholder": "ahmed@example.com",
-        "phone_label": "Phone Number",
-        "phone_placeholder": "01012345678",
-        "grade_label": "Grade Level",
-        "grade_placeholder": "Select grade level",
-        "enrollment_date_label": "Enrollment Date",
-        "gpa_label": "Grade Point Average (GPA)",
-        "gpa_placeholder": "e.g. 3.85",
-        "status_label": "Active Account"
-      },
-      "delete_confirm": {
-        "title": "Confirm Delete Student",
-        "message": "Are you sure you want to permanently delete this student? This action cannot be undone."
-      },
-      "toast": {
-        "create_success": "Student added successfully",
-        "update_success": "Student details updated successfully",
-        "delete_success": "Student deleted successfully"
-      },
-      "details": {
-        "title": "Student Profile",
-        "academic_info": "Academic Information",
-        "enrolled_courses": "Enrolled Courses"
-      }
     }
   },
   "VALIDATION": {

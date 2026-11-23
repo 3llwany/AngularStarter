@@ -4,7 +4,7 @@
 @import 'tailwindcss-primeui';
 @import 'primeicons/primeicons.css';
 @import './styles/fonts.css';
-@import './styles/roles.css';
+@import './styles/palette.css';
 @import './styles/theme.css';
 @import './styles/ui-library.css';
 

@@ -8,22 +8,20 @@ import {
   DEFAULT_LANG,
   SUPPORTED_LANGS,
   LocaleService,
-  MozMissingTranslationHandler,
+  AppMissingTranslationHandler,
   SSRTranslateLoader,
 } from '@core/i18n';
-import { ThemeService } from '@core/theme';
 
-export function provideMozI18n(): (Provider | EnvironmentProviders)[] {
+export function provideAppI18n(): (Provider | EnvironmentProviders)[] {
   return [
     ...provideTranslateService({
       lang: DEFAULT_LANG,
       fallbackLang: DEFAULT_LANG,
       langs: [...SUPPORTED_LANGS],
       loader: provideTranslateLoader(SSRTranslateLoader),
-      missingTranslationHandler: provideMissingTranslationHandler(MozMissingTranslationHandler),
+      missingTranslationHandler: provideMissingTranslationHandler(AppMissingTranslationHandler),
     }),
     provideAppInitializer(async () => {
-      inject(ThemeService);
       const locale = inject(LocaleService);
       await locale.init();
     }),

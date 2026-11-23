@@ -3,26 +3,8 @@ import { createAppError } from '@core/errors';
 import { AuthApi } from './auth-api';
 import { AuthUser, LoginRequest } from './auth.models';
 
-/** Every demo account uses this password. */
+/** Demo password accepted by the in-memory authentication provider. */
 export const DEMO_PASSWORD = 'Password123!';
-
-const DEMO_USERS: readonly AuthUser[] = [
-  {
-    id: 'usr-student-1',
-    role: 'student',
-    displayName: 'Sara Student',
-    identifier: 'student@mozakrety.test',
-  },
-  { id: 'usr-parent-1', role: 'parent', displayName: 'Hassan Parent', identifier: '01012345678' },
-  { id: 'usr-teacher-1', role: 'teacher', displayName: 'Nour Teacher', identifier: 'TCH-1001' },
-  { id: 'usr-school-1', role: 'school', displayName: 'Al-Nile School', identifier: 'SCH-2026' },
-  {
-    id: 'usr-partner-1',
-    role: 'partner',
-    displayName: 'EduMall Partner',
-    identifier: 'partner@mozakrety.test',
-  },
-];
 
 /**
  * Fake backend kept in memory, used until the real API is ready.
@@ -48,11 +30,8 @@ export class MockAuthApi extends AuthApi {
       });
     }
 
-    this.currentUser = DEMO_USERS.find(
-      (user) => user.role === request.role && user.identifier === request.identifier,
-    ) ?? {
-      id: `usr-${request.role}-demo`,
-      role: request.role,
+    this.currentUser = {
+      id: `demo-${request.identifier.toLowerCase()}`,
       displayName: request.identifier,
       identifier: request.identifier,
     };

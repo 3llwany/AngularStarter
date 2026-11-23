@@ -1,24 +1,24 @@
-# قرار معماري ADR-0002: تغليف مكتبة PrimeNG خلف مكونات نظام التصميم الموحّد
+# ADR-0002: Keep PrimeNG behind shared UI components
 
-- **الحالة**: مقبول (Accepted)
-- **التاريخ**: 2026-11-11
+- **Status:** Accepted
+- **Date:** 2026-11-11
 
 ## السياق
 
-يعتمد مذاكرتي على مكتبة **PrimeNG v22** (مع سمة `@primeuix/themes` Aura و `tailwindcss-primeui`) لتوفير مكونات واجهة يسهل الوصول إليها (إدارة التركيز، النوافذ المنبثقة، لوحة المفاتيح، وسمات ARIA). لكن السماح للمطورين باستيراد `primeng/*` مباشرة داخل صفحات الميزات يعرّض المشروع لثلاثة مخاطر:
+The app uses **PrimeNG v22** with `@primeuix/themes` Aura and `tailwindcss-primeui`. Direct imports inside every feature would duplicate accessibility, styling, and upgrade work:
 
-1. **الارتباط الوثيق بتغييرات الطرف الثالث**: تحديثات PrimeNG الكبرى تغيّر أسماء الخصائص والتوجيهات أحياناً عبر عشرات المكونات.
-2. **تشتّت الهوية البصرية وتجربة المستخدم**: قد يضبط كل مطور أنماطاً أو أحجاماً أو كلاسات اتجاه فيزيائية مختلفة لنفس العنصر.
-3. **انحراف إتاحة الوصول والـ RTL**: ستتكرر تفاصيل مثل عكس الأيقونات في العربية (`rtl:scale-x-[-1]`) وربط مفاتيح الترجمة وربط رسائل الخطأ (`aria-invalid`, `aria-describedby`) داخل كل ميزة.
+1. Third-party API changes would affect many feature files.
+2. Each feature could implement different visual behavior for the same control.
+3. Accessibility, localization, and RTL details would be repeated across features.
 
 ## القرار
 
-1. تغليف جميع مكونات وتوجيهات PrimeNG داخل `src/app/shared/ui/` خلف مكونات عامة مستقلة وموحدة (`AppButton`, `AppInput`, `AppSelect`, `AppCard`, `AppDialog`, `AppToast`, `AppConfirmDialog`, وغيرها).
-2. يقدّم كل مغلّف واجهة برمجية مبنية على الـ Signals (`input()`, `output()`, `model()`) وتقبل مفاتيح الترجمة (`ngx-translate`) بدلاً من النصوص الثابتة قدر الإمكان.
-3. عدم تسريب أنواع PrimeNG إلى خارج مجلد `src/app/shared/ui/`.
-4. تفعيل قاعدة ESLint `no-restricted-imports` لمنع استيراد `primeng/*` أو `@primeuix/*` نهائياً خارج `src/app/shared/ui/**` (باستثناء الإعداد العام للسمات في `src/app/core/theme/**` و `src/app/core/config/**`).
+1. Keep shared PrimeNG components and directives in `src/app/shared/ui/` behind reusable wrappers.
+2. Use signal-based inputs and outputs and translation keys where they fit the component.
+3. Keep PrimeNG component types behind the shared UI boundary.
+4. Enforce import restrictions with ESLint, allowing the application theme preset and app configuration.
 
 ## النتائج والتبعات
 
-- **إيجابيات**: ترقية PrimeNG وإصلاحات الـ RTL وتحديثات التصميم تتم في مكان واحد (`src/app/shared/ui/`) مع بقاء قوالب الميزات نظيفة ومتناسقة.
-- **سلبيات**: عند الحاجة لمكوّن PrimeNG جديد لم يسبق تغليفه، يجب إضافته أولاً في `src/app/shared/ui/` (وتسجيله في `docs/ui-library-contributions.md`) قبل استخدامه في أي ميزة.
+- **Benefits:** PrimeNG upgrades and accessibility fixes stay localized while feature templates remain consistent.
+- **Trade-off:** A new PrimeNG control is added to `shared/ui` and documented before features use it.

@@ -2,5 +2,4 @@
 export * from './auth-api';
 export * from './auth.models';
 export * from './auth.service';
-export * from './login-methods';
 export * from './mock-auth-api';

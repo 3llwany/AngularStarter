@@ -6,9 +6,9 @@ Declarative image fallback directive for `<img>` elements. Automatically catches
 
 ```html
 <img
-  [src]="student.avatarUrl"
+  [src]="profile.avatarUrl"
   appImgFallback="assets/images/default-avatar.svg"
-  alt="Student avatar"
+  alt="Profile avatar"
 />
 ```
 

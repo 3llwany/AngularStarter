@@ -102,7 +102,7 @@ if (!process.argv.includes('--allow-unused')) {
 }
 
 if (errors.length > 0) {
-  console.error('Mozakrety i18n key check failed:');
+  console.error('Starter i18n key check failed:');
   for (const err of errors) {
     console.error(`  - ${err}`);
   }
@@ -110,5 +110,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `Mozakrety i18n check passed: ${String(arMap.size)} keys verified across ar.json and en.json (${String(usedKeys.size)} referenced in src/).`,
+  `Starter i18n check passed: ${String(arMap.size)} keys verified across ar.json and en.json (${String(usedKeys.size)} referenced in src/).`,
 );

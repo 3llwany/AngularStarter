@@ -15,8 +15,8 @@ describe('AppSelect', () => {
 
     fixture = TestBed.createComponent(AppSelect<{ label: string; value: string }>);
     fixture.componentRef.setInput('options', [
-      { label: 'mock.students.grades.first_sec', value: 'first_sec' },
-      { label: 'mock.students.grades.second_sec', value: 'second_sec' },
+      { label: 'Option A', value: 'option_a' },
+      { label: 'Option B', value: 'option_b' },
     ]);
     fixture.componentRef.setInput('optionLabel', 'label');
     fixture.componentRef.setInput('optionValue', 'value');

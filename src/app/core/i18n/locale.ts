@@ -6,7 +6,7 @@ export type Direction = 'rtl' | 'ltr';
 
 export const DEFAULT_LANG: SupportedLang = 'ar';
 
-export const LANG_COOKIE_NAME = 'moz_lang';
+export const LANG_COOKIE_NAME = 'app_lang';
 
 export function isSupportedLang(value: unknown): value is SupportedLang {
   return typeof value === 'string' && (SUPPORTED_LANGS as readonly string[]).includes(value);

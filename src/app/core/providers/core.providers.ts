@@ -12,11 +12,11 @@ import {
   withHttpTransferCacheOptions,
 } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
-import { provideMozErrors, TOAST_HANDLER, ToastHandler } from '@core/errors';
-import { AuthOptions, provideMozAuth } from './auth.providers';
-import { provideMozHttp } from './http.providers';
-import { provideMozI18n } from './i18n.providers';
-import { provideMozPrimeNG } from './primeng.providers';
+import { provideAppErrors, TOAST_HANDLER, ToastHandler } from '@core/errors';
+import { AuthOptions, provideAppAuth } from './auth.providers';
+import { provideAppHttp } from './http.providers';
+import { provideAppI18n } from './i18n.providers';
+import { provideAppPrimeNG } from './primeng.providers';
 
 /**
  * SSR HTTP Transfer Cache Policy:
@@ -66,11 +66,11 @@ export function provideCore(
 ): (Provider | EnvironmentProviders)[] {
   return [
     ...provideCoreFramework(appRoutes),
-    ...provideMozHttp(extraInterceptors),
-    ...provideMozPrimeNG(),
-    ...provideMozI18n(),
+    ...provideAppHttp(extraInterceptors),
+    ...provideAppPrimeNG(),
+    ...provideAppI18n(),
     ...(toastHandler ? [{ provide: TOAST_HANDLER, useExisting: toastHandler }] : []),
-    ...provideMozErrors(),
-    ...provideMozAuth(auth),
+    ...provideAppErrors(),
+    ...provideAppAuth(auth),
   ];
 }

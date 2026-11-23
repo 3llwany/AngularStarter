@@ -45,6 +45,6 @@ export class GlobalErrorHandler implements ErrorHandler {
 /**
  * Registers global unexpected exception handling across client and SSR runtimes.
  */
-export function provideMozErrors(): Provider[] {
+export function provideAppErrors(): Provider[] {
   return [{ provide: ErrorHandler, useExisting: GlobalErrorHandler }];
 }

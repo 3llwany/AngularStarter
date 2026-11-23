@@ -13,10 +13,7 @@ import { type Field, FormField, type ValidationError } from '@angular/forms/sign
 import { TranslatePipe } from '@ngx-translate/core';
 import { FloatLabel } from 'primeng/floatlabel';
 import { Textarea } from 'primeng/textarea';
-import { AppFieldError } from '../foundation/field-error';
-import { APP_VARIANT } from '../foundation/input-config';
-import { createUniqueId, getDirection } from '../foundation/utils';
-import { ValidationMessageService } from '../foundation/validation-message.service';
+import { APP_VARIANT, AppFieldError, createUniqueId, getDirection, ValidationMessageService } from '../foundation';
 
 /**
  * Reusable textarea component supporting Angular 22 Signal Forms and ControlValueAccessor.

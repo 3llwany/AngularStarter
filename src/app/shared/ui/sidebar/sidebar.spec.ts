@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { UiNavItem } from '../foundation/ui-nav-item';
+import { UiNavItem } from '../foundation';
 import { AppSidebar } from './sidebar';
 
 const MOCK_ITEMS: readonly UiNavItem[] = [
-  { id: 'overview', label: 'Overview', route: '/teacher', icon: 'pi pi-home' },
-  { id: 'lessons', label: 'Lessons', route: '/teacher/lessons', icon: 'pi pi-book' },
+  { id: 'overview', label: 'Overview', route: '/overview', icon: 'pi pi-home' },
+  { id: 'settings', label: 'Settings', route: '/settings', icon: 'pi pi-cog' },
 ];
 
 describe('AppSidebar', () => {
@@ -27,7 +27,7 @@ describe('AppSidebar', () => {
   it('renders desktop PanelMenu items when expanded', () => {
     const text = (fixture.nativeElement as HTMLElement).textContent ?? '';
     expect(text).toContain('Overview');
-    expect(text).toContain('Lessons');
+    expect(text).toContain('Settings');
   });
 
   it('switches to compact icon rail when collapsed is true', () => {

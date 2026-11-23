@@ -12,9 +12,7 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 import { type Field, FormField, type ValidationError } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Checkbox, type CheckboxChangeEvent } from 'primeng/checkbox';
-import { AppFieldError } from '../foundation/field-error';
-import { createUniqueId } from '../foundation/utils';
-import { ValidationMessageService } from '../foundation/validation-message.service';
+import { AppFieldError, createUniqueId, ValidationMessageService } from '../foundation';
 
 /**
  * Reusable checkbox component supporting Angular 22 Signal Forms and ControlValueAccessor.

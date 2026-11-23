@@ -1,5 +1,5 @@
 {
-  "name": "mozakrety",
+  "name": "angular-starter",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false",
-    "serve:ssr:mozakrety": "node dist/mozakrety/server/server.mjs",
+    "serve:ssr": "node dist/angular-starter/server/server.mjs",
     "i18n:check": "node tools/i18n-check.mjs",
     "theme:a11y": "node tools/check-theme-a11y.mjs",
     "lint": "ng lint && npm run i18n:check && node tools/lint-design-tokens.mjs && npm run theme:a11y",

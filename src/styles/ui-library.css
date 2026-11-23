@@ -190,7 +190,7 @@
 }
 
 .p-datatable .p-sortable-column:focus {
-  outline: 2px solid var(--moz-primary-600) !important;
+  outline: 2px solid var(--app-primary-600) !important;
   outline-offset: -2px !important;
 }
 
@@ -201,7 +201,7 @@
 }
 
 .p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
-  color: var(--moz-primary-600) !important;
+  color: var(--app-primary-600) !important;
 }
 
 /* Paginator Styling */
@@ -240,8 +240,8 @@
 }
 
 .p-paginator .p-paginator-page.p-paginator-page-selected {
-  background-color: var(--moz-primary-600) !important;
-  color: var(--moz-on-primary, #ffffff) !important;
+  background-color: var(--app-primary-600) !important;
+  color: var(--app-on-primary, #ffffff) !important;
   font-weight: 700 !important;
 }
 
@@ -314,13 +314,13 @@
 }
 
 .p-radiobutton:not(.p-disabled):hover .p-radiobutton-box {
-  border-color: var(--moz-primary-500, #2a6eee) !important;
+  border-color: var(--app-primary-500, #2a6eee) !important;
 }
 
 .p-radiobutton.p-radiobutton-checked .p-radiobutton-box,
 .p-radiobutton[data-p-checked='true'] .p-radiobutton-box {
-  border-color: var(--moz-primary-600, #2a6eee) !important;
-  background-color: var(--moz-primary-600, #2a6eee) !important;
+  border-color: var(--app-primary-600, #2a6eee) !important;
+  background-color: var(--app-primary-600, #2a6eee) !important;
 }
 
 .p-radiobutton-box .p-radiobutton-icon {
@@ -376,13 +376,13 @@
 }
 
 .p-checkbox:not(.p-disabled):hover .p-checkbox-box {
-  border-color: var(--moz-primary-500, #2a6eee) !important;
+  border-color: var(--app-primary-500, #2a6eee) !important;
 }
 
 .p-checkbox.p-checkbox-checked .p-checkbox-box,
 .p-checkbox[data-p-checked='true'] .p-checkbox-box {
-  border-color: var(--moz-primary-600, #2a6eee) !important;
-  background-color: var(--moz-primary-600, #2a6eee) !important;
+  border-color: var(--app-primary-600, #2a6eee) !important;
+  background-color: var(--app-primary-600, #2a6eee) !important;
 }
 
 .p-checkbox-box .p-checkbox-icon {
@@ -413,13 +413,13 @@
 
 .p-togglebutton:hover {
   background-color: #f8fafc !important;
-  border-color: var(--moz-primary-400, #6e9bf2) !important;
+  border-color: var(--app-primary-400, #6e9bf2) !important;
 }
 
 .p-togglebutton.p-togglebutton-checked,
 .p-togglebutton[data-p-checked='true'] {
-  background-color: var(--moz-primary-600, #2a6eee) !important;
-  border-color: var(--moz-primary-600, #2a6eee) !important;
+  background-color: var(--app-primary-600, #2a6eee) !important;
+  border-color: var(--app-primary-600, #2a6eee) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   box-shadow: 0 2px 8px -2px rgba(42, 110, 238, 0.4) !important;
@@ -622,13 +622,13 @@
 }
 
 .p-radiobutton:not(.p-disabled):hover .p-radiobutton-box {
-  border-color: var(--moz-primary-500, #2a6eee) !important;
+  border-color: var(--app-primary-500, #2a6eee) !important;
 }
 
 .p-radiobutton.p-radiobutton-checked .p-radiobutton-box,
 .p-radiobutton[data-p-checked="true"] .p-radiobutton-box {
-  border-color: var(--moz-primary-600, #2a6eee) !important;
-  background-color: var(--moz-primary-600, #2a6eee) !important;
+  border-color: var(--app-primary-600, #2a6eee) !important;
+  background-color: var(--app-primary-600, #2a6eee) !important;
 }
 
 .p-radiobutton-box .p-radiobutton-icon {
@@ -684,13 +684,13 @@
 }
 
 .p-checkbox:not(.p-disabled):hover .p-checkbox-box {
-  border-color: var(--moz-primary-500, #2a6eee) !important;
+  border-color: var(--app-primary-500, #2a6eee) !important;
 }
 
 .p-checkbox.p-checkbox-checked .p-checkbox-box,
 .p-checkbox[data-p-checked="true"] .p-checkbox-box {
-  border-color: var(--moz-primary-600, #2a6eee) !important;
-  background-color: var(--moz-primary-600, #2a6eee) !important;
+  border-color: var(--app-primary-600, #2a6eee) !important;
+  background-color: var(--app-primary-600, #2a6eee) !important;
 }
 
 .p-checkbox-box .p-checkbox-icon {
@@ -721,13 +721,13 @@
 
 .p-togglebutton:hover {
   background-color: #f8fafc !important;
-  border-color: var(--moz-primary-400, #6e9bf2) !important;
+  border-color: var(--app-primary-400, #6e9bf2) !important;
 }
 
 .p-togglebutton.p-togglebutton-checked,
 .p-togglebutton[data-p-checked="true"] {
-  background-color: var(--moz-primary-600, #2a6eee) !important;
-  border-color: var(--moz-primary-600, #2a6eee) !important;
+  background-color: var(--app-primary-600, #2a6eee) !important;
+  border-color: var(--app-primary-600, #2a6eee) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   box-shadow: 0 2px 8px -2px rgba(42, 110, 238, 0.4) !important;

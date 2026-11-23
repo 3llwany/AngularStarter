@@ -1,7 +1,7 @@
 import { Component, computed, input, output, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Drawer } from 'primeng/drawer';
-import { mapUiNavToMenuItems, UiNavItem } from '../foundation/ui-nav-item';
+import { mapUiNavToMenuItems, UiNavItem } from '../foundation';
 
 /**
  * Reusable responsive top navigation bar / application header.

@@ -1,27 +1,27 @@
 @theme inline {
-  --font-sans: var(--moz-font-sans);
-  --font-heading: var(--moz-font-heading);
+  --font-sans: var(--app-font-sans);
+  --font-heading: var(--app-font-heading);
   --font-alexandria: 'Alexandria', system-ui, sans-serif;
   --font-stack-headline: 'Stack Sans Headline', system-ui, sans-serif;
   --font-stack-text: 'Stack Sans Text', system-ui, sans-serif;
 
   /* Primary color tokens mapped from runtime CSS variables */
-  --color-primary-50: var(--moz-primary-50);
-  --color-primary-100: var(--moz-primary-100);
-  --color-primary-200: var(--moz-primary-200);
-  --color-primary-300: var(--moz-primary-300);
-  --color-primary-400: var(--moz-primary-400);
-  --color-primary-500: var(--moz-primary-500);
-  --color-primary-600: var(--moz-primary-600);
-  --color-primary-700: var(--moz-primary-700);
-  --color-primary-800: var(--moz-primary-800);
-  --color-primary-900: var(--moz-primary-900);
-  --color-primary-950: var(--moz-primary-950);
+  --color-primary-50: var(--app-primary-50);
+  --color-primary-100: var(--app-primary-100);
+  --color-primary-200: var(--app-primary-200);
+  --color-primary-300: var(--app-primary-300);
+  --color-primary-400: var(--app-primary-400);
+  --color-primary-500: var(--app-primary-500);
+  --color-primary-600: var(--app-primary-600);
+  --color-primary-700: var(--app-primary-700);
+  --color-primary-800: var(--app-primary-800);
+  --color-primary-900: var(--app-primary-900);
+  --color-primary-950: var(--app-primary-950);
 
   /* Primary Tinted Tokens */
-  --color-primary-tint: var(--moz-primary-tint);
-  --color-primary-tint-hover: var(--moz-primary-tint-hover);
-  --color-primary-tint-active: var(--moz-primary-tint-active);
+  --color-primary-tint: var(--app-primary-tint);
+  --color-primary-tint-hover: var(--app-primary-tint-hover);
+  --color-primary-tint-active: var(--app-primary-tint-active);
 
   /* Neutrals & Inks from Figma */
   --color-ink: #12233a;
@@ -44,17 +44,17 @@
   --color-semantic-error-border: #ef5a4a;
 
   /* Contrast & gradient tokens */
-  --color-on-primary: var(--moz-on-primary);
-  --color-on-primary-500: var(--moz-on-primary-500);
+  --color-on-primary: var(--app-on-primary);
+  --color-on-primary-500: var(--app-on-primary-500);
   --color-primary-contrast: var(--primary-contrast);
   --background-image-primary-gradient: var(--primary-gradient);
 
   /* Elevation Shadows from Figma */
   --shadow-card-subtle: 0 8px 24px 0 rgba(18, 35, 58, 0.08);
   --shadow-card-elevated: 0 8px 24px -4px rgba(18, 35, 58, 0.20);
-  --shadow-glow-md: var(--moz-primary-glow-md);
-  --shadow-glow-lg: var(--moz-primary-glow-lg);
-  --shadow-glow-xl: var(--moz-primary-glow-xl);
+  --shadow-glow-md: var(--app-primary-glow-md);
+  --shadow-glow-lg: var(--app-primary-glow-lg);
+  --shadow-glow-xl: var(--app-primary-glow-xl);
 
   /* Radii tokens */
   --radius-xs: 0.25rem;
@@ -74,8 +74,8 @@
 }
 
 :root {
-  --moz-font-sans: 'Alexandria', system-ui, -apple-system, sans-serif;
-  --moz-font-heading: 'Alexandria', system-ui, -apple-system, sans-serif;
+  --app-font-sans: 'Alexandria', system-ui, -apple-system, sans-serif;
+  --app-font-heading: 'Alexandria', system-ui, -apple-system, sans-serif;
 
   /* Glass Surface Tokens */
   --glass-bg: rgba(255, 255, 255, 0.60);
@@ -93,13 +93,13 @@
 }
 
 html[lang='ar'] {
-  --moz-font-sans: 'Alexandria', system-ui, -apple-system, sans-serif;
-  --moz-font-heading: 'Alexandria', system-ui, -apple-system, sans-serif;
+  --app-font-sans: 'Alexandria', system-ui, -apple-system, sans-serif;
+  --app-font-heading: 'Alexandria', system-ui, -apple-system, sans-serif;
 }
 
 html[lang='en'] {
-  --moz-font-sans: 'Stack Sans Text', system-ui, -apple-system, sans-serif;
-  --moz-font-heading: 'Stack Sans Headline', system-ui, -apple-system, sans-serif;
+  --app-font-sans: 'Stack Sans Text', system-ui, -apple-system, sans-serif;
+  --app-font-heading: 'Stack Sans Headline', system-ui, -apple-system, sans-serif;
 }
 
 @layer tailwind-base {

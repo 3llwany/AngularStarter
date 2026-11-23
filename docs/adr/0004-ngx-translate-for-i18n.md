@@ -1,27 +1,22 @@
-# قرار معماري ADR-0004: اعتماد مكتبة ngx-translate للترجمة ودعم الاتجاهين (i18n)
+# ADR-0004: ngx-translate for localization and direction support
 
-- **الحالة**: مقبول (Accepted)
-- **التاريخ**: 2026-11-11
-- **السياق**: تطبيق مذاكرتي ثنائي اللغة من اليوم الأول (العربية افتراضياً بـ RTL، والإنجليزية بـ LTR) مع دعم كامل للـ SSR وسيتوسع لاحقاً إلى ميزات كثيرة. تقرر استخدام `@ngx-translate/core` و `@ngx-translate/http-loader` (`^18.1.0`) كما ينص عليه المبدأ التاسع من دستور المشروع.
+- **Status:** Accepted
+- **Date:** 2026-11-11
 
-## القرار
+## Context
 
-اعتماد `ngx-translate` بملفي ترجمة أساسيين في المرحلة الأولى والثانية (`public/i18n/ar.json` و `public/i18n/en.json`):
+The starter supports Arabic by default with RTL and English with LTR, including during SSR. Translation keys must remain consistent as consuming applications add features.
 
-- **الإعداد والـ SSR**: تُحمَّل الترجمات قبل أول عملية رسم عبر `provideAppInitializer`، وفي بيئة الـ SSR يقرأ `SSRTranslateLoader` ملف JSON مباشرة من الخادم ويحفظه في `TransferState` ليصل إلى المتصفح مترجماً بالكامل دون إعادة طلب الملف عبر الشبكة.
-- **تسمية المفاتيح**: كائنات متداخلة بصيغة `lower_snake_case` مفصولة بنقاط ومبدوءة باسم الميزة أو `common.` أو `auth.` أو `errors.` (`common.actions.save`, `errors.http.network`).
-- **الاستخدام**: استخدام `translate` pipe في القوالب، و `toSignal(translate.stream(...))` في ملفات TypeScript؛ ويُمنع استخدام `translate.instant()` عبر قاعدة ESLint مخصصة (`mozakrety/no-translate-instant`).
-- **`LocaleService`**: يدير اللغة الحالية والاتجاه (`<html lang dir>`) ويحفظ الاختيار في الكوكي `moz_lang` المتوافق مع SSR.
+## Decision
 
-## التنازلات والحلول البديلة (Trade-offs & Mitigations)
+- Use `@ngx-translate/core` with `public/i18n/ar.json` and `public/i18n/en.json`.
+- Load translations during application initialization and use the SSR loader with `TransferState`.
+- Organize keys as nested, feature-prefixed `lower_snake_case` paths.
+- Use the translate pipe in templates and `toSignal(translate.stream(...))` in TypeScript.
+- Keep `LocaleService` responsible for language, `lang`/`dir` attributes, and an SSR-compatible language cookie.
+- Check key parity and usage with `npm run i18n:check`.
 
-| التحدي في `ngx-translate` | المعالجة المعتمدة |
-|---|---|
-| عدم وجود نظام نطاقات كسول (Scopes) مدمج افتراضياً | البدء بملف واحد لكل لغة، وعند تضخم الميزات مستقبلاً تُدمج ملفات كل ميزة عبر `setTranslation(lang, json, true)`. |
-| صيغ الجمع العربية المعقدة (6 حالات في ICU) | تجنّب الجمل المعتمدة على الأعداد في المرحلة التأسيسية، ومراجعة خيار `Intl.PluralRules` أو مترجم MessageFormat عند الحاجة الفعلية. |
-| عدم وجود Type-Safety تلقائي للمفاتيح | تعويضه بالالتزام بالمفاتيح الحرفية وفحص `npm run i18n:check` في كل `lint` مع معالج مفاتيح مفقودة صارم في التطوير والاختبارات. |
-| الصفحات الثابتة (Prerendered) لا ترى كوكي الزائر | الصفحات الحساسة للغة الكوكي تعمل بنمط `RenderMode.Server` (SSR) أو تُضمّن رمز اللغة في المسار مستقبلاً. |
+## Consequences
 
-## النتائج والتبعات
-
-مكتبة مألوفة وخفيفة ومستقرة مع قواعد تنظيم وأدوات تحقق محلية تضمن عدم تسرب أي نص غير مترجم أو مفتاح ناقص.
+- Public pages can render in the selected language on the server.
+- When the translation set grows, feature files can be introduced while retaining the same key ownership rules.

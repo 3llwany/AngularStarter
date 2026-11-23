@@ -17,7 +17,7 @@ describe('apiBaseUrlInterceptor', () => {
         {
           provide: AppConfigService,
           useValue: {
-            apiBaseUrl: () => 'https://api.mozakrety.com',
+            apiBaseUrl: () => 'https://api.starter.com',
           },
         },
       ],
@@ -33,7 +33,7 @@ describe('apiBaseUrlInterceptor', () => {
   it('prepends apiBaseUrl to relative endpoints', () => {
     http.get('students/profile').subscribe();
 
-    const req = httpTesting.expectOne('https://api.mozakrety.com/students/profile');
+    const req = httpTesting.expectOne('https://api.starter.com/students/profile');
     expect(req.request.method).toBe('GET');
     req.flush({});
   });
@@ -41,7 +41,7 @@ describe('apiBaseUrlInterceptor', () => {
   it('normalizes leading slash in relative endpoints', () => {
     http.get('/teachers/classes').subscribe();
 
-    const req = httpTesting.expectOne('https://api.mozakrety.com/teachers/classes');
+    const req = httpTesting.expectOne('https://api.starter.com/teachers/classes');
     req.flush({});
   });
 

@@ -10,12 +10,12 @@ export const THROW_ON_MISSING_TRANSLATION = new InjectionToken<boolean>(
 );
 
 @Service()
-export class MozMissingTranslationHandler implements MissingTranslationHandler {
+export class AppMissingTranslationHandler implements MissingTranslationHandler {
   private readonly throwOnMissing = inject(THROW_ON_MISSING_TRANSLATION);
   private readonly loggedKeys = new Set<string>();
 
   handle(params: MissingTranslationHandlerParams): string {
-    const message = `[Mozakrety i18n] Missing translation for key: "${params.key}"`;
+    const message = `[Starter i18n] Missing translation for key: "${params.key}"`;
 
     if (this.throwOnMissing) {
       throw new Error(message);

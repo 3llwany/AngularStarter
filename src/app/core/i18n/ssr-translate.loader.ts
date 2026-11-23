@@ -11,7 +11,7 @@ export const SERVER_TRANSLATION_READER = new InjectionToken<ServerTranslationRea
 );
 
 export function translationStateKey(lang: SupportedLang): StateKey<TranslationObject> {
-  return makeStateKey<TranslationObject>(`moz.i18n.${lang}`);
+  return makeStateKey<TranslationObject>(`app.i18n.${lang}`);
 }
 
 @Service()

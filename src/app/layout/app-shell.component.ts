@@ -10,13 +10,13 @@ import { LocaleService } from '@core/i18n';
 import { LayoutService } from '@core/layout';
 import { NavItem, NavService } from '@core/navigation';
 import { APP_ROUTES } from '@core/routes';
-import { ThemeService } from '@core/theme';
 import { HAS_DEV_ROUTES } from '../dev/dev.routes';
-import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@shared/ui';
+import { AppConfirmDialog, AppNavbar, AppSidebar, UiNavItem } from '@shared/ui/shell';
+import { AppToast } from '@shared/ui/toast';
 
 /**
  * غلاف التطبيق الرئيسي (App Shell):
- * يربط بين خدمات النواة (`NavService`, `LayoutService`, `AuthService`, `LocaleService`, `ThemeService`)
+ * يربط بين خدمات النواة (`NavService`, `LayoutService`, `AuthService`, `LocaleService`)
  * ومكونات الواجهة (`AppNavbar`, `AppSidebar`, `AppToast`, `AppConfirmDialog`) مع احترام حدود Sheriff.
  */
 @Component({
@@ -34,7 +34,7 @@ import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@s
   template: `
     <div class="min-h-screen flex flex-col overflow-x-clip bg-surface-50 text-surface-900">
       <a
-        href="#moz-main-content"
+        href="#app-main-content"
         class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:inset-s-2 focus:z-50 focus:rounded-lg focus:bg-primary-600 focus:px-4 focus:py-2 focus:text-on-primary">
         {{ 'shell.layout.skip_to_content' | translate }}
       </a>
@@ -79,13 +79,6 @@ import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@s
               <i class="pi pi-sign-out text-xs" aria-hidden="true"></i>
               <span class="hidden sm:inline">{{ 'shell.actions.sign_out' | translate }}</span>
             </button>
-          } @else {
-            <a
-              [routerLink]="routes.auth.login.full"
-              class="inline-flex h-9 items-center gap-1.5 rounded-xl bg-primary-600 px-2.5 sm:px-3 text-xs font-semibold text-on-primary no-underline whitespace-nowrap transition-colors hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 shadow-2xs">
-              <i class="pi pi-sign-in text-xs" aria-hidden="true"></i>
-              <span>{{ 'shell.actions.sign_in' | translate }}</span>
-            </a>
           }
         </div>
       </app-navbar>
@@ -112,7 +105,7 @@ import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@s
                         {{ currentUser.displayName }}
                       </p>
                       <p class="truncate text-[11px] text-surface-500">
-                        {{ currentUser.role }}
+                        {{ currentUser.identifier }}
                       </p>
                     </div>
                   }
@@ -121,12 +114,12 @@ import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@s
                 <div sidebarHeader class="flex items-center gap-2.5">
                   <span
                     class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary-600 text-xs font-bold text-on-primary shadow-2xs">
-                    <i class="pi pi-user text-xs" aria-hidden="true"></i>
+                    <i class="pi pi-box text-xs" aria-hidden="true"></i>
                   </span>
                   @if (!layout.sidebarCollapsed()) {
                     <div class="min-w-0">
                       <p class="truncate text-xs font-bold text-surface-900">
-                        {{ 'common.roles.' + theme.role() | translate }}
+                        {{ 'common.app_name' | translate }}
                       </p>
                       <p class="truncate text-[11px] text-primary-600 font-medium">
                         {{ 'common.app_name' | translate }}
@@ -158,7 +151,7 @@ import { AppConfirmDialog, UiNavItem, AppNavbar, AppSidebar, AppToast } from '@s
           }
         }
 
-        <main id="moz-main-content" class="flex-1 min-w-0 p-4 md:p-6">
+        <main id="app-main-content" class="flex-1 min-w-0 p-4 md:p-6">
           <router-outlet />
         </main>
       </div>
@@ -173,7 +166,6 @@ export class AppShellComponent {
   protected readonly nav = inject(NavService);
   protected readonly layout = inject(LayoutService);
   protected readonly locale = inject(LocaleService);
-  protected readonly theme = inject(ThemeService);
   private readonly translate = inject(TranslateService);
   private readonly router = inject(Router);
   private readonly platformId = inject(PLATFORM_ID);
@@ -210,13 +202,6 @@ export class AppShellComponent {
   private readonly devGuestPreviewItems: readonly NavItem[] = HAS_DEV_ROUTES
     ? [
         {
-          id: 'mock-students',
-          labelKey: 'mock.students.nav_title',
-          route: '/mock/students',
-          icon: 'pi pi-users',
-          order: 0,
-        },
-        {
           id: 'overview',
           labelKey: 'dev.menu.overview',
           route: '/dev/foundation',
@@ -224,39 +209,18 @@ export class AppShellComponent {
           order: 1,
         },
         {
-          id: 'courses',
-          labelKey: 'dev.menu.courses',
+          id: 'components',
+          labelKey: 'dev.menu.components',
           route: '/dev/foundation',
-          icon: 'pi pi-book',
+          icon: 'pi pi-th-large',
           order: 2,
         },
         {
-          id: 'lessons',
-          labelKey: 'dev.menu.lessons',
+          id: 'settings',
+          labelKey: 'dev.menu.settings',
           route: '/dev/foundation',
-          icon: 'pi pi-video',
+          icon: 'pi pi-cog',
           order: 3,
-        },
-        {
-          id: 'exams',
-          labelKey: 'dev.menu.exams',
-          route: '/dev/foundation',
-          icon: 'pi pi-file-edit',
-          order: 4,
-        },
-        {
-          id: 'messages',
-          labelKey: 'dev.menu.messages',
-          route: '/dev/foundation',
-          icon: 'pi pi-envelope',
-          order: 6,
-        },
-        {
-          id: 'support',
-          labelKey: 'dev.menu.support',
-          route: '/dev/foundation',
-          icon: 'pi pi-life-ring',
-          order: 7,
         },
       ]
     : [];
@@ -303,6 +267,6 @@ export class AppShellComponent {
 
   protected async onSignOut(): Promise<void> {
     await this.auth.logout();
-    await this.router.navigate([APP_ROUTES.auth.login.full]);
+    await this.router.navigate([APP_ROUTES.root.full]);
   }
 }

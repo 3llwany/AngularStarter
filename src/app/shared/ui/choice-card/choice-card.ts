@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { type Field, FormField } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RadioButton } from 'primeng/radiobutton';
-import { createUniqueId } from '../foundation/utils';
+import { createUniqueId } from '../foundation';
 
 @Component({
   selector: 'app-choice-card',

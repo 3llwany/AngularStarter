@@ -2,7 +2,7 @@ import { Component, computed, input } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PIcon } from '@primeicons/angular/p-icon';
 import { ButtonDirective, ButtonVariant } from 'primeng/button';
-import { BaseButton } from '../foundation/base-button';
+import { BaseButton } from '../foundation';
 
 export type AppButtonVariant = 'primary' | 'glass' | 'tinted' | 'outlined' | 'text' | 'link';
 export type AppButtonSize = 'large' | 'medium' | 'small';

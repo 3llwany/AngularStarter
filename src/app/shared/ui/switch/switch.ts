@@ -11,8 +11,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Field, FormField, ValidationError } from '@angular/forms/signals';
-import { ValidationMessageService } from '../foundation/validation-message.service';
-import { createUniqueId } from '../foundation/utils';
+import { createUniqueId, ValidationMessageService } from '../foundation';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
 

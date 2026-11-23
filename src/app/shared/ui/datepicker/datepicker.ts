@@ -1,9 +1,7 @@
 import { Component, computed, inject, input, output, forwardRef, signal, model } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, FormsModule } from '@angular/forms';
 import { Field, FormField, ValidationError } from '@angular/forms/signals';
-import { ValidationMessageService } from '../foundation/validation-message.service';
-import { APP_VARIANT } from '../foundation/input-config';
-import { createUniqueId } from '../foundation/utils';
+import { APP_VARIANT, createUniqueId, ValidationMessageService } from '../foundation';
 import { FloatLabel } from 'primeng/floatlabel';
 import { DatePickerModule } from 'primeng/datepicker';
 import { TranslatePipe } from '@ngx-translate/core';

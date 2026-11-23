@@ -2,14 +2,14 @@ import { TestBed } from '@angular/core/testing';
 import { MissingTranslationHandlerParams, TranslateService } from '@ngx-translate/core';
 import { describe, expect, it, vi } from 'vitest';
 import {
-  MozMissingTranslationHandler,
+  AppMissingTranslationHandler,
   THROW_ON_MISSING_TRANSLATION,
 } from './missing-translation.handler';
 
-describe('MozMissingTranslationHandler', () => {
+describe('AppMissingTranslationHandler', () => {
   it('logs an error and returns a visible marker in dev mode when THROW_ON_MISSING_TRANSLATION is false', () => {
     TestBed.configureTestingModule({});
-    const handler = TestBed.inject(MozMissingTranslationHandler);
+    const handler = TestBed.inject(AppMissingTranslationHandler);
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
 
     const result = handler.handle({
@@ -19,7 +19,7 @@ describe('MozMissingTranslationHandler', () => {
 
     expect(result).toBe('⚠ [common.non_existent_key]');
     expect(errorSpy).toHaveBeenCalledWith(
-      '[Mozakrety i18n] Missing translation for key: "common.non_existent_key"',
+      '[Starter i18n] Missing translation for key: "common.non_existent_key"',
     );
     errorSpy.mockRestore();
   });
@@ -28,13 +28,13 @@ describe('MozMissingTranslationHandler', () => {
     TestBed.configureTestingModule({
       providers: [{ provide: THROW_ON_MISSING_TRANSLATION, useValue: true }],
     });
-    const handler = TestBed.inject(MozMissingTranslationHandler);
+    const handler = TestBed.inject(AppMissingTranslationHandler);
 
     expect(() =>
       handler.handle({
         key: 'common.missing_strict',
         translateService: {} as TranslateService,
       }),
-    ).toThrowError('[Mozakrety i18n] Missing translation for key: "common.missing_strict"');
+    ).toThrowError('[Starter i18n] Missing translation for key: "common.missing_strict"');
   });
 });

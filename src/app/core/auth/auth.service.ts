@@ -1,16 +1,13 @@
 import { computed, inject, Service, signal } from '@angular/core';
-import { createAppError } from '@core/errors';
 import { CookieService } from '@core/platform';
-import { ThemeService } from '@core/theme';
 import { AuthApi } from './auth-api';
-import { AuthStatus, AuthUser, LoginForm, LoginRole } from './auth.models';
-import { buildLoginRequest, isValidIdentifier, LOGIN_METHODS } from './login-methods';
+import { AuthStatus, AuthUser, LoginForm } from './auth.models';
 
 /**
  * Harmless cookie (`1` or missing) that only says "this browser was signed in before".
  * It holds no token; the real session lives in the backend's HttpOnly cookie.
  */
-export const SESSION_HINT_COOKIE = 'moz_session_hint';
+export const SESSION_HINT_COOKIE = 'app_session_hint';
 
 /**
  * Knows who the current user is. State lives in signals inside this instance only
@@ -20,7 +17,6 @@ export const SESSION_HINT_COOKIE = 'moz_session_hint';
 export class AuthService {
   private readonly api = inject(AuthApi);
   private readonly cookies = inject(CookieService);
-  private readonly theme = inject(ThemeService, { optional: true });
 
   private readonly currentUser = signal<AuthUser | null>(null);
   private readonly currentStatus = signal<AuthStatus>('unknown');
@@ -28,18 +24,10 @@ export class AuthService {
 
   readonly user = this.currentUser.asReadonly();
   readonly status = this.currentStatus.asReadonly();
-  readonly role = computed(() => this.currentUser()?.role ?? null);
   readonly isAuthenticated = computed(() => this.currentStatus() === 'authenticated');
 
-  async login(role: LoginRole, form: LoginForm): Promise<AuthUser> {
-    if (!isValidIdentifier(role, form.identifier)) {
-      throw createAppError({
-        code: 'AUTH_INVALID_IDENTIFIER',
-        errorKey: LOGIN_METHODS[role].errorKey,
-      });
-    }
-
-    const user = await this.api.login(buildLoginRequest(role, form));
+  async login(form: LoginForm): Promise<AuthUser> {
+    const user = await this.api.login(form);
     this.signIn(user);
     return user;
   }
@@ -91,7 +79,6 @@ export class AuthService {
     this.currentUser.set(user);
     this.currentStatus.set('authenticated');
     this.cookies.set(SESSION_HINT_COOKIE, '1', { path: '/', sameSite: 'Lax' });
-    this.theme?.setRole(user.role);
   }
 
   private signOut(): void {

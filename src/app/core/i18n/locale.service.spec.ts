@@ -16,7 +16,7 @@ describe('LocaleService', () => {
     });
     doc = TestBed.inject(DOCUMENT);
     translateService = TestBed.inject(TranslateService);
-    doc.cookie = 'moz_lang=; Path=/; Max-Age=0';
+    doc.cookie = 'app_lang=; Path=/; Max-Age=0';
     doc.documentElement.removeAttribute('lang');
     doc.documentElement.removeAttribute('dir');
   });
@@ -32,7 +32,7 @@ describe('LocaleService', () => {
     expect(doc.documentElement.getAttribute('dir')).toBe('rtl');
   });
 
-  it('switches to "en" (ltr), calls TranslateService.use("en"), and persists moz_lang cookie', () => {
+  it('switches to "en" (ltr), calls TranslateService.use("en"), and persists app_lang cookie', () => {
     const useSpy = vi.spyOn(translateService, 'use').mockReturnValue(of({}));
     const service = TestBed.inject(LocaleService);
 
@@ -42,7 +42,7 @@ describe('LocaleService', () => {
     expect(service.currentDir()).toBe('ltr');
     expect(doc.documentElement.getAttribute('lang')).toBe('en');
     expect(doc.documentElement.getAttribute('dir')).toBe('ltr');
-    expect(doc.cookie).toContain('moz_lang=en');
+    expect(doc.cookie).toContain('app_lang=en');
     expect(useSpy).toHaveBeenCalledWith('en');
   });
 
@@ -56,7 +56,7 @@ describe('LocaleService', () => {
   });
 
   it('discards an invalid cookie and falls back to detected/default language', () => {
-    doc.cookie = 'moz_lang=invalid_lang; Path=/';
+    doc.cookie = 'app_lang=invalid_lang; Path=/';
     const cookieService = TestBed.inject(CookieService);
     vi.spyOn(cookieService, 'getBrowserLanguages').mockReturnValue(['de-DE']);
 

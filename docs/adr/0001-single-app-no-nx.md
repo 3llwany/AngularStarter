@@ -1,20 +1,19 @@
-# قرار معماري ADR-0001: تطبيق Angular موحّد بدون Nx وبحماية Sheriff
+# ADR-0001: Start as a single Angular application
 
-- **الحالة**: مقبول (Accepted)
-- **التاريخ**: 2026-11-11
-- **السياق**: يخدم تطبيق مذاكرتي ستة أدوار مستخدمين (`student`, `parent`, `teacher`, `school`, `partner`, `admin`) بالإضافة إلى صفحات الاكتشاف العامة للـ SEO ومسارات المصادقة، وكلها متصلة بواجهة برمجية واحدة وتُنشَر كواجهة ويب هجينة واحدة تدعم SSR. نحتاج إلى حدود معمارية صارمة تمنع تشابك الميزات (Cross-feature coupling) مع نمو المشروع، دون تعقيد أدوات البناء الخاصة بأنظمة الـ Monorepo متعددة المشاريع مثل Nx.
+- **Status:** Accepted
+- **Date:** 2026-11-11
 
-## القرار
+## Context
 
-1. الإبقاء على مذاكرتي كـ **تطبيق Angular CLI موحّد** (`@angular/build:application`) بالطبقات العليا: `src/app/core` و `src/app/shared` و `src/app/features/{public,auth,student,parent,teacher,school,partner,admin}`.
-2. فرض حدود الوحدات أثناء الفحص (`lint`) باستخدام **Sheriff** (`@softarc/sheriff-core` و `@softarc/eslint-plugin-sheriff`) في وضع `enableBarrelLess: true`، مع تغليف مكتبة الواجهة في `src/app/shared/ui/index.ts`.
-3. ضبط قواعد الاعتماديات (`depRules`) بحيث:
-   - يمنع على `core` الاستيراد من `shared` أو من أي ميزة داخل `features/*`.
-   - يمنع على `shared` الاستيراد من `core` أو من أي ميزة داخل `features/*`.
-   - يمنع على `features/public` استيراد أي كود من مساحات الأدوار أو `auth`.
-   - كل ميزة تستورد فقط من `core` و `shared` ومن داخل مجلدها الخاص (`sameTag`).
+The repository is a reusable web application starter. It needs clear module boundaries and lazy feature routes without the setup cost of a multi-project monorepo tool.
 
-## النتائج والتبعات
+## Decision
 
-- **إيجابيات**: سرعة بناء عالية عبر Angular CLI، إعدادات بسيطة، وفشل فوري ومؤتمت في `npm run lint` عند محاولة كسر أي حد معماري أو استيراد خاطئ بين الميزات.
-- **سلبيات**: عدم وجود كاش بناء جزئي على مستوى المكتبات (وهو أمر مقبول لتطبيق ويب واحد، حيث تتكفل المسارات الكسولة Lazy Routes بتصغير الحزمة الابتدائية).
+- Use one Angular CLI application with `core`, `shared`, `features`, and development-only showcase areas.
+- Use Sheriff and ESLint to enforce module boundaries and import conventions.
+- Lazy-load feature routes so future applications can add capabilities without loading every page in the initial bundle.
+
+## Consequences
+
+- Build and workspace configuration stay straightforward for a single app.
+- If the repository later grows multiple independently released apps or libraries, reassess the monorepo decision.

@@ -21,34 +21,6 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Client,
   },
   {
-    path: 'dashboard',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'student/**',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'parent/**',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'teacher/**',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'school/**',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'partner/**',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'admin/**',
-    renderMode: RenderMode.Client,
-  },
-  {
     path: 'not-found',
     renderMode: RenderMode.Server,
   },

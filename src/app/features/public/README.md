@@ -1,15 +1,5 @@
-# نطاق الميزة: `public` (الصفحات العامة)
+# Public feature
 
-صفحات الاكتشاف العامة وتحسين محركات البحث للزوار (المعلمون، الدورات، المحاضرات، المدارس، وشركاء المتجر). آمنة لـ SSR/Prerender، ويُمنع تماماً استيراد أي كود من مساحات الأدوار بداخلها.
+Owns pages that do not require an authenticated session, including the starter home and not-found page. Keep SEO and SSR behavior close to the page that owns it, using `SeoService` for metadata and response status.
 
-## البنية الداخلية
-
-- `pages/` — مكونات الصفحات الذكية المرتبطة بالمسارات (تتصل بواجهات ومتاجر `data-access/`).
-- `ui/` — مكونات العرض المحلية الخاصة بالميزة (`input()` / `output()` فقط).
-- `data-access/` — متجر `SignalStore`، ورموز المستودعات المجردة (Abstract DI tokens)، وتطبيقات HTTP، ومحوّلات DTOs.
-- `models/` — واجهات وأنواع نماذج النطاق الخاصة بالميزة.
-
-## قواعد الحدود المعمارية (Sheriff + ESLint)
-
-- **الاستيراد المسموح**: `src/app/core/**` و `src/app/shared/**` والملفات داخل `src/app/features/public/**`.
-- **الاستيراد الممنوع**: أي ميزة أخرى تحت `src/app/features/*` وأي استيراد مباشر من `primeng/*` أو `@primeuix/*`.
+Public pages may depend on `core`, `shared`, and their own feature files. They must not import other features.

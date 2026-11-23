@@ -1,7 +1,7 @@
 import { inject, Service } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MessageService } from 'primeng/api';
-import { translateText } from '../foundation/utils';
+import { translateText } from '../foundation';
 
 export type ToastSeverity = 'success' | 'info' | 'warn' | 'error' | 'secondary' | 'contrast';
 

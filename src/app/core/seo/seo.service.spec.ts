@@ -32,26 +32,26 @@ describe('SeoService', () => {
     seo.setPage({
       title: 'Algebra Basics',
       description: 'Learn Algebra step by step',
-      canonical: 'https://mozakrety.com/courses/algebra',
-      image: 'https://mozakrety.com/og/algebra.png',
+      canonical: 'https://starter.com/courses/algebra',
+      image: 'https://starter.com/og/algebra.png',
       type: 'article',
       alternates: [
-        { hreflang: 'ar', href: 'https://mozakrety.com/ar/courses/algebra' },
-        { hreflang: 'en', href: 'https://mozakrety.com/en/courses/algebra' },
-        { hreflang: 'x-default', href: 'https://mozakrety.com/courses/algebra' },
+        { hreflang: 'ar', href: 'https://starter.com/ar/courses/algebra' },
+        { hreflang: 'en', href: 'https://starter.com/en/courses/algebra' },
+        { hreflang: 'x-default', href: 'https://starter.com/courses/algebra' },
       ],
     });
 
-    expect(titleService.getTitle()).toBe('Algebra Basics | Mozakrety');
+    expect(titleService.getTitle()).toBe('Algebra Basics | Starter');
     expect(metaService.getTag('name="description"')?.content).toBe('Learn Algebra step by step');
-    expect(metaService.getTag('property="og:title"')?.content).toBe('Algebra Basics | Mozakrety');
+    expect(metaService.getTag('property="og:title"')?.content).toBe('Algebra Basics | Starter');
     expect(metaService.getTag('property="og:type"')?.content).toBe('article');
     expect(metaService.getTag('name="robots"')?.content).toBe('index, follow');
 
     const canonical = doc.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    expect(canonical?.href).toBe('https://mozakrety.com/courses/algebra');
+    expect(canonical?.href).toBe('https://starter.com/courses/algebra');
 
-    const hreflangs = doc.head.querySelectorAll('link[rel="alternate"][data-moz-seo="hreflang"]');
+    const hreflangs = doc.head.querySelectorAll('link[rel="alternate"][data-app-seo="hreflang"]');
     expect(hreflangs).toHaveLength(3);
   });
 
@@ -66,7 +66,7 @@ describe('SeoService', () => {
 
     expect(metaService.getTag('name="robots"')?.content).toBe('noindex, nofollow');
     expect(responseInit.status).toBe(404);
-    expect(doc.getElementById('moz-seo-jsonld')).toBeNull();
+    expect(doc.getElementById('app-seo-jsonld')).toBeNull();
   });
 
   it('creates valid JSON-LD script tags for schemas passed to setJsonLd', () => {
@@ -75,7 +75,7 @@ describe('SeoService', () => {
       { '@context': 'https://schema.org', '@type': 'BreadcrumbList' },
     ]);
 
-    const script = doc.getElementById('moz-seo-jsonld');
+    const script = doc.getElementById('app-seo-jsonld');
     expect(script).not.toBeNull();
     const parsed = JSON.parse(script?.textContent ?? '[]') as Record<string, unknown>[];
     expect(parsed).toHaveLength(2);

@@ -1,16 +1,9 @@
 User-agent: *
 Allow: /
 
-# Private, authenticated role areas, and internal routes are disallowed from search indexing
+# Internal routes are disallowed from search indexing
 Disallow: /auth/
-Disallow: /student/
-Disallow: /parent/
-Disallow: /teacher/
-Disallow: /school/
-Disallow: /partner/
-Disallow: /admin/
-Disallow: /dashboard
 Disallow: /dev/
 
 # TODO(seo-phase-3): Point to dynamic sitemap once public catalog routes are implemented
-# Sitemap: https://mozakrety.com/sitemap.xml
+# Sitemap: https://starter.com/sitemap.xml

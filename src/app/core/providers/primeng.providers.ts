@@ -1,13 +1,13 @@
 import { EnvironmentProviders, Provider } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { providePrimeNG } from 'primeng/config';
-import { MozAuraPreset } from '@core/theme';
+import { AppAuraPreset } from '@core/theme';
 
-export function provideMozPrimeNG(): (Provider | EnvironmentProviders)[] {
+export function provideAppPrimeNG(): (Provider | EnvironmentProviders)[] {
   return [
     providePrimeNG({
       theme: {
-        preset: MozAuraPreset,
+        preset: AppAuraPreset,
         options: {
           darkModeSelector: false,
           cssLayer: {

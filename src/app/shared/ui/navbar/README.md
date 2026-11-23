@@ -12,7 +12,7 @@ Generic top navigation bar / application header wrapping PrimeNG `Menubar`.
   [menuAriaLabel]="toggleLabel()"
   (sidebarToggle)="onToggleSidebar()"
 >
-  <a brand routerLink="/">Mozakrety</a>
+  <a brand routerLink="/">Your App</a>
   <div actions>
     <!-- language / auth actions -->
   </div>

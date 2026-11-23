@@ -2,9 +2,7 @@ import { Component, computed, inject, input, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { type Field, FormField, type ValidationError } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
-import { AppFieldError } from '../foundation/field-error';
-import { createUniqueId } from '../foundation/utils';
-import { ValidationMessageService } from '../foundation/validation-message.service';
+import { AppFieldError, createUniqueId, ValidationMessageService } from '../foundation';
 
 export interface CountryDialCode {
   readonly code: string;

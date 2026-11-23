@@ -1,21 +1,12 @@
 {
   "common": {
-    "app_name": "مذاكرتي",
-    "tagline": "منصة التعلّم الاجتماعي المتمحورة حول الطالب",
+    "app_name": "قالب أنجولار",
+    "tagline": "بداية عامة لبناء تطبيقات ويب بـ Angular",
     "language": {
       "label": "اللغة",
       "ar": "العربية",
       "en": "English",
       "current_dir": "من اليمين إلى اليسار (RTL)"
-    },
-    "roles": {
-      "label": "اختر دور المستخدم لمعاينة السمة",
-      "student": "طالب (Student)",
-      "parent": "ولي أمر (Parent)",
-      "teacher": "معلم (Teacher)",
-      "school": "مدرسة (School)",
-      "partner": "شريك المتجر (Partner)",
-      "admin": "مدير النظام (Admin)"
     },
     "actions": {
       "search": "بحث...",
@@ -64,35 +55,15 @@
     }
   },
   "auth": {
-    "fields": {
-      "email": {
-        "label": "البريد الإلكتروني",
-        "placeholder": "student@example.com",
-        "error": "يرجى إدخال بريد إلكتروني صحيح."
-      },
-      "mobile_number": {
-        "label": "رقم الموبايل",
-        "placeholder": "01012345678",
-        "error": "يرجى إدخال رقم موبايل مصري صحيح مكون من 11 رقماً."
-      },
-      "teacher_id": {
-        "label": "كود المعلم",
-        "placeholder": "TCH-1042",
-        "error": "يرجى إدخال كود معلم صحيح (أحرف إنجليزية وأرقام فقط)."
-      },
-      "school_code": {
-        "label": "كود المدرسة",
-        "placeholder": "SCH-2026",
-        "error": "يرجى إدخال كود مدرسة صحيح."
-      },
-      "business_email": {
-        "label": "البريد الإلكتروني للعمل",
-        "placeholder": "partner@company.com",
-        "error": "يرجى إدخال بريد إلكتروني صحيح للعمل."
-      }
-    },
     "errors": {
       "invalid_credentials": "بيانات الدخول غير صحيحة. يرجى المحاولة مرة أخرى."
+    }
+  },
+  "starter": {
+    "home": {
+      "title": "قالب Angular جاهز للبدء",
+      "description": "تضم هذه البنية القابلة لإعادة الاستخدام التوجيه والعرض من الخادم والترجمة ومكونات الواجهة والخدمات الأساسية.",
+      "next_step": "أضف أول ميزة لك داخل src/app/features."
     }
   },
   "errors": {
@@ -119,21 +90,21 @@
   },
   "dev": {
     "foundation": {
-      "removable_banner": "صفحة تحقق مؤقتة للتطوير فقط (TEMPORARY — مستبعدة تلقائياً من بناء الإنتاج)",
-      "title": "التحقق من البنية الأساسية ونظام التصميم — المرحلة الأولى",
-      "subtitle": "معاينة حية لمكونات moz-* المغلِّفة لـ PrimeNG، وتبديل سمات الأدوار، ودعم العربية والإنجليزية.",
+      "removable_banner": "معرض أدوات التطوير فقط، ويُستبعد من بناء الإنتاج.",
+      "title": "معرض مكونات التطبيق والبنية الأساسية",
+      "subtitle": "استكشف مكونات الواجهة وخدمات Angular المشتركة قبل بدء ميزات مشروعك.",
       "theme_section": {
-        "title": "مبدّل سمات الأدوار (6 أدوار)",
-        "description": "يتغير اللون الأساسي فوراً عبر متغيرات CSS لكل من Tailwind و PrimeNG دون إعادة تحميل الصفحة.",
-        "active_role": "الدور النشط حالياً",
-        "contrast_badge": "تباين متوافق مع WCAG AA"
+        "title": "سمة التطبيق",
+        "description": "لوحة ألوان واحدة مشتركة للتطبيق ومكونات PrimeNG.",
+        "contrast_badge": "تباين متوافق مع WCAG AA",
+        "single_theme": "سمة ثابتة واحدة للتطبيق"
       },
       "i18n_section": {
         "title": "مبدّل اللغة والاتجاه (RTL / LTR)",
         "description": "يضبط خاصيتي lang و dir على عنصر html ويحفظ الاختيار في ملف تعريف الارتباط (Cookie) متوافق مع SSR."
       },
       "buttons_section": {
-        "title": "الأزرار (moz-button)",
+        "title": "الأزرار (app-button)",
         "primary": "زر أساسي",
         "secondary": "زر ثانوي",
         "outlined": "زر بإطار",
@@ -144,30 +115,30 @@
         "directional": "استمرار (أيقونة اتجاهية)"
       },
       "inputs_section": {
-        "title": "حقول الإدخال والقوائم (moz-input & moz-select)",
-        "name_label": "اسم الطالب",
-        "name_placeholder": "أدخل اسم الطالب...",
-        "name_helper": "حقل نصي قياسي مرتبط بإشارات Angular",
+        "title": "حقول الإدخال والقوائم (app-input و app-select)",
+        "name_label": "اسم تجريبي",
+        "name_placeholder": "أدخل قيمة...",
+        "name_helper": "حقل نصي مرتبط بإشارة Angular",
         "invalid_label": "حقل بحالة خطأ",
         "invalid_placeholder": "قيمة غير صالحة",
         "invalid_error": "يرجى إدخال قيمة صحيحة في هذا الحقل.",
         "disabled_label": "حقل معطّل",
         "disabled_placeholder": "غير متاح للتعديل",
-        "grade_label": "المرحلة الدراسية",
-        "grade_placeholder": "اختر المرحلة الدراسية",
-        "grade_options": {
-          "primary": "المرحلة الابتدائية",
-          "preparatory": "المرحلة الإعدادية",
-          "secondary": "المرحلة الثانوية"
+        "option_label": "خيار",
+        "option_placeholder": "اختر خياراً",
+        "options": {
+          "option_a": "الخيار الأول",
+          "option_b": "الخيار الثاني",
+          "option_c": "الخيار الثالث"
         }
       },
       "cards_dialog_section": {
-        "title": "البطاقات والنوافذ الحوارية (moz-card & moz-dialog)",
+        "title": "البطاقات والنوافذ الحوارية (app-card و app-dialog)",
         "card_title": "بطاقة نظام التصميم الموحّد",
         "card_subtitle": "تغليف كامل لمكونات الطرف الثالث داخل shared/ui",
-        "card_body": "لا تستورد ميزات التطبيق مكتبة PrimeNG مباشرة؛ بل تستخدم مكونات moz-* فقط لضمان الاتساق وسهولة الصيانة.",
-        "dialog_header": "نافذة حوارية تجريبية (moz-dialog)",
-        "dialog_body": "تتحقق هذه النافذة من إدارة التركيز، ودعم الاتجاه من اليمين إلى اليسار، وتطبيق سمة الدور النشط."
+        "card_body": "تستخدم الميزات مكونات الواجهة المشتركة للحفاظ على الاتساق.",
+        "dialog_header": "نافذة حوارية تجريبية",
+        "dialog_body": "مثال على إدارة التركيز واتجاهي RTL وLTR."
       },
       "utilities_section": {
         "title": "عرض الأدوات والخدمات المشتركة",
@@ -198,23 +169,24 @@
         "fallback_valid_label": "صورة برابط صالح"
       },
       "auth_section": {
-        "title": "تجربة دورة تسجيل الدخول والجلسة (AuthService & LOGIN_METHODS)",
-        "subtitle": "جرّب تغيير الدور لترى كيف يتغير حقل الإدخال والتحقق تلقائياً، ثم سجّل الدخول لمشاهدة تحديث الجلسة والثيم والأحداث مباشرة.",
-        "select_role_label": "١. اختر دور الدخول (يتغير الحقل حسب LOGIN_METHODS)",
+        "title": "تجربة المصادقة والجلسة",
+        "subtitle": "جرّب تسجيل الدخول والخروج وانتهاء الجلسة باستخدام موفر تجريبي داخل الذاكرة.",
         "fill_demo_btn": "ملء بيانات تجريبية صالحة",
         "password_label": "كلمة المرور (للتجربة: Password123!)",
         "password_placeholder": "أدخل كلمة المرور...",
         "login_btn": "تسجيل الدخول (login)",
         "logout_btn": "تسجيل الخروج (logout)",
         "expire_btn": "محاكاة انتهاء الجلسة 401",
-        "state_title": "حالة الجلسة الحية (AuthService Signals)",
+        "state_title": "حالة الجلسة",
         "status_label": "الحالة (status)",
-        "user_label": "المستخدم الحالي (user)",
-        "last_error_label": "آخر خطأ تحقق / دخول"
+        "user_label": "المستخدم الحالي",
+        "last_error_label": "آخر خطأ تحقق / دخول",
+        "identifier_label": "معرّف المستخدم",
+        "identifier_placeholder": "demo@example.test"
       },
       "figma_section": {
-        "title": "المرحلة 1.5 — مكونات نظام تصميم فيجما وحاوية الاستجابة",
-        "subtitle": "مطابقة جميع العناصر مع وثائق التصميم ومعاينتها داخل حاويات الاستجابة",
+        "title": "مكونات نظام التصميم ومعاينة الاستجابة",
+        "subtitle": "معاينة مكونات الواجهة داخل عروض مختلفة باستخدام container queries.",
         "container_harness": "حاوية فحص الاستجابة (@container):",
         "current_max_width": "الحد الأقصى للعرض الحالي:",
         "btn_primary_large": "أساسي كبير (56px)",
@@ -235,20 +207,20 @@
         "sec_steps": "8. تتبع الخطوات",
         "sec_skeletons": "9. الهياكل المؤقتة (دائرة، خط، صف، بطاقة)",
         "sec_nav_links": "10. الروابط، الفواصل، التسجيل الاجتماعي والشريط السفلي",
-        "banner_info_title": "معلومة دراسية هامة",
-        "banner_info_msg": "تم تحديث جدول الامتحانات للفصل الدراسي الأول.",
+        "banner_info_title": "إشعار تجريبي",
+        "banner_info_msg": "هذا مثال على لافتة معلومات.",
         "banner_warn_title": "تنبيه بالموعد النهائي",
-        "banner_warn_msg": "يتبقى يومان على انتهاء فترة تسجيل المواد.",
+        "banner_warn_msg": "هذا مثال على لافتة تحذير.",
         "banner_error_title": "تعذر الاتصال بالخادم",
         "banner_error_msg": "يرجى التحقق من اتصالك بالإنترنت وإعادة المحاولة.",
         "plan_standard_title": "الباقة القياسية",
-        "plan_standard_desc": "وصول كامل للمحاضرات وبنك الأسئلة التفاعلي",
+        "plan_standard_desc": "مجموعة أساسية من الإعدادات.",
         "plan_premium_title": "الباقة المميزة",
-        "plan_premium_desc": "متابعة دورية مع المعلم ومراجعات مباشرة أسبوعية",
-        "notif_lessons_title": "إشعارات الدروس والمواعيد",
-        "notif_lessons_desc": "استلام تنبيهات فورية عند إضافة محتوى دراسي جديد",
+        "plan_premium_desc": "مجموعة موسعة من الإعدادات.",
+        "notif_lessons_title": "إشعارات التطبيق",
+        "notif_lessons_desc": "استلام تنبيهات عند وجود تحديثات جديدة.",
         "notif_digest_title": "الملخصات الأسبوعية عبر البريد",
-        "notif_digest_desc": "تقرير أسبوعي مفصل بتقدم الطالب ونتائج الواجبات",
+        "notif_digest_desc": "ملخص دوري للنشاط والتحديثات.",
         "chip_math": "الرياضيات",
         "chip_physics": "الفيزياء",
         "chip_chemistry": "الكيمياء",
@@ -283,21 +255,9 @@
       "stream_label": "قيمة مشتقة عبر toSignal(translate.stream(...))"
     },
     "menu": {
-      "overview": "الرئيسية",
-      "courses": "المقررات",
-      "lessons": "الدروس المسجلة",
-      "assignments": "الواجبات",
-      "exams": "الاختبارات",
-      "students": "الطلاب",
-      "calendar": "الجدول الدراسي",
-      "wallet": "المحفظة والمدفوعات",
-      "certificates": "الشهادات",
-      "messages": "الرسائل",
-      "notifications": "الإشعارات",
-      "analytics": "الإحصائيات",
-      "reports": "التقارير",
-      "support": "الدعم الفني",
-      "settings": "الإعدادات"
+      "overview": "نظرة عامة",
+      "settings": "الإعدادات",
+      "components": "المكونات"
     }
   },
   "shell": {
@@ -306,84 +266,11 @@
       "collapse_sidebar": "طي القائمة الجانبية",
       "expand_sidebar": "توسيع القائمة الجانبية",
       "switch_language": "تغيير اللغة",
-      "sign_in": "تسجيل الدخول",
       "sign_out": "تسجيل الخروج"
     },
     "layout": {
       "skip_to_content": "الانتقال إلى المحتوى الرئيسي",
       "sidebar_label": "قائمة التنقل الجانبية"
-    }
-  },
-  "mock": {
-    "students": {
-      "nav_title": "الطلاب (Mock)",
-      "title": "إدارة الطلاب (بيئة تجريبية)",
-      "subtitle": "استعراض عملي متكامل لأحدث تقنيات Angular 22: Signal Forms، و SignalStore، و BaseRepository، و HttpResource",
-      "stats": {
-        "total": "إجمالي الطلاب",
-        "active": "الطلاب النشطون",
-        "inactive": "الطلاب غير النشطين",
-        "avg_gpa": "متوسط المعدل التراكمي"
-      },
-      "table": {
-        "id": "الرقم التعريفي",
-        "name": "الطالب",
-        "contact": "بيانات الاتصال",
-        "grade": "المرحلة الدراسية",
-        "enrollment_date": "تاريخ القيد",
-        "gpa": "المعدل",
-        "status": "الحالة",
-        "actions": "الإجراءات"
-      },
-      "grades": {
-        "first_sec": "الأول الثانوي",
-        "second_sec": "الثاني الثانوي",
-        "third_sec": "الثالث الثانوي"
-      },
-      "status": {
-        "active": "نشط",
-        "inactive": "غير نشط"
-      },
-      "actions": {
-        "add": "إضافة طالب جديد",
-        "edit": "تعديل",
-        "delete": "حذف",
-        "view": "عرض التفاصيل",
-        "refresh": "تحديث البيانات",
-        "search_placeholder": "بحث بالاسم، البريد، أو الهاتف...",
-        "filter_all_grades": "جميع المراحل الدراسية",
-        "filter_all_statuses": "جميع الحالات"
-      },
-      "form": {
-        "add_title": "إضافة طالب جديد",
-        "edit_title": "تعديل بيانات الطالب",
-        "name_label": "الاسم الكامل",
-        "name_placeholder": "مثال: أحمد محمد علي",
-        "email_label": "البريد الإلكتروني",
-        "email_placeholder": "ahmed@example.com",
-        "phone_label": "رقم الهاتف",
-        "phone_placeholder": "01012345678",
-        "grade_label": "المرحلة الدراسية",
-        "grade_placeholder": "اختر المرحلة الدراسية",
-        "enrollment_date_label": "تاريخ القيد",
-        "gpa_label": "المعدل التراكمي (GPA)",
-        "gpa_placeholder": "مثال: 3.85",
-        "status_label": "حساب نشط"
-      },
-      "delete_confirm": {
-        "title": "تأكيد حذف الطالب",
-        "message": "هل أنت متأكد من حذف هذا الطالب نهائياً؟ لا يمكن التراجع عن هذا الإجراء."
-      },
-      "toast": {
-        "create_success": "تمت إضافة الطالب بنجاح",
-        "update_success": "تم تحديث بيانات الطالب بنجاح",
-        "delete_success": "تم حذف الطالب بنجاح"
-      },
-      "details": {
-        "title": "الملف التعريفي للطالب",
-        "academic_info": "المعلومات الدراسية",
-        "enrolled_courses": "المقررات المسجلة"
-      }
     }
   },
   "VALIDATION": {

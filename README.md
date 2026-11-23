@@ -1,43 +1,47 @@
-# مذاكرتي (Mozakrety)
+# Angular Starter
 
-منصة التعلّم الاجتماعي المتمحورة حول الطالب — مبنية بـ **Angular 22** (بدون `zone.js`، بنظام الـ Signals)، مع دعم كامل لـ **SSR (Server-Side Rendering)**، واللغة العربية كاتجاه افتراضي (`RTL`) مع الإنجليزية (`LTR`)، وتصميم موحّد يعتمد على مكونات `src/app/shared/ui/` مع تغيير الألوان ديناميكياً حسب دور المستخدم.
+قالب تجريبي عام لمشاريع Angular.
 
----
+يحتفظ القالب بالبنية والأدوات القابلة لإعادة الاستخدام، ولا يحتوي على منتج أو مجال عمل مفروض. استخدمه كبداية لتطبيقات الويب التي تحتاج واجهة مشتركة، تقسيم ميزات، مصادقة اختيارية، API، ترجمة عربية/إنجليزية، أو SSR.
 
-## الأوامر الأساسية للتشغيل والتطوير
+## المكونات والتقنيات
 
-| الأمر | الوظيفة |
-|---|---|
-| `npm start` (`ng serve`) | تشغيل خادم التطوير المحلي على `http://localhost:4200/` مع إعادة التحميل التلقائي |
-| `npm run build` | بناء التطبيق للإنتاج (متصفح + خادم SSR) وحفظ المخرجات في `dist/mozakrety` |
-| `npm run serve:ssr:mozakrety` | تشغيل خادم Node Express للـ SSR بعد البناء (`node dist/mozakrety/server/server.mjs`) |
-| `npm test` | تشغيل جميع اختبارات الوحدة عبر **Vitest** |
-| `npm run typecheck` | فحص الأنواع الصارم لملفات التطبيق والاختبارات (`tsconfig.app.json` و `tsconfig.spec.json`) |
-| `npm run lint` | تشغيل قواعد **ESLint** وحدود **Sheriff** المعمارية وفحص مفاتيح الترجمة (`npm run i18n:check`) |
-| `npm run i18n:check` | التحقق من تطابق مفاتيح الترجمة بين `ar.json` و `en.json` وعدم وجود مفاتيح غير مستخدمة |
+- Angular 22 وTypeScript strict مع standalone APIs وSignals وZoneless change detection.
+- Angular SSR وHydration وHTTP Transfer Cache.
+- PrimeNG 22 خلف مكتبة الواجهة المشتركة في `src/app/shared/ui/`.
+- Tailwind CSS 4 وCSS design tokens مع لوحة ألوان واحدة ثابتة.
+- ngx-translate للغتين العربية والإنجليزية، مع RTL/LTR.
+- طبقة HTTP عامة، interceptors، repositories، وأمثلة auth providers بنمط mock أو HTTP.
+- Sheriff وESLint لفرض حدود الوحدات، وGitHub Actions لبوابات الجودة.
+- صفحة معرض مكونات التطوير موجودة على `/dev/foundation` في وضع التطوير فقط.
 
----
-
-## البنية العامة للمجلدات
-
-- `src/app/core/`: الخدمات المركزية والأساسية (المصادقة `auth`، حماية المسارات، الـ `http` والـ Interceptors، الأخطاء والتنبيهات `errors`، الـ SEO و SSR `seo`، سجل التنقل `navigation`، ناقل الأحداث `events`، السمات `theme`، الترجمة `i18n`، إعدادات التشغيل `config`، والملفات والتحميل).
-- `src/app/shared/`: مكتبة المكونات والأدوات المشتركة القابلة لإعادة الاستخدام (`src/app/shared/ui/`).
-- `src/app/features/`: وحدات الميزات المعزولة لكل نطاق (`public`, `auth`, `student`, `parent`, `teacher`, `school`, `partner`, `admin`)، بحيث لا يستورد أي Feature من Feature آخر.
-- `src/app/dev/`: صفحات معاينة وتحقق خاصة بالتطوير فقط، تُستبعد تلقائياً أثناء بناء الإنتاج.
-- `docs/`: وثائق المعمارية وسجلات القرارات المعمارية (`docs/adr/`) وسجل مساهمات مكتبة الواجهة (`docs/ui-library-contributions.md`).
-- `specs/`: مواصفات وخطط ومهام المراحل (`speckit`).
-
----
-
-## بوابات الجودة (Quality Gates)
-
-قبل اعتماد أي مهمة برمجية، يجب أن تنجح البوابات الأربع التالية دون أخطاء:
+## التشغيل
 
 ```bash
-npm run typecheck
-npm run lint
-npm test
-npm run build
+npm ci
+npm start
 ```
 
-للمزيد من التفاصيل حول المعمارية راجع [دليل هيكلية التطبيق](file:///w:/Mashura/Front-End/mozakrety/docs/architecture/structure.md) و [معمارية HTTP](file:///w:/Mashura/Front-End/mozakrety/docs/http-and-api-architecture.md).
+## الأوامر
+
+| الأمر               | الوظيفة                                         |
+| ------------------- | ----------------------------------------------- |
+| `npm start`         | تشغيل خادم التطوير                              |
+| `npm run build`     | بناء التطبيق وSSR                               |
+| `npm run serve:ssr` | تشغيل خادم SSR بعد البناء                       |
+| `npm test`          | تشغيل اختبارات Vitest                           |
+| `npm run typecheck` | فحص TypeScript للتطبيق والاختبارات              |
+| `npm run lint`      | ESLint وحدود Sheriff والتراجم والتصميم والتباين |
+| `npm run test:ci`   | تشغيل الاختبارات دون وضع watch لـCI             |
+
+## أين تبدأ؟
+
+- أضف ميزات المشروع داخل `src/app/features/<feature>/`.
+- ضع الخدمات المشتركة والبنية الأساسية داخل `src/app/core/`.
+- ضع المكونات العامة داخل `src/app/shared/ui/`.
+- راجع [دليل هيكلية التطبيق](docs/architecture/structure.md) و[معمارية HTTP](docs/http-and-api-architecture.md) قبل توسيع البنية.
+- اضبط `public/config.json` لعنوان API الخاص بمشروعك، وبدّل اسم التطبيق والأيقونة والترجمة قبل النشر.
+
+## ملاحظات قبل إعادة الاستخدام
+
+هذا مشروع بداية وديمو، وليس منتجًا جاهزًا للنشر كما هو. راجع ترخيص المشروع المصدر وأي مكتبة منسوخة أو أصول مرفقة قبل إعادة التوزيع، واستبدل إعدادات الـAPI والهوية البصرية ومفاتيح الترجمة بما يناسب مشروعك.

@@ -3,7 +3,6 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { LocaleService } from '@core/i18n';
-import { ThemeService } from '@core/theme';
 import { SKIP_COMMON_PARAMS } from '@core/http';
 import { commonParamsInterceptor } from './common-params.interceptor';
 
@@ -12,11 +11,9 @@ describe('commonParamsInterceptor', () => {
   let httpTesting: HttpTestingController;
 
   const mockLang = signal<'ar' | 'en'>('ar');
-  const mockRole = signal('student');
 
   beforeEach(() => {
     mockLang.set('ar');
-    mockRole.set('student');
 
     TestBed.configureTestingModule({
       providers: [
@@ -25,10 +22,6 @@ describe('commonParamsInterceptor', () => {
         {
           provide: LocaleService,
           useValue: { lang: mockLang },
-        },
-        {
-          provide: ThemeService,
-          useValue: { role: mockRole },
         },
       ],
     });
@@ -40,21 +33,19 @@ describe('commonParamsInterceptor', () => {
     httpTesting.verify();
   });
 
-  it('automatically adds lang and role query parameters', () => {
-    http.get('api/lessons').subscribe();
+  it('automatically adds the current language query parameter', () => {
+    http.get('api/items').subscribe();
 
-    const req = httpTesting.expectOne((r) => r.url === 'api/lessons');
+    const req = httpTesting.expectOne((r) => r.url === 'api/items');
     expect(req.request.params.get('lang')).toBe('ar');
-    expect(req.request.params.get('role')).toBe('student');
     req.flush([]);
   });
 
-  it('does not overwrite explicitly provided lang or role parameters', () => {
-    http.get('api/lessons', { params: { lang: 'en', role: 'teacher' } }).subscribe();
+  it('does not overwrite an explicitly provided language parameter', () => {
+    http.get('api/items', { params: { lang: 'en' } }).subscribe();
 
-    const req = httpTesting.expectOne((r) => r.url === 'api/lessons');
+    const req = httpTesting.expectOne((r) => r.url === 'api/items');
     expect(req.request.params.get('lang')).toBe('en');
-    expect(req.request.params.get('role')).toBe('teacher');
     req.flush([]);
   });
 
@@ -64,7 +55,6 @@ describe('commonParamsInterceptor', () => {
 
     const req = httpTesting.expectOne('api/ping');
     expect(req.request.params.has('lang')).toBe(false);
-    expect(req.request.params.has('role')).toBe(false);
     req.flush({});
   });
 

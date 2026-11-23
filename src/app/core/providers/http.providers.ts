@@ -19,13 +19,13 @@ import {
  *
  * Chain order:
  * 1. apiBaseUrlInterceptor    - prepends runtime API base URL
- * 2. commonParamsInterceptor  - attaches active lang & role query parameters
+ * 2. commonParamsInterceptor  - attaches the active language query parameter
  * 3. credentialsInterceptor   - attaches withCredentials: true for HttpOnly sessions
  * 4. localeHeaderInterceptor  - attaches Accept-Language header from LocaleService
  * 5. [Opt-in slot]            - loadingInterceptor (available in core/interceptors/loading.interceptor.ts; intentionally not enabled by default)
  * 6. errorMappingInterceptor  - normalizes errors into AppError & notifies via TOAST_HANDLER
  */
-export function provideMozHttp(
+export function provideAppHttp(
   extraInterceptors: readonly HttpInterceptorFn[] = [],
 ): (Provider | EnvironmentProviders)[] {
   return [

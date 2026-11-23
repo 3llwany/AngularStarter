@@ -10,7 +10,7 @@ import { SupportedLang, SERVER_TRANSLATION_READER } from '@core/i18n';
 async function readServerTranslations(lang: SupportedLang): Promise<TranslationObject> {
   const candidatePaths = [
     resolve(process.cwd(), 'public', 'i18n', `${lang}.json`),
-    resolve(process.cwd(), 'dist', 'mozakrety', 'browser', 'i18n', `${lang}.json`),
+    resolve(process.cwd(), 'dist', 'angular-starter', 'browser', 'i18n', `${lang}.json`),
   ];
 
   for (const filePath of candidatePaths) {
@@ -21,7 +21,7 @@ async function readServerTranslations(lang: SupportedLang): Promise<TranslationO
       // try next path
     }
   }
-  throw new Error(`[Mozakrety SSR i18n] Could not locate translation file for "${lang}".`);
+  throw new Error(`[Starter SSR i18n] Could not locate translation file for "${lang}".`);
 }
 
 const serverConfig: ApplicationConfig = {

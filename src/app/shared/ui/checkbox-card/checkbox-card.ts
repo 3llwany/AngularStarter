@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { type Field, FormField } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Checkbox } from 'primeng/checkbox';
-import { createUniqueId } from '../foundation/utils';
+import { createUniqueId } from '../foundation';
 
 @Component({
   selector: 'app-checkbox-card',

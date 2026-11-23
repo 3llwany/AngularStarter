@@ -1,0 +1,33 @@
+:root {
+  color-scheme: light;
+  --app-white: #ffffff;
+  /* Authoritative step 500 from design sheet */
+  --app-primary-500: #2a6eee;
+  /* OKLCH hue-stable steps */
+  --app-primary-50: #e6eeff;
+  --app-primary-100: #d4e3ff;
+  --app-primary-200: #b3cefe;
+  --app-primary-300: #8eb4fc;
+  --app-primary-400: #6e9bf2;
+  --app-primary-600: #1f59cc;
+  --app-primary-700: #1745a3;
+  --app-primary-800: #13367d;
+  --app-primary-900: #0f2757;
+  --app-primary-950: #08152e;
+  /* Accessible text contrast on primary-500 (WCAG AA >= 4.5:1) */
+  --primary-contrast: #ffffff;
+  --app-on-primary-500: #ffffff;
+  --app-on-primary: #ffffff;
+  /* Primary gradient token (400 -> 500) */
+  --primary-gradient: linear-gradient(135deg, var(--app-primary-400) 0%, var(--app-primary-500) 100%);
+
+  /* Dynamic Tinted Surface Variables (color-mix adapts to ANY role palette) */
+  --app-primary-tint: color-mix(in srgb, var(--app-primary-500) 10%, transparent);
+  --app-primary-tint-hover: color-mix(in srgb, var(--app-primary-500) 16%, transparent);
+  --app-primary-tint-active: color-mix(in srgb, var(--app-primary-500) 22%, transparent);
+
+  /* Primary Ambient Glow Shadows */
+  --app-primary-glow-md: 0 6px 14px -4px color-mix(in srgb, var(--app-primary-500) 25%, transparent);
+  --app-primary-glow-lg: 0 8px 20px -6px color-mix(in srgb, var(--app-primary-500) 28%, transparent);
+  --app-primary-glow-xl: 0 12px 28px -10px color-mix(in srgb, var(--app-primary-500) 30%, transparent);
+}

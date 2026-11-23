@@ -32,32 +32,14 @@
       </p>
     </header>
 
-    <!-- Section 1: Role Theme Switcher & Language Switcher -->
+    <!-- Language switcher; the application uses one fixed design theme. -->
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-      <app-card
-        header="dev.foundation.theme_section.title"
-        subheader="dev.foundation.theme_section.description"
-      >
-        <div class="flex flex-col gap-4">
-          <p class="text-sm font-medium text-slate-700">
-            {{ 'common.roles.label' | translate }}:
-            <strong class="text-primary-600 ms-1">{{ activeRoleKey() | translate }}</strong>
-            <span class="text-xs text-slate-500 ms-1">
-              ({{ 'dev.foundation.theme_section.active_role' | translate }})
-            </span>
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            @for (item of roleOptions; track item.role) {
-              <app-button
-                [outlined]="themeService.role() !== item.role"
-                [label]="item.labelKey"
-                (onClick)="selectRole(item.role)"
-              />
-            }
-          </div>
+      <app-card header="dev.foundation.theme_section.title" subheader="dev.foundation.theme_section.description">
+        <div class="flex items-center gap-3 text-sm text-slate-700">
+          <span class="h-8 w-8 rounded-full bg-primary-600" aria-hidden="true"></span>
+          <span>{{ 'dev.foundation.theme_section.single_theme' | translate }}</span>
         </div>
       </app-card>
-
       <app-card
         header="dev.foundation.i18n_section.title"
         subheader="dev.foundation.i18n_section.description"
@@ -249,25 +231,25 @@
             <div class="grid grid-cols-1 gap-4 @md:grid-cols-2">
               <div class="flex flex-col gap-1">
                 <app-input
-                  [field]="demoForm.studentName"
+                  [field]="demoForm.sampleName"
                   label="dev.foundation.inputs_section.name_label"
                   placeholder="dev.foundation.inputs_section.name_placeholder"
                 />
                 <app-helper-error
                   helper="dev.foundation.inputs_section.name_helper"
-                  [count]="studentNameLength()"
+                  [count]="sampleNameLength()"
                   [maxCount]="50"
                 />
               </div>
 
               <div class="flex flex-col gap-1">
                 <app-select
-                  [field]="demoForm.selectedGrade"
-                  [options]="gradeOptions"
+                  [field]="demoForm.selectedOption"
+                  [options]="sampleOptions"
                   optionLabel="labelKey"
                   optionValue="value"
-                  label="dev.foundation.inputs_section.grade_label"
-                  placeholder="dev.foundation.inputs_section.grade_placeholder"
+                  label="dev.foundation.inputs_section.option_label"
+                  placeholder="dev.foundation.inputs_section.option_placeholder"
                 />
               </div>
 
@@ -548,7 +530,7 @@
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div class="flex flex-col gap-1">
           <app-input
-            [field]="demoForm.studentName"
+            [field]="demoForm.sampleName"
             label="dev.foundation.inputs_section.name_label"
             placeholder="dev.foundation.inputs_section.name_placeholder"
           />
@@ -558,12 +540,12 @@
         </div>
 
         <app-select
-          [field]="demoForm.selectedGrade"
-          [options]="gradeOptions"
+          [field]="demoForm.selectedOption"
+          [options]="sampleOptions"
           optionLabel="labelKey"
           optionValue="value"
-          label="dev.foundation.inputs_section.grade_label"
-          placeholder="dev.foundation.inputs_section.grade_placeholder"
+          label="dev.foundation.inputs_section.option_label"
+          placeholder="dev.foundation.inputs_section.option_placeholder"
         />
 
         <app-input
@@ -777,41 +759,19 @@
       </div>
     </app-card>
 
-    <!-- Section 6: Auth & Session Cycle Demo (Phase 2) -->
+    <!-- Generic authentication and session demo -->
     <app-card
       header="dev.foundation.auth_section.title"
       subheader="dev.foundation.auth_section.subtitle"
     >
       <div class="flex flex-col gap-6 text-start">
-        <div class="flex flex-col gap-3">
-          <p class="text-sm font-medium text-slate-700">
-            {{ 'dev.foundation.auth_section.select_role_label' | translate }}
-          </p>
-          <div class="flex flex-wrap gap-2">
-            @for (item of loginRoleOptions; track item.role) {
-              <app-button
-                [severity]="selectedLoginRole() === item.role ? 'primary' : 'secondary'"
-                [outlined]="selectedLoginRole() !== item.role"
-                [label]="item.labelKey"
-                (onClick)="selectLoginRole(item.role)"
-              />
-            }
-            <app-button
-              severity="secondary"
-              [outlined]="true"
-              label="dev.foundation.auth_section.fill_demo_btn"
-              (onClick)="fillDemoCredentials()"
-            />
-          </div>
-        </div>
-
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <app-input
             [field]="authDemoForm.identifier"
-            [label]="activeLoginMethod().labelKey"
-            [placeholder]="activeLoginMethod().placeholderKey"
-            [type]="activeIdentifierInputType()"
-            [autocomplete]="activeLoginMethod().autocomplete"
+            label="dev.foundation.auth_section.identifier_label"
+            placeholder="dev.foundation.auth_section.identifier_placeholder"
+            type="text"
+            autocomplete="username"
           />
           <app-input
             [field]="authDemoForm.password"
@@ -820,6 +780,13 @@
             type="password"
           />
         </div>
+
+        <app-button
+          severity="secondary"
+          [outlined]="true"
+          label="dev.foundation.auth_section.fill_demo_btn"
+          (onClick)="fillDemoCredentials()"
+        />
 
         <div class="flex flex-wrap gap-3">
           <app-button

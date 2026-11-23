@@ -13,9 +13,7 @@ import { type Field, FormField, type ValidationError } from '@angular/forms/sign
 import { TranslatePipe } from '@ngx-translate/core';
 import { PIcon } from '@primeicons/angular/p-icon';
 import { RadioButton } from 'primeng/radiobutton';
-import { AppFieldError } from '../foundation/field-error';
-import { createUniqueId } from '../foundation/utils';
-import { ValidationMessageService } from '../foundation/validation-message.service';
+import { AppFieldError, createUniqueId, ValidationMessageService } from '../foundation';
 
 /**
  * Reusable radio button component supporting Angular 22 Signal Forms and ControlValueAccessor.

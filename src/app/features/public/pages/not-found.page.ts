@@ -8,7 +8,7 @@ import { SeoService } from '@core/seo';
  * Translated 404 Not Found skeleton route setting `noindex` metadata and real SSR HTTP 404 status.
  */
 @Component({
-  selector: 'moz-not-found-page',
+  selector: 'app-not-found-page',
   imports: [RouterLink, TranslatePipe],
   template: `
     <main

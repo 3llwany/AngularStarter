@@ -6,17 +6,7 @@
  */
 export const APP_ASSETS = {
   logos: {
-    brand: 'assets/images/logos/mozakrety-logo.svg',
-    brandLight: 'assets/images/logos/mozakrety-logo-light.webp',
-    icon: 'assets/images/logos/mozakrety-icon.svg',
-  },
-  placeholders: {
-    avatar: 'assets/images/placeholders/avatar.webp',
-    courseCover: 'assets/images/placeholders/course-cover.webp',
-  },
-  emptyStates: {
-    general: 'assets/images/empty/empty-general.svg',
-    courses: 'assets/images/empty/empty-courses.svg',
+    brand: 'assets/images/logos/starter-logo.svg',
   },
 } as const;
 

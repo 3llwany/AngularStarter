@@ -2,13 +2,12 @@ import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { disabled, form, required } from '@angular/forms/signals';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ArrowRight } from '@primeicons/angular/arrow-right';
-import { LoginRole, AuthService, LOGIN_METHODS, DEMO_PASSWORD } from '@core/auth';
+import { AuthService, DEMO_PASSWORD } from '@core/auth';
 import { isAppError } from '@core/errors';
 import { FileService } from '@core/file';
 import { SupportedLang, LocaleService } from '@core/i18n';
-import { LayoutService, ROLE_LAYOUT_MODE } from '@core/layout';
+import { LayoutService } from '@core/layout';
 import { LoadingService } from '@core/loading';
-import { Role, ThemeService } from '@core/theme';
 import {
   AppBanner,
   AppBottomNavTab,
@@ -38,7 +37,7 @@ import {
   ToastService,
 } from '@shared/ui';
 
-interface GradeOption {
+interface SampleOption {
   readonly value: string;
   readonly labelKey: string;
 }
@@ -89,7 +88,6 @@ export class SampleDynamicModalComponent {
   templateUrl: './foundation.page.html',
 })
 export class FoundationPageComponent {
-  protected readonly themeService = inject(ThemeService);
   protected readonly localeService = inject(LocaleService);
   protected readonly toastService = inject(ToastService);
   protected readonly confirmService = inject(ConfirmService);
@@ -125,7 +123,7 @@ export class FoundationPageComponent {
   protected readonly uploadProgress = signal<number | null>(null);
   protected readonly uploadMaxBytes = 5 * 1024 * 1024;
   protected readonly uploadDirections = ['ltr', 'rtl'] as const;
-  protected readonly sampleFileName = 'CV_Sarah_Ahmed.pdf';
+  protected readonly sampleFileName = 'sample-document.pdf';
   protected readonly sampleFileSize = 1_258_291;
   private uploadTimer: ReturnType<typeof setInterval> | null = null;
   private readonly cleanupUploadTimer = inject(DestroyRef).onDestroy(() => this.clearUploadTimer());
@@ -154,7 +152,7 @@ export class FoundationPageComponent {
       this.uploadTimer = null;
     }
   }
-  protected readonly studentNameLength = computed(() => this.formModel().studentName.length);
+  protected readonly sampleNameLength = computed(() => this.formModel().sampleName.length);
 
   readonly fallbackImgDataUri =
     'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
@@ -162,8 +160,8 @@ export class FoundationPageComponent {
     'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="%2310b981"><circle cx="12" cy="12" r="10"/><path fill="white" d="M9 12l2 2 4-4"/></svg>';
 
   private readonly formModel = signal({
-    studentName: '',
-    selectedGrade: 'primary',
+    sampleName: '',
+    selectedOption: 'option_a',
     invalidSample: '',
     disabledSample: '',
   });
@@ -180,13 +178,8 @@ export class FoundationPageComponent {
   protected readonly dynamicDialogResult = signal<string>('—');
   protected readonly fileBase64Info = signal<string>('—');
 
-  protected readonly selectedLoginRole = signal<LoginRole>('student');
-  protected readonly activeLoginMethod = computed(() => LOGIN_METHODS[this.selectedLoginRole()]);
-  protected readonly activeIdentifierInputType = computed<'text' | 'email'>(() =>
-    this.activeLoginMethod().inputType === 'email' ? 'email' : 'text',
-  );
   private readonly authFormModel = signal({
-    identifier: 'student@mozakrety.test',
+    identifier: 'demo@example.test',
     password: DEMO_PASSWORD,
   });
   protected readonly authDemoForm = form(this.authFormModel);
@@ -194,29 +187,8 @@ export class FoundationPageComponent {
 
   protected readonly authUserDisplay = computed(() => {
     const current = this.authService.user();
-    return current ? `${current.displayName} (${current.role}) — ${current.identifier}` : 'null';
+    return current ? `${current.displayName} — ${current.identifier}` : 'null';
   });
-
-  protected readonly loginRoleOptions: readonly {
-    readonly role: LoginRole;
-    readonly labelKey: string;
-    readonly demoIdentifier: string;
-  }[] = [
-    { role: 'student', labelKey: 'common.roles.student', demoIdentifier: 'student@mozakrety.test' },
-    { role: 'parent', labelKey: 'common.roles.parent', demoIdentifier: '01012345678' },
-    { role: 'teacher', labelKey: 'common.roles.teacher', demoIdentifier: 'TCH-1001' },
-    { role: 'school', labelKey: 'common.roles.school', demoIdentifier: 'SCH-2026' },
-    { role: 'partner', labelKey: 'common.roles.partner', demoIdentifier: 'partner@mozakrety.test' },
-  ];
-
-  protected readonly roleOptions: readonly { readonly role: Role; readonly labelKey: string }[] = [
-    { role: 'student', labelKey: 'common.roles.student' },
-    { role: 'parent', labelKey: 'common.roles.parent' },
-    { role: 'teacher', labelKey: 'common.roles.teacher' },
-    { role: 'school', labelKey: 'common.roles.school' },
-    { role: 'partner', labelKey: 'common.roles.partner' },
-    { role: 'admin', labelKey: 'common.roles.admin' },
-  ];
 
   protected readonly languageOptions: readonly {
     readonly lang: SupportedLang;
@@ -226,27 +198,14 @@ export class FoundationPageComponent {
     { lang: 'en', labelKey: 'common.language.en' },
   ];
 
-  protected readonly gradeOptions: GradeOption[] = [
-    { value: 'primary', labelKey: 'dev.foundation.inputs_section.grade_options.primary' },
-    { value: 'preparatory', labelKey: 'dev.foundation.inputs_section.grade_options.preparatory' },
-    { value: 'secondary', labelKey: 'dev.foundation.inputs_section.grade_options.secondary' },
+  protected readonly sampleOptions: SampleOption[] = [
+    { value: 'option_a', labelKey: 'dev.foundation.inputs_section.options.option_a' },
+    { value: 'option_b', labelKey: 'dev.foundation.inputs_section.options.option_b' },
+    { value: 'option_c', labelKey: 'dev.foundation.inputs_section.options.option_c' },
   ];
-
-  protected readonly activeRoleKey = computed(() => {
-    const active = this.themeService.role();
-    const match = this.roleOptions.find((item) => item.role === active);
-    return match?.labelKey ?? 'common.roles.student';
-  });
 
   constructor() {
     this.demoForm.invalidSample().markAsTouched();
-  }
-
-  protected selectRole(role: Role): void {
-    this.themeService.setRole(role);
-    if (!this.authService.isAuthenticated()) {
-      this.layoutService.setMode(ROLE_LAYOUT_MODE[role] ?? 'navbar');
-    }
   }
 
   protected selectLanguage(lang: SupportedLang): void {
@@ -304,10 +263,10 @@ export class FoundationPageComponent {
 
   protected downloadSampleFile(): void {
     const blob = new Blob(
-      ['Mozakrety Design System & Core Utilities Test File\nGenerated dynamically.'],
+      ['Angular Starter design system showcase file.'],
       { type: 'text/plain' },
     );
-    this.fileService.downloadFile(blob, 'mozakrety-demo.txt');
+    this.fileService.downloadFile(blob, 'starter-demo.txt');
   }
 
   protected async onFileSelected(event: Event): Promise<void> {
@@ -319,15 +278,9 @@ export class FoundationPageComponent {
     }
   }
 
-  protected selectLoginRole(role: LoginRole): void {
-    this.selectedLoginRole.set(role);
-    this.fillDemoCredentials();
-  }
-
   protected fillDemoCredentials(): void {
-    const match = this.loginRoleOptions.find((item) => item.role === this.selectedLoginRole());
     this.authFormModel.set({
-      identifier: match?.demoIdentifier ?? '',
+      identifier: 'demo@example.test',
       password: DEMO_PASSWORD,
     });
     this.authErrorKey.set(null);
@@ -338,7 +291,7 @@ export class FoundationPageComponent {
     await this.loadingService.withLoadingAsync(async () => {
       await new Promise((resolve) => setTimeout(resolve, 400));
       try {
-        await this.authService.login(this.selectedLoginRole(), this.authFormModel());
+        await this.authService.login(this.authFormModel());
         await this.toastService.success('common.toast.success');
       } catch (error: unknown) {
         const errorKey = isAppError(error) ? error.translationKey : 'errors.unexpected';

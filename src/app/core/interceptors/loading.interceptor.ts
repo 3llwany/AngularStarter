@@ -8,7 +8,7 @@ import { LoadingService } from '@core/loading';
  * معترض تحميل عام اختياري (Opt-in):
  * يزيد عداد `LoadingService` عند بدء طلب HTTP وينقصه في `finalize()`.
  *
- * غير مفعّل افتراضياً في `provideMozHttp()` لأن كل قسم يدير حالة التحميل الخاصة به محلياً
+ * غير مفعّل افتراضياً في `provideAppHttp()` لأن كل قسم يدير حالة التحميل الخاصة به محلياً
  * عبر `httpResource.isLoading()`. لتفعيله مستقبلاً أضفه إلى `withInterceptors([...])`.
  */
 export const loadingInterceptor: HttpInterceptorFn = (req, next) => {

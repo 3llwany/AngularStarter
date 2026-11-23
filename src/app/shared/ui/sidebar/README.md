@@ -12,7 +12,7 @@ Generic responsive sidebar wrapping PrimeNG `PanelMenu` (desktop) and `Drawer` (
   [dir]="dir()"
   [ariaLabel]="sidebarLabel()"
 >
-  <div sidebarHeader>Logo / Role</div>
+  <div sidebarHeader>Brand / User</div>
   <div sidebarFooter>Collapse control</div>
 </app-sidebar>
 ```

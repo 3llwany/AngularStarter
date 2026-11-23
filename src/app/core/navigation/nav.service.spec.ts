@@ -10,12 +10,12 @@ const MOCK_MENU: readonly NavItem[] = [
   {
     id: 'courses',
     labelKey: 'nav.courses',
-    route: '/student/courses',
+    route: '/items',
     order: 20,
     icon: 'pi pi-book',
   },
-  { id: 'home', labelKey: 'nav.home', route: '/student', order: 10, icon: 'pi pi-home' },
-  { id: 'passport', labelKey: 'nav.passport', route: '/student/passport' },
+  { id: 'home', labelKey: 'nav.home', route: '/', order: 10, icon: 'pi pi-home' },
+  { id: 'settings', labelKey: 'nav.settings', route: '/settings' },
 ];
 
 function wrapEnvelope<T>(data: T): IResponse<T> {
@@ -68,8 +68,8 @@ describe('NavService', () => {
   });
 
   it('fetches, unwraps IResponse, toggles isLoading, and sorts menu items after login', async () => {
-    await auth.login('student', {
-      identifier: 'student@mozakrety.test',
+    await auth.login({
+      identifier: 'demo@starter.test',
       password: DEMO_PASSWORD,
     });
     TestBed.tick();
@@ -82,12 +82,12 @@ describe('NavService', () => {
     await settle();
 
     expect(nav.isLoading()).toBe(false);
-    expect(nav.items().map((item) => item.id)).toEqual(['passport', 'home', 'courses']);
+    expect(nav.items().map((item) => item.id)).toEqual(['settings', 'home', 'courses']);
   });
 
   it('caches menu items across reads and only refetches on reload()', async () => {
-    await auth.login('student', {
-      identifier: 'student@mozakrety.test',
+    await auth.login({
+      identifier: 'demo@starter.test',
       password: DEMO_PASSWORD,
     });
     TestBed.tick();
@@ -108,12 +108,12 @@ describe('NavService', () => {
     reloadReq.flush(wrapEnvelope(MOCK_MENU));
     await settle();
 
-    expect(nav.items().map((item) => item.id)).toEqual(['passport', 'home', 'courses']);
+    expect(nav.items().map((item) => item.id)).toEqual(['settings', 'home', 'courses']);
   });
 
   it('resets items to empty on logout()', async () => {
-    await auth.login('student', {
-      identifier: 'student@mozakrety.test',
+    await auth.login({
+      identifier: 'demo@starter.test',
       password: DEMO_PASSWORD,
     });
     TestBed.tick();

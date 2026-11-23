@@ -7,14 +7,14 @@ import { provideTranslateService } from '@ngx-translate/core';
 import { provideMockAuthApi } from '@core/auth';
 import { LayoutService } from '@core/layout';
 import { NavItem, NavService } from '@core/navigation';
-import { provideMozPrimeNG } from '@core/providers';
+import { provideAppPrimeNG } from '@core/providers';
 import { AppShellComponent } from './app-shell.component';
 
 describe('AppShellComponent', () => {
   let fixture: ComponentFixture<AppShellComponent>;
   let layout: LayoutService;
   const navItemsSignal = signal<readonly NavItem[]>([
-    { id: 'home', labelKey: 'common.app_name', route: '/student', order: 1 },
+    { id: 'home', labelKey: 'common.app_name', route: '/', order: 1 },
   ]);
 
   beforeEach(async () => {
@@ -41,7 +41,7 @@ describe('AppShellComponent', () => {
         provideHttpClientTesting(),
         provideTranslateService(),
         ...provideMockAuthApi(),
-        ...provideMozPrimeNG(),
+        ...provideAppPrimeNG(),
         {
           provide: NavService,
           useValue: {

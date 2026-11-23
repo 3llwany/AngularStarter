@@ -19,19 +19,26 @@ export const config: SheriffConfig = {
     'src/app/core/<module>': 'type:core',
     'src/app/core': 'type:core', // البنية التحتية والخدمات المركزية
     'src/app/shared': 'type:shared', // الأدوات والمكونات المشتركة
-    // مكتبة واجهات المستخدم وحدة واحدة مدخلها الوحيد index.ts؛ من خارجها الاستيراد عبر '@shared/ui' فقط.
+    // Aggregate UI API plus focused public APIs for shell and toast composition.
     'src/app/shared/ui': 'type:shared',
-    // مجالات الأعمال المشتركة بين أكثر من دور (مثل courses, exams). كل مجال وحدة مستقلة مدخلها index.ts عبر '@domain/<name>'.
-    'src/app/domain/<domain>': 'type:domain',
+    // Public sub-APIs used by the app shell avoid eagerly loading the full showcase library.
+    'src/app/shared/ui/shell': 'type:shared',
+    'src/app/shared/ui/toast': 'type:shared',
+    'src/app/shared/ui/confirm': 'type:shared',
+    'src/app/shared/ui/navbar': 'type:shared',
+    'src/app/shared/ui/sidebar': 'type:shared',
+    'src/app/shared/ui/foundation': 'type:shared',
+    // Capabilities intentionally shared by multiple features.
+    'src/app/domain/<capability>': 'type:domain',
     'src/app/features/public': 'feature:public', // الصفحات العامة و SSR و SEO
     'src/app/features/auth': 'feature:auth', // شاشات تسجيل الدخول والتسجيل واستعادة الحساب
-    'src/app/features/<role>': ['type:role-feature', 'feature:<role>'], // مساحات الأدوار: student, parent, teacher, school, partner, admin
+    'src/app/features/<feature>': ['type:feature', 'feature:<feature>'],
   },
 
   // قواعد الاعتمادية: المفتاح = الوحدة المستورِدة، القيمة = الوسوم المسموح لها بالاستيراد منها فقط
   depRules: {
     // جذر التطبيق (main.ts، app.config.ts، app.routes.ts، dev/*) يرى جميع الطبقات لربط التطبيق
-    root: ['type:core', 'type:shared', 'type:domain', 'feature:*', 'type:role-feature', 'noTag'],
+    root: ['type:core', 'type:shared', 'type:domain', 'feature:*', 'type:feature', 'noTag'],
 
     // أي مجلد غير مصنّف صراحةً أعلاه يستورد فقط من ملفات غير مصنّفة أو من core و shared
     noTag: ['noTag', 'type:core', 'type:shared'],
@@ -42,13 +49,13 @@ export const config: SheriffConfig = {
     // shared معزول تماماً: يستورد من shared فقط (ممنوع استيراد core أو domain أو أي feature)
     'type:shared': ['type:shared'],
 
-    // domain: قدرات وعقود مشتركة بين الأدوار؛ تستورد من core و shared فقط (ممنوع استيراد features أو مجال domain آخر لتجنب التشابك)
+    // Shared capabilities can depend on infrastructure, but not on feature internals.
     'type:domain': ['type:core', 'type:shared'],
 
-    // الميزات (public, auth, وكل دور): تستورد من نفسها (sameTag) + core + shared + domain فقط، وممنوع استيراد أي ميزة أخرى
+    // Features can depend on their own code, shared infrastructure, and explicit shared capabilities.
     'feature:public': [sameTag, 'type:core', 'type:shared', 'type:domain'],
     'feature:auth': [sameTag, 'type:core', 'type:shared', 'type:domain'],
-    'type:role-feature': [sameTag, 'type:core', 'type:shared', 'type:domain'],
+    'type:feature': [sameTag, 'type:core', 'type:shared', 'type:domain'],
     'feature:*': [sameTag, 'type:core', 'type:shared', 'type:domain'],
   },
 };
