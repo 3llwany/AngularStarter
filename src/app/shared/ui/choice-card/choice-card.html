@@ -1,0 +1,51 @@
+<div
+  role="radio"
+  [attr.aria-checked]="isChecked()"
+  [attr.tabindex]="disabled() ? -1 : 0"
+  (click)="select()"
+  (keydown.space)="$event.preventDefault(); select()"
+  (keydown.enter)="select()"
+  [class]="
+    'flex cursor-pointer items-start gap-3.5 rounded-[24px] p-[18px] transition-all ' +
+    containerClasses()
+  "
+>
+  @if (field(); as f) {
+    <p-radiobutton
+      [formField]="f"
+      [value]="value()"
+      [inputId]="inputId()"
+      [disabled]="disabled()"
+      [name]="name() || inputId()"
+      (click)="$event.stopPropagation()"
+    />
+  } @else {
+    <p-radiobutton
+      [inputId]="inputId()"
+      [value]="value() !== undefined ? value() : true"
+      [ngModel]="groupValue() !== undefined ? groupValue() : selected()"
+      (ngModelChange)="select()"
+      [disabled]="disabled()"
+      [name]="name() || inputId()"
+      (click)="$event.stopPropagation()"
+    />
+  }
+
+  <div class="flex-1 min-w-0 text-start">
+    <div class="flex items-center justify-between gap-2">
+      <label [for]="inputId()" class="text-sm font-semibold text-surface-900 cursor-pointer">
+        {{ title() | translate }}
+      </label>
+      @if (badge()) {
+        <span class="rounded-full bg-primary-100 px-2 py-0.5 text-[11px] font-bold text-primary-700">
+          {{ badge() | translate }}
+        </span>
+      }
+    </div>
+    @if (description()) {
+      <p class="text-xs text-surface-500 mt-1 leading-relaxed">
+        {{ description() | translate }}
+      </p>
+    }
+  </div>
+</div>

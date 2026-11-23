@@ -1,0 +1,49 @@
+@if (routerLink()) {
+  <a
+    [routerLink]="routerLink()"
+    [class]="
+      'inline-flex items-center gap-1.5 font-medium text-sm transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:rounded-sm ' +
+      linkClasses()
+    "
+  >
+    <ng-content select="[leadingIcon]" />
+    @if (label()) {
+      <span>{{ label() | translate }}</span>
+    } @else {
+      <ng-content />
+    }
+    <ng-content select="[trailingIcon]" />
+  </a>
+} @else if (href()) {
+  <a
+    [href]="href()"
+    [class]="
+      'inline-flex items-center gap-1.5 font-medium text-sm transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:rounded-sm ' +
+      linkClasses()
+    "
+  >
+    <ng-content select="[leadingIcon]" />
+    @if (label()) {
+      <span>{{ label() | translate }}</span>
+    } @else {
+      <ng-content />
+    }
+    <ng-content select="[trailingIcon]" />
+  </a>
+} @else {
+  <button
+    type="button"
+    [class]="
+      'inline-flex items-center gap-1.5 font-medium text-sm transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:rounded-sm bg-transparent border-none p-0 ' +
+      linkClasses()
+    "
+  >
+    <ng-content select="[leadingIcon]" />
+    @if (label()) {
+      <span>{{ label() | translate }}</span>
+    } @else {
+      <ng-content />
+    }
+    <ng-content select="[trailingIcon]" />
+  </button>
+}

@@ -1,0 +1,238 @@
+<div class="flex flex-col gap-6">
+  <!-- Header Section -->
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <h1 class="text-2xl font-black text-surface-900 sm:text-3xl">
+        {{ 'mock.students.title' | translate }}
+      </h1>
+      <p class="mt-1 text-sm text-surface-500">
+        {{ 'mock.students.subtitle' | translate }}
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2.5 shrink-0">
+      <app-button
+        severity="secondary"
+        [outlined]="true"
+        label="mock.students.actions.refresh"
+        (onClick)="store.loadAll()"
+      />
+      <app-button
+        severity="primary"
+        label="mock.students.actions.add"
+        (onClick)="openCreate()"
+      />
+    </div>
+  </div>
+
+  <!-- KPI Statistics Cards -->
+  <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+    <app-card>
+      <div class="flex flex-col gap-1">
+        <span class="text-xs font-medium text-surface-500">
+          {{ 'mock.students.stats.total' | translate }}
+        </span>
+        <span class="text-2xl sm:text-3xl font-black text-surface-900">
+          {{ store.totalCount() }}
+        </span>
+      </div>
+    </app-card>
+
+    <app-card>
+      <div class="flex flex-col gap-1">
+        <span class="text-xs font-medium text-surface-500">
+          {{ 'mock.students.stats.active' | translate }}
+        </span>
+        <span class="text-2xl sm:text-3xl font-black text-emerald-600">
+          {{ store.activeCount() }}
+        </span>
+      </div>
+    </app-card>
+
+    <app-card>
+      <div class="flex flex-col gap-1">
+        <span class="text-xs font-medium text-surface-500">
+          {{ 'mock.students.stats.inactive' | translate }}
+        </span>
+        <span class="text-2xl sm:text-3xl font-black text-rose-600">
+          {{ store.inactiveCount() }}
+        </span>
+      </div>
+    </app-card>
+
+    <app-card>
+      <div class="flex flex-col gap-1">
+        <span class="text-xs font-medium text-surface-500">
+          {{ 'mock.students.stats.avg_gpa' | translate }}
+        </span>
+        <span class="text-2xl sm:text-3xl font-black text-primary-600">
+          {{ store.averageGpa() }}
+          <span class="text-xs text-surface-400 font-normal">/ 4.0</span>
+        </span>
+      </div>
+    </app-card>
+  </div>
+
+  <!-- Filters & Search Toolbar -->
+  <app-card>
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div class="relative flex-1 min-w-0">
+        <i
+          class="pi pi-search absolute top-1/2 -translate-y-1/2 inset-s-3.5 text-sm text-surface-400 pointer-events-none"
+          aria-hidden="true"
+        ></i>
+        <input
+          type="text"
+          class="w-full rounded-xl border border-surface-200 bg-surface-50 ps-10 pe-4 py-2.5 text-sm text-surface-800 placeholder-surface-400 transition-colors focus:border-primary-600 focus:bg-surface-0 focus:outline-none"
+          [placeholder]="'mock.students.actions.search_placeholder' | translate"
+          [ngModel]="store.filter().searchQuery"
+          (ngModelChange)="store.setFilter({ searchQuery: $event })"
+        />
+      </div>
+
+      <div class="flex items-center gap-2">
+        <!-- Grade Filter -->
+        <select
+          class="rounded-xl border border-surface-200 bg-surface-50 px-3 py-2.5 text-xs sm:text-sm font-medium text-surface-700 transition-colors focus:border-primary-600 focus:bg-surface-0 focus:outline-none"
+          [ngModel]="store.filter().grade"
+          (ngModelChange)="onGradeFilterChange($event)"
+        >
+          <option value="all">{{ 'mock.students.actions.filter_all_grades' | translate }}</option>
+          <option value="first_sec">{{ 'mock.students.grades.first_sec' | translate }}</option>
+          <option value="second_sec">{{ 'mock.students.grades.second_sec' | translate }}</option>
+          <option value="third_sec">{{ 'mock.students.grades.third_sec' | translate }}</option>
+        </select>
+
+        <!-- Status Filter -->
+        <select
+          class="rounded-xl border border-surface-200 bg-surface-50 px-3 py-2.5 text-xs sm:text-sm font-medium text-surface-700 transition-colors focus:border-primary-600 focus:bg-surface-0 focus:outline-none"
+          [ngModel]="store.filter().status"
+          (ngModelChange)="onStatusFilterChange($event)"
+        >
+          <option value="all">{{ 'mock.students.actions.filter_all_statuses' | translate }}</option>
+          <option value="active">{{ 'mock.students.status.active' | translate }}</option>
+          <option value="inactive">{{ 'mock.students.status.inactive' | translate }}</option>
+        </select>
+      </div>
+    </div>
+  </app-card>
+
+  <!-- Data Table -->
+  <app-table
+    [columns]="columns"
+    [list]="store.filteredStudents()"
+    [loading]="store.isLoading()"
+    [paginator]="true"
+    [localPaginator]="true"
+    [pageSize]="10"
+    [showSearchInput]="false"
+  >
+    <!-- Custom Column: Student Name & Email with Avatar -->
+    <ng-template appTableCol="name" let-student>
+      <div class="flex items-center gap-3">
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-50 to-primary-100 text-sm font-bold text-primary-700 border border-primary-200/80 shadow-2xs"
+        >
+          {{ student.name.slice(0, 1) }}
+        </span>
+        <div class="min-w-0">
+          <p class="truncate text-sm font-bold text-surface-900">{{ student.name }}</p>
+          <p class="truncate text-xs text-surface-500 font-mono mt-0.5">{{ student.email }}</p>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Custom Column: Grade Badge -->
+    <ng-template appTableCol="grade" let-student>
+      <span
+        class="inline-flex items-center rounded-lg bg-surface-100 px-2.5 py-1 text-xs font-semibold text-surface-700 border border-surface-200/80"
+      >
+        {{ ('mock.students.grades.' + student.grade) | translate }}
+      </span>
+    </ng-template>
+
+    <!-- Custom Column: GPA -->
+    <ng-template appTableCol="gpa" let-student>
+      <div class="flex justify-center">
+        <span
+          class="inline-flex items-center justify-center min-w-14 font-mono text-xs font-bold px-2 py-0.5 rounded-md border shadow-2xs"
+          [class]="
+            student.gpa >= 3.5
+              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              : student.gpa >= 3.0
+                ? 'bg-sky-50 text-sky-700 border-sky-200'
+                : 'bg-amber-50 text-amber-700 border-amber-200'
+          "
+        >
+          {{ student.gpa }}
+        </span>
+      </div>
+    </ng-template>
+
+    <!-- Custom Column: Status Badge -->
+    <ng-template appTableCol="status" let-student>
+      <div class="flex justify-center">
+        <span
+          class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold border"
+          [class]="
+            student.status === 'active'
+              ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              : 'bg-rose-50 text-rose-700 border-rose-200'
+          "
+        >
+          <span
+            class="h-1.5 w-1.5 rounded-full"
+            [class]="student.status === 'active' ? 'bg-emerald-500' : 'bg-rose-500'"
+          ></span>
+          <span>{{ ('mock.students.status.' + student.status) | translate }}</span>
+        </span>
+      </div>
+    </ng-template>
+
+    <!-- Custom Column: Actions -->
+    <ng-template appTableCol="actions" let-student>
+      <div class="flex items-center justify-end gap-1.5">
+        <button
+          type="button"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-surface-200/80 bg-surface-0 text-surface-500 shadow-2xs transition-all hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-primary-600 cursor-pointer"
+          [attr.aria-label]="'mock.students.actions.view' | translate"
+          (click)="openDetails(student)"
+        >
+          <i class="pi pi-eye text-xs" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-surface-200/80 bg-surface-0 text-surface-500 shadow-2xs transition-all hover:border-amber-300 hover:bg-amber-50 hover:text-amber-600 focus-visible:outline-2 focus-visible:outline-primary-600 cursor-pointer"
+          [attr.aria-label]="'mock.students.actions.edit' | translate"
+          (click)="openEdit(student)"
+        >
+          <i class="pi pi-file-edit text-xs" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-surface-200/80 bg-surface-0 text-surface-500 shadow-2xs transition-all hover:border-rose-300 hover:bg-rose-50 hover:text-rose-600 focus-visible:outline-2 focus-visible:outline-rose-600 cursor-pointer"
+          [attr.aria-label]="'mock.students.actions.delete' | translate"
+          (click)="confirmDelete(student)"
+        >
+          <i class="pi pi-trash text-xs" aria-hidden="true"></i>
+        </button>
+      </div>
+    </ng-template>
+  </app-table>
+
+  <!-- Add / Edit Modal Dialog -->
+  <app-student-form-dialog
+    [(visible)]="formDialogOpen"
+    [student]="editingStudent()"
+    [saving]="store.isSaving()"
+    (save)="onSaveStudent($event)"
+  />
+
+  <!-- View Details Modal Dialog -->
+  <app-student-details-dialog
+    [(visible)]="detailsDialogOpen"
+    [student]="selectedStudentForDetails()"
+    (edit)="openEdit($event)"
+    (delete)="confirmDelete($event)"
+  />
+</div>

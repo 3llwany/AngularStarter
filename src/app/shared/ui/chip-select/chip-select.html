@@ -1,0 +1,56 @@
+@if (field(); as f) {
+  <p-togglebutton
+    [formField]="f"
+    [disabled]="disabled()"
+    [onLabel]="label() | translate"
+    [offLabel]="label() | translate"
+    [class]="'min-h-[44px] rounded-full !rounded-full px-4 text-sm transition-all ' + chipClasses()"
+  >
+    <ng-template #content>
+      <div class="flex items-center gap-1.5">
+        @if (isSelected()) {
+          <i class="pi pi-check text-xs text-white" aria-hidden="true"></i>
+        } @else if (icon()) {
+          <i [class]="icon()" aria-hidden="true"></i>
+        }
+        <span>{{ label() | translate }}</span>
+        @if (count() !== undefined) {
+          <span
+            class="rounded-full px-2 py-0.5 text-xs font-bold"
+            [class]="isSelected() ? 'bg-white/20 text-white' : 'bg-surface-200 text-surface-700'"
+          >
+            {{ count() }}
+          </span>
+        }
+      </div>
+    </ng-template>
+  </p-togglebutton>
+} @else {
+  <p-togglebutton
+    [ngModel]="active()"
+    (ngModelChange)="onToggle($event)"
+    [disabled]="disabled()"
+    [onLabel]="label() | translate"
+    [offLabel]="label() | translate"
+    [class]="'min-h-[44px] rounded-full !rounded-full px-4 text-sm transition-all ' + chipClasses()"
+  >
+    <ng-template #content>
+      <div class="flex items-center gap-1.5">
+        @if (isSelected()) {
+          <i class="pi pi-check text-xs text-white" aria-hidden="true"></i>
+        } @else if (icon()) {
+          <i [class]="icon()" aria-hidden="true"></i>
+        }
+        <span>{{ label() | translate }}</span>
+        @if (count() !== undefined) {
+          <span
+            class="rounded-full px-2 py-0.5 text-xs font-bold"
+            [class]="isSelected() ? 'bg-white/20 text-white' : 'bg-surface-200 text-surface-700'"
+          >
+            {{ count() }}
+          </span>
+        }
+      </div>
+    </ng-template>
+  </p-togglebutton>
+}

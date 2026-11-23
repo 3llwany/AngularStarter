@@ -1,0 +1,81 @@
+<button
+  pButton
+  [class]="
+    'inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:outline-offset-2 ' +
+    computedClasses()
+  "
+  [severity]="severity()"
+  [disabled]="disabled() || loading()"
+  [loading]="loading()"
+  [type]="type()"
+  (click)="Click()"
+>
+  <!-- Loading spinner (when positioned BEFORE label) -->
+  @if (loading() && !isTrailingLoading()) {
+    <svg
+      data-testid="loading-spinner-start"
+      class="animate-spin shrink-0"
+      [class]="spinnerSizeClass()"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9.5" stroke-opacity="0.25"></circle>
+      <path d="M12 2.5A9.5 9.5 0 0 1 21.5 12"></path>
+    </svg>
+  }
+
+  <!-- Leading Icon Slot or String Icon (hidden while loading at start) -->
+  @if (!loading() || isTrailingLoading()) {
+    <ng-content select="[leadingIcon]" />
+    <ng-content select="[prefixIcon]" />
+
+    @if (iconPos() === 'left' && icon() !== null) {
+      <svg
+        [class]="'w-4 h-4' + (directionalIcon() ? ' inline-block rtl:scale-x-[-1]' : '')"
+        [pIcon]="icon()!"
+      ></svg>
+    }
+  }
+
+  <!-- Button Label / Content -->
+  @if (label()) {
+    <span>{{ label() | translate }}</span>
+  } @else {
+    <ng-content />
+  }
+
+  <!-- Trailing Icon Slot or String Icon (hidden while loading at end) -->
+  @if (!loading() || !isTrailingLoading()) {
+    @if (iconPos() === 'right' && icon() !== null) {
+      <svg
+        [class]="'w-4 h-4' + (directionalIcon() ? ' inline-block rtl:scale-x-[-1]' : '')"
+        [pIcon]="icon()!"
+      ></svg>
+    }
+
+    <ng-content select="[trailingIcon]" />
+    <ng-content select="[suffixIcon]" />
+  }
+
+  <!-- Loading spinner (when positioned AFTER label via [loadingTrailing]="true" or [loadingAfter]="true") -->
+  @if (loading() && isTrailingLoading()) {
+    <svg
+      data-testid="loading-spinner-end"
+      class="animate-spin shrink-0"
+      [class]="spinnerSizeClass()"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9.5" stroke-opacity="0.25"></circle>
+      <path d="M12 2.5A9.5 9.5 0 0 1 21.5 12"></path>
+    </svg>
+  }
+</button>

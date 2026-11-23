@@ -1,0 +1,6356 @@
+{
+  "Social / Google": [
+    {
+      "width": 56,
+      "height": 56,
+      "radius": 28,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#ffffff @0.75",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": []
+    }
+  ],
+  "Social / Facebook": [
+    {
+      "width": 56,
+      "height": 56,
+      "radius": 28,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#ffffff @0.75",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": []
+    }
+  ],
+  "Divider / Or": [
+    {
+      "width": 354,
+      "height": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 12,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 400,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    }
+  ],
+  "Icon / parent": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / teacher": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / partner": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / school": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / link": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / child": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / camera": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / info": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / upload": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / image": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / clock": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / check": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / home": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / learn": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / gift": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / wallet": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / passport": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / flask": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / leaf": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / sigma": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / type": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / edit": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / chevron": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / up": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / down": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / calendar": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / pin": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / chart": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / warn": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / chevron-down": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / close": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / plus": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / bell": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / user": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / megaphone": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / wifi-off": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / settings": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / globe": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / moon": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / file": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / shield": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / help": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / logout": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Icon / play": [
+    {
+      "width": 24,
+      "height": 24,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 10,
+      "shadows": []
+    }
+  ],
+  "Card / Choice": [
+    {
+      "variant": "Selected=On, Direction=LTR",
+      "width": 354,
+      "height": 122,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, Direction=LTR",
+      "width": 354,
+      "height": 120,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=On, Direction=RTL",
+      "width": 354,
+      "height": 120,
+      "radius": 24,
+      "padding": [
+        18,
+        16,
+        18,
+        18
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, Direction=RTL",
+      "width": 354,
+      "height": 118,
+      "radius": 24,
+      "padding": [
+        18,
+        16,
+        18,
+        18
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Card / Checkbox": [
+    {
+      "variant": "Checked=On, State=Default, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Default, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Error, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=On, State=Default, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Default, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Error, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 18,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Nav / Tab": [
+    {
+      "variant": "State=Active, Direction=LTR",
+      "width": 64,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 11,
+        "weight": 600,
+        "lineHeightPx": 14.3,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "State=Default, Direction=LTR",
+      "width": 64,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 11,
+        "weight": 500,
+        "lineHeightPx": 14.3,
+        "letterSpacing": 0,
+        "color": "#6b758a"
+      }
+    },
+    {
+      "variant": "State=Active, Direction=RTL",
+      "width": 64,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 11,
+        "weight": 600,
+        "lineHeightPx": 13.41,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "State=Default, Direction=RTL",
+      "width": 64,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 11,
+        "weight": 500,
+        "lineHeightPx": 13.41,
+        "letterSpacing": 0,
+        "color": "#6b758a"
+      }
+    }
+  ],
+  "Button": [
+    {
+      "variant": "Type=Primary, Size=Large, State=Default, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 20,
+          "spread": -6,
+          "color": "#2a6eee @0.28"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Large, State=Default, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Medium, State=Default, Direction=LTR",
+      "width": 123,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Small, State=Default, Direction=LTR",
+      "width": 98,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Medium, State=Default, Direction=LTR",
+      "width": 125,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Small, State=Default, Direction=LTR",
+      "width": 100,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Large, State=Default, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Medium, State=Default, Direction=LTR",
+      "width": 123,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Small, State=Default, Direction=LTR",
+      "width": 98,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Large, State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#c9d4ea",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Large, State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Medium, State=Disabled, Direction=LTR",
+      "width": 123,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#c9d4ea",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Small, State=Disabled, Direction=LTR",
+      "width": 98,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#c9d4ea",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Medium, State=Disabled, Direction=LTR",
+      "width": 125,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Small, State=Disabled, Direction=LTR",
+      "width": 100,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Large, State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#12233a @0.05000000074505806",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Medium, State=Disabled, Direction=LTR",
+      "width": 123,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#12233a @0.05000000074505806",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Small, State=Disabled, Direction=LTR",
+      "width": 98,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#12233a @0.05000000074505806",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Large, State=Loading, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 20,
+          "spread": -6,
+          "color": "#2a6eee @0.28"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Large, State=Loading, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Medium, State=Loading, Direction=LTR",
+      "width": 147,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Small, State=Loading, Direction=LTR",
+      "width": 120,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Medium, State=Loading, Direction=LTR",
+      "width": 149,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Small, State=Loading, Direction=LTR",
+      "width": 122,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Large, State=Loading, Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Medium, State=Loading, Direction=LTR",
+      "width": 147,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 20.8,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Small, State=Loading, Direction=LTR",
+      "width": 120,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Large, State=Default, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 20,
+          "spread": -6,
+          "color": "#2a6eee @0.28"
+        }
+      ],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Large, State=Default, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Medium, State=Default, Direction=RTL",
+      "width": 130,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Small, State=Default, Direction=RTL",
+      "width": 104,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Medium, State=Default, Direction=RTL",
+      "width": 132,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Small, State=Default, Direction=RTL",
+      "width": 106,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Large, State=Default, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Medium, State=Default, Direction=RTL",
+      "width": 130,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Small, State=Default, Direction=RTL",
+      "width": 104,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Large, State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#c9d4ea",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Large, State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Medium, State=Disabled, Direction=RTL",
+      "width": 130,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#c9d4ea",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Small, State=Disabled, Direction=RTL",
+      "width": 104,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#c9d4ea",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Medium, State=Disabled, Direction=RTL",
+      "width": 132,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Small, State=Disabled, Direction=RTL",
+      "width": 106,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Large, State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#12233a @0.05000000074505806",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Medium, State=Disabled, Direction=RTL",
+      "width": 130,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#12233a @0.05000000074505806",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Small, State=Disabled, Direction=RTL",
+      "width": 104,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#12233a @0.05000000074505806",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Large, State=Loading, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 20,
+          "spread": -6,
+          "color": "#2a6eee @0.28"
+        }
+      ],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Large, State=Loading, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Medium, State=Loading, Direction=RTL",
+      "width": 154,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Primary, Size=Small, State=Loading, Direction=RTL",
+      "width": 126,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Medium, State=Loading, Direction=RTL",
+      "width": 156,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Glass, Size=Small, State=Loading, Direction=RTL",
+      "width": 128,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Large, State=Loading, Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 99,
+      "padding": [
+        null,
+        24,
+        null,
+        24
+      ],
+      "gap": 8,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Medium, State=Loading, Direction=RTL",
+      "width": 154,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        18,
+        null,
+        18
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Type=Tinted, Size=Small, State=Loading, Direction=RTL",
+      "width": 126,
+      "height": 36,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        14
+      ],
+      "gap": 6,
+      "fill": "#2a6eee @0.10000000149011612",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    }
+  ],
+  "Tag": [
+    {
+      "variant": "Tone=Green, Size=Small, Direction=LTR",
+      "width": 52,
+      "height": 24,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#ddf6ec",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    },
+    {
+      "variant": "Tone=Green, Size=Medium, Direction=LTR",
+      "width": 59,
+      "height": 29,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#ddf6ec",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    },
+    {
+      "variant": "Tone=Orange, Size=Small, Direction=LTR",
+      "width": 52,
+      "height": 24,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#ffe8da",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#a4480f"
+      }
+    },
+    {
+      "variant": "Tone=Orange, Size=Medium, Direction=LTR",
+      "width": 59,
+      "height": 29,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#ffe8da",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#a4480f"
+      }
+    },
+    {
+      "variant": "Tone=Red, Size=Small, Direction=LTR",
+      "width": 52,
+      "height": 24,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#fde4e1",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    },
+    {
+      "variant": "Tone=Red, Size=Medium, Direction=LTR",
+      "width": 59,
+      "height": 29,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#fde4e1",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    },
+    {
+      "variant": "Tone=Blue, Size=Small, Direction=LTR",
+      "width": 52,
+      "height": 24,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#e6eeff",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Tone=Blue, Size=Medium, Direction=LTR",
+      "width": 59,
+      "height": 29,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#e6eeff",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Tone=Amber, Size=Small, Direction=LTR",
+      "width": 52,
+      "height": 24,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#fff1d6",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#8a5a00"
+      }
+    },
+    {
+      "variant": "Tone=Amber, Size=Medium, Direction=LTR",
+      "width": 59,
+      "height": 29,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#fff1d6",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#8a5a00"
+      }
+    },
+    {
+      "variant": "Tone=Neutral, Size=Small, Direction=LTR",
+      "width": 52,
+      "height": 24,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#eef0f4",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#3a4a66"
+      }
+    },
+    {
+      "variant": "Tone=Neutral, Size=Medium, Direction=LTR",
+      "width": 59,
+      "height": 29,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#eef0f4",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#3a4a66"
+      }
+    },
+    {
+      "variant": "Tone=Green, Size=Small, Direction=RTL",
+      "width": 53,
+      "height": 23,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#ddf6ec",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    },
+    {
+      "variant": "Tone=Green, Size=Medium, Direction=RTL",
+      "width": 60,
+      "height": 28,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#ddf6ec",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    },
+    {
+      "variant": "Tone=Orange, Size=Small, Direction=RTL",
+      "width": 53,
+      "height": 23,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#ffe8da",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#a4480f"
+      }
+    },
+    {
+      "variant": "Tone=Orange, Size=Medium, Direction=RTL",
+      "width": 60,
+      "height": 28,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#ffe8da",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#a4480f"
+      }
+    },
+    {
+      "variant": "Tone=Red, Size=Small, Direction=RTL",
+      "width": 53,
+      "height": 23,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#fde4e1",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    },
+    {
+      "variant": "Tone=Red, Size=Medium, Direction=RTL",
+      "width": 60,
+      "height": 28,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#fde4e1",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    },
+    {
+      "variant": "Tone=Blue, Size=Small, Direction=RTL",
+      "width": 53,
+      "height": 23,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#e6eeff",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Tone=Blue, Size=Medium, Direction=RTL",
+      "width": 60,
+      "height": 28,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#e6eeff",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Tone=Amber, Size=Small, Direction=RTL",
+      "width": 53,
+      "height": 23,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#fff1d6",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#8a5a00"
+      }
+    },
+    {
+      "variant": "Tone=Amber, Size=Medium, Direction=RTL",
+      "width": 60,
+      "height": 28,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#fff1d6",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#8a5a00"
+      }
+    },
+    {
+      "variant": "Tone=Neutral, Size=Small, Direction=RTL",
+      "width": 53,
+      "height": 23,
+      "radius": 99,
+      "padding": [
+        4,
+        10,
+        4,
+        10
+      ],
+      "gap": 4,
+      "fill": "#eef0f4",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#3a4a66"
+      }
+    },
+    {
+      "variant": "Tone=Neutral, Size=Medium, Direction=RTL",
+      "width": 60,
+      "height": 28,
+      "radius": 99,
+      "padding": [
+        6,
+        12,
+        6,
+        12
+      ],
+      "gap": 4,
+      "fill": "#eef0f4",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#3a4a66"
+      }
+    }
+  ],
+  "Banner": [
+    {
+      "variant": "Tone=Info, Direction=LTR",
+      "width": 354,
+      "height": 44,
+      "radius": 18,
+      "padding": [
+        12,
+        14,
+        12,
+        14
+      ],
+      "gap": 10,
+      "fill": "#e6eeff",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Tone=Warning, Direction=LTR",
+      "width": 354,
+      "height": 44,
+      "radius": 18,
+      "padding": [
+        12,
+        14,
+        12,
+        14
+      ],
+      "gap": 10,
+      "fill": "#fff1d6",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Tone=Error, Direction=LTR",
+      "width": 354,
+      "height": 44,
+      "radius": 18,
+      "padding": [
+        12,
+        14,
+        12,
+        14
+      ],
+      "gap": 10,
+      "fill": "#fde4e1",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Tone=Info, Direction=RTL",
+      "width": 354,
+      "height": 44,
+      "radius": 18,
+      "padding": [
+        12,
+        14,
+        12,
+        14
+      ],
+      "gap": 10,
+      "fill": "#e6eeff",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Tone=Warning, Direction=RTL",
+      "width": 354,
+      "height": 44,
+      "radius": 18,
+      "padding": [
+        12,
+        14,
+        12,
+        14
+      ],
+      "gap": 10,
+      "fill": "#fff1d6",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Tone=Error, Direction=RTL",
+      "width": 354,
+      "height": 44,
+      "radius": 18,
+      "padding": [
+        12,
+        14,
+        12,
+        14
+      ],
+      "gap": 10,
+      "fill": "#fde4e1",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Progress / Steps": [
+    {
+      "variant": "Step=1, Direction=LTR",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=2, Direction=LTR",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=3, Direction=LTR",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=4, Direction=LTR",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=5, Direction=LTR",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=1, Direction=RTL",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=2, Direction=RTL",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=3, Direction=RTL",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=4, Direction=RTL",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Step=5, Direction=RTL",
+      "width": 354,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    }
+  ],
+  "Card / Option": [
+    {
+      "variant": "Selected=On, State=Default, Direction=LTR",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        14,
+        null,
+        16
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Default, Direction=LTR",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        14,
+        null,
+        16
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 500,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Error, Direction=LTR",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        14,
+        null,
+        16
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 500,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Disabled, Direction=LTR",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        14,
+        null,
+        16
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 500,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=On, State=Default, Direction=RTL",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        16,
+        null,
+        14
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Default, Direction=RTL",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        16,
+        null,
+        14
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 500,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Error, Direction=RTL",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        16,
+        null,
+        14
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 500,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Disabled, Direction=RTL",
+      "width": 172,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        16,
+        null,
+        14
+      ],
+      "gap": 10,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 500,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Chip / Select": [
+    {
+      "variant": "Selected=On, State=Default, Direction=LTR",
+      "width": 141,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        12
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Default, Direction=LTR",
+      "width": 125,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#12233a @0.11999999731779099",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Error, Direction=LTR",
+      "width": 126,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Disabled, Direction=LTR",
+      "width": 125,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#12233a @0.11999999731779099",
+      "strokeWidth": 1,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=On, State=Default, Direction=RTL",
+      "width": 144,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        12,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#2a6eee",
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#ffffff"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Default, Direction=RTL",
+      "width": 128,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#12233a @0.11999999731779099",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Error, Direction=RTL",
+      "width": 129,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, State=Disabled, Direction=RTL",
+      "width": 128,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        16,
+        null,
+        16
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#12233a @0.11999999731779099",
+      "strokeWidth": 1,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Field / Select": [
+    {
+      "variant": "State=Default, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=LTR",
+      "width": 354,
+      "height": 103,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "State=Default, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=RTL",
+      "width": 354,
+      "height": 101,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    }
+  ],
+  "Card / Exam": [
+    {
+      "variant": "State=Upcoming, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "State=Needs result, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "State=Completed, Direction=LTR",
+      "width": 354,
+      "height": 76,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "State=No subject, Direction=LTR",
+      "width": 354,
+      "height": 78,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "State=Upcoming, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Needs result, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Completed, Direction=RTL",
+      "width": 354,
+      "height": 76,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=No subject, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "radius": 22,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Chip / Child Filter": [
+    {
+      "variant": "Selected=Off",
+      "width": 102,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        5
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#12233a @0.11999999731779099",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 15.300000190734863,
+        "weight": 600,
+        "lineHeightPx": 19.89,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Selected=On",
+      "width": 100,
+      "height": 44,
+      "radius": 99,
+      "padding": [
+        null,
+        14,
+        null,
+        5
+      ],
+      "gap": 8,
+      "fill": "#2a6eee",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 6,
+          "blur": 14,
+          "spread": -4,
+          "color": "#2a6eee @0.25"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 15.300000190734863,
+        "weight": 600,
+        "lineHeightPx": 19.89,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    }
+  ],
+  "Card / Plan": [
+    {
+      "variant": "Selected=On, Direction=LTR",
+      "width": 354,
+      "height": 80,
+      "radius": 22,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=Off, Direction=LTR",
+      "width": 354,
+      "height": 80,
+      "radius": 22,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Selected=On, Direction=RTL",
+      "width": 354,
+      "height": 80,
+      "radius": 22,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.8999999761581421",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    },
+    {
+      "variant": "Selected=Off, Direction=RTL",
+      "width": 354,
+      "height": 80,
+      "radius": 22,
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    }
+  ],
+  "Row / Child Select": [
+    {
+      "variant": "Checked=On, State=Default, Direction=LTR",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Default, Direction=LTR",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Error, Direction=LTR",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Disabled, Direction=LTR",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Checked=On, State=Locked, Direction=LTR",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Checked=On, State=Default, Direction=RTL",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Default, Direction=RTL",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Error, Direction=RTL",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=Off, State=Disabled, Direction=RTL",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "opacity": 0.44999998807907104,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Checked=On, State=Locked, Direction=RTL",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Field / Text": [
+    {
+      "variant": "State=Default, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=LTR",
+      "width": 354,
+      "height": 103,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "State=Default, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=RTL",
+      "width": 354,
+      "height": 101,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    }
+  ],
+  "Field / Phone": [
+    {
+      "variant": "State=Default, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=LTR",
+      "width": 354,
+      "height": 103,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled, Direction=LTR",
+      "width": 354,
+      "height": 79,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    },
+    {
+      "variant": "State=Default, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=RTL",
+      "width": 354,
+      "height": 101,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled, Direction=RTL",
+      "width": 354,
+      "height": 78,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    }
+  ],
+  "Field / Upload": [
+    {
+      "variant": "State=Default, Direction=LTR",
+      "width": 354,
+      "height": 100,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Uploading, Direction=LTR",
+      "width": 354,
+      "height": 100,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Uploaded, Direction=LTR",
+      "width": 354,
+      "height": 99,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=LTR",
+      "width": 354,
+      "height": 124,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 16.9,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Default, Direction=RTL",
+      "width": 354,
+      "height": 99,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Uploading, Direction=RTL",
+      "width": 354,
+      "height": 99,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Uploaded, Direction=RTL",
+      "width": 354,
+      "height": 98,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error, Direction=RTL",
+      "width": 354,
+      "height": 122,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Skeleton": [
+    {
+      "variant": "Type=Line, Direction=LTR",
+      "width": 200,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": []
+    },
+    {
+      "variant": "Type=Row, Direction=LTR",
+      "width": 354,
+      "height": 68,
+      "radius": 22,
+      "padding": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": []
+    },
+    {
+      "variant": "Type=Card, Direction=LTR",
+      "width": 354,
+      "height": 128,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": []
+    },
+    {
+      "variant": "Type=Circle, Direction=LTR",
+      "width": 48,
+      "height": 48,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    },
+    {
+      "variant": "Type=Line, Direction=RTL",
+      "width": 200,
+      "height": 30,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "shadows": []
+    },
+    {
+      "variant": "Type=Row, Direction=RTL",
+      "width": 354,
+      "height": 68,
+      "radius": 22,
+      "padding": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": []
+    },
+    {
+      "variant": "Type=Card, Direction=RTL",
+      "width": 354,
+      "height": 128,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": []
+    },
+    {
+      "variant": "Type=Circle, Direction=RTL",
+      "width": 48,
+      "height": 48,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Field / OTP": [
+    {
+      "variant": "State=Empty",
+      "width": 64,
+      "height": 64,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#ffffff",
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Focused",
+      "width": 64,
+      "height": 64,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#ffffff",
+      "stroke": "#2a6eee",
+      "strokeWidth": 2,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Filled",
+      "width": 64,
+      "height": 64,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#ffffff",
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Error",
+      "width": 64,
+      "height": 64,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#ffffff",
+      "stroke": "#ef5a4a",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "State=Disabled",
+      "width": 64,
+      "height": 64,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "fill": "#eef0f4",
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#9aa3b5"
+      }
+    }
+  ],
+  "Link / Text": [
+    {
+      "variant": "Direction=LTR",
+      "width": 64,
+      "height": 42,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 65,
+      "height": 41,
+      "padding": [
+        12,
+        null,
+        12,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    }
+  ],
+  "Link / Prompt": [
+    {
+      "variant": "Direction=LTR",
+      "width": 200,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 400,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 200,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 4,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    }
+  ],
+  "Icon Button / Back": [
+    {
+      "variant": "Direction=LTR",
+      "width": 44,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 44,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": []
+    }
+  ],
+  "Card / Role": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 131,
+      "radius": 24,
+      "padding": [
+        16,
+        14,
+        16,
+        16
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 129,
+      "radius": 24,
+      "padding": [
+        16,
+        16,
+        16,
+        14
+      ],
+      "gap": 14,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 21.94,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Helper / Error": [
+    {
+      "variant": "Direction=LTR",
+      "width": 190,
+      "height": 16,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 6,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 12,
+        "weight": 400,
+        "lineHeightPx": 15.6,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 193,
+      "height": 15,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 6,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 400,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    }
+  ],
+  "Row / Grade Input": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 68,
+      "radius": 20,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 68,
+      "radius": 20,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 700,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Button / Add Row": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.44999998807907104",
+      "stroke": "#2a6eee @0.44999998807907104",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 56,
+      "radius": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 8,
+      "fill": "#ffffff @0.44999998807907104",
+      "stroke": "#2a6eee @0.44999998807907104",
+      "strokeWidth": 1.5,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    }
+  ],
+  "Empty State": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 261,
+      "radius": 24,
+      "padding": [
+        28,
+        24,
+        28,
+        24
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 260,
+      "radius": 24,
+      "padding": [
+        28,
+        24,
+        28,
+        24
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 21.94,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Card / Passport": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 161,
+      "radius": 28,
+      "padding": [
+        24,
+        20,
+        24,
+        20
+      ],
+      "gap": 10,
+      "fill": "GRADIENT_LINEAR",
+      "gradient": [
+        "#6e9bf2 0%",
+        "#2a6eee 100%"
+      ],
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 12,
+          "blur": 28,
+          "spread": -10,
+          "color": "#2a6eee @0.3"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 22,
+        "weight": 600,
+        "lineHeightPx": 28.6,
+        "letterSpacing": -0.22,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 161,
+      "radius": 28,
+      "padding": [
+        24,
+        20,
+        24,
+        20
+      ],
+      "gap": 10,
+      "fill": "GRADIENT_LINEAR",
+      "gradient": [
+        "#6e9bf2 0%",
+        "#2a6eee 100%"
+      ],
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 12,
+          "blur": 28,
+          "spread": -10,
+          "color": "#2a6eee @0.3"
+        }
+      ],
+      "text": {
+        "family": "Alexandria",
+        "size": 22,
+        "weight": 600,
+        "lineHeightPx": 26.82,
+        "letterSpacing": -0.22,
+        "color": "#ffffff @0.8500000238418579"
+      }
+    }
+  ],
+  "Section Header": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 18,
+        "weight": 600,
+        "lineHeightPx": 23.4,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    }
+  ],
+  "Row / Subject": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 70,
+      "radius": 20,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 70,
+      "radius": 20,
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "gap": 12,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 16,
+        "weight": 700,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Nav / Student": [
+    {
+      "variant": "Direction=LTR",
+      "width": 370,
+      "height": 72,
+      "radius": 32,
+      "padding": [
+        8,
+        10,
+        8,
+        10
+      ],
+      "fill": "#ffffff @0.75",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "color": "#12233a @0.08"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 11,
+        "weight": 500,
+        "lineHeightPx": 14.3,
+        "letterSpacing": 0,
+        "color": "#6b758a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 370,
+      "height": 72,
+      "radius": 32,
+      "padding": [
+        8,
+        10,
+        8,
+        10
+      ],
+      "fill": "#ffffff @0.75",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "color": "#12233a @0.08"
+        }
+      ],
+      "text": {
+        "family": "Alexandria",
+        "size": 11,
+        "weight": 500,
+        "lineHeightPx": 13.41,
+        "letterSpacing": 0,
+        "color": "#6b758a"
+      }
+    }
+  ],
+  "Card / Profile Header": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 94,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 22,
+        "weight": 600,
+        "lineHeightPx": 28.6,
+        "letterSpacing": -0.22,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 94,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 13,
+        "weight": 600,
+        "lineHeightPx": 15.85,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    }
+  ],
+  "Row / Nav": [
+    {
+      "variant": "Direction=LTR",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        14,
+        null,
+        14,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 322,
+      "height": 68,
+      "padding": [
+        14,
+        null,
+        14,
+        null
+      ],
+      "gap": 14,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Link / Destructive": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 44,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#b42318"
+      }
+    }
+  ],
+  "Card / Code": [
+    {
+      "variant": "Direction=LTR",
+      "width": 341,
+      "height": 140,
+      "radius": 24,
+      "padding": [
+        24,
+        18,
+        24,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 11,
+        "weight": 600,
+        "lineHeightPx": 14.3,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 341,
+      "height": 135,
+      "radius": 24,
+      "padding": [
+        24,
+        18,
+        24,
+        18
+      ],
+      "gap": 6,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 11,
+        "weight": 600,
+        "lineHeightPx": 13.41,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    }
+  ],
+  "Card / Grade": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 102,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "gap": 16,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 28,
+        "weight": 700,
+        "lineHeightPx": 36.4,
+        "letterSpacing": 0,
+        "color": "#13795b"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 102,
+      "radius": 24,
+      "padding": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "gap": 16,
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Toast": [
+    {
+      "variant": "Direction=LTR",
+      "width": 174,
+      "height": 50,
+      "radius": 99,
+      "padding": [
+        12,
+        18,
+        12,
+        12
+      ],
+      "gap": 10,
+      "fill": "#e6eeff",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "spread": -4,
+          "color": "#12233a @0.2"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 18.2,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 172,
+      "height": 50,
+      "radius": 99,
+      "padding": [
+        12,
+        12,
+        12,
+        18
+      ],
+      "gap": 10,
+      "fill": "#e6eeff",
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "spread": -4,
+          "color": "#12233a @0.2"
+        }
+      ],
+      "text": {
+        "family": "Alexandria",
+        "size": 14,
+        "weight": 600,
+        "lineHeightPx": 17.07,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ],
+  "Nav / Parent": [
+    {
+      "variant": "Direction=LTR",
+      "width": 370,
+      "height": 72,
+      "radius": 32,
+      "padding": [
+        8,
+        18,
+        8,
+        18
+      ],
+      "fill": "#ffffff @0.75",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "color": "#12233a @0.08"
+        }
+      ],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 11,
+        "weight": 600,
+        "lineHeightPx": 14.3,
+        "letterSpacing": 0,
+        "color": "#2a6eee"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 370,
+      "height": 72,
+      "radius": 32,
+      "padding": [
+        8,
+        18,
+        8,
+        18
+      ],
+      "fill": "#ffffff @0.75",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "color": "#12233a @0.08"
+        }
+      ],
+      "text": {
+        "family": "Alexandria",
+        "size": 11,
+        "weight": 500,
+        "lineHeightPx": 13.41,
+        "letterSpacing": 0,
+        "color": "#6b758a"
+      }
+    }
+  ],
+  "Child Label": [
+    {
+      "variant": "Direction=LTR",
+      "width": 57,
+      "height": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 6,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Headline",
+        "size": 8.100000381469727,
+        "weight": 600,
+        "lineHeightPx": 10.53,
+        "letterSpacing": 0,
+        "color": "#b4561b"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 59,
+      "height": 18,
+      "padding": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": 6,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 12,
+        "weight": 600,
+        "lineHeightPx": 14.63,
+        "letterSpacing": 0,
+        "color": "#647086"
+      }
+    }
+  ],
+  "Status Steps": [
+    {
+      "variant": "Direction=LTR",
+      "width": 354,
+      "height": 194,
+      "radius": 22,
+      "padding": [
+        8,
+        18,
+        8,
+        18
+      ],
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Stack Sans Text",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 19.5,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    },
+    {
+      "variant": "Direction=RTL",
+      "width": 354,
+      "height": 185,
+      "radius": 22,
+      "padding": [
+        8,
+        18,
+        8,
+        18
+      ],
+      "fill": "#ffffff @0.6000000238418579",
+      "stroke": "#ffffff @0.75",
+      "strokeWidth": 1,
+      "shadows": [],
+      "text": {
+        "family": "Alexandria",
+        "size": 15,
+        "weight": 600,
+        "lineHeightPx": 18.28,
+        "letterSpacing": 0,
+        "color": "#12233a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "skills": {
+    "angular-developer": {
+      "source": "angular/skills",
+      "commit": "38b2fc9bb22a0f9ce2d31743ec1fc860faf66cf2",
+      "sourceType": "github",
+      "skillPath": "angular-developer/SKILL.md",
+      "computedHash": "05d5488f770874f6f12e6d365611a6eae449f29481a52cd8a89929e448426c54"
+    },
+    "angular-new-app": {
+      "source": "angular/skills",
+      "commit": "38b2fc9bb22a0f9ce2d31743ec1fc860faf66cf2",
+      "sourceType": "github",
+      "skillPath": "angular-new-app/SKILL.md",
+      "computedHash": "0be79572cc707eaf995feb4f3d767594765656edc5deda33b9afa5c7bb177d00"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "commit": "b49177d32788f2dc585c42831d845dacf1ebed2c",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "08bd5bf141cb507f46bd8347890cd985865606f15adf88295ed3a73bc9ad5d96"
+    },
+    "tailwind-best-practices": {
+      "source": "ofershap/tailwind-best-practices",
+      "commit": "61fe3133a4c9618f8076f9fe66df6f3ea971d895",
+      "sourceType": "github",
+      "skillPath": "skills/tailwind-best-practices/SKILL.md",
+      "computedHash": "3804df51ba1b02b2dfa0a2285bcc45f3b1664f1e57f2791db77a29537e24302c"
+    }
+  }
+}

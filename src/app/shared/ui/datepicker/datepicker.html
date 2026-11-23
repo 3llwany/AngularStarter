@@ -1,0 +1,35 @@
+<p-floatlabel [variant]="variant()">
+  @if (field(); as f) {
+    <p-datepicker
+      [inputId]="inputId()"
+      [formField]="f"
+      [showIcon]="showIcon()"
+      [placeholder]="placeholder()"
+      [appendTo]="appendTo()"
+      [dateFormat]="dateFormat()"
+      [class]="'w-full ' + styleClass()"
+      (onChange)="onChange.emit($event)"
+    />
+  } @else {
+    <p-datepicker
+      [inputId]="inputId()"
+      [ngModel]="effectiveValue()"
+      (ngModelChange)="onValueChange($event)"
+      [showIcon]="showIcon()"
+      [placeholder]="placeholder()"
+      [appendTo]="appendTo()"
+      [dateFormat]="dateFormat()"
+      [disabled]="isDisabled()"
+      [class]="'w-full ' + styleClass()"
+      (onBlur)="onTouchedCb()"
+    />
+  }
+
+
+
+  @if (label()) {
+    <label [for]="inputId()">
+      {{ label() | translate }}
+    </label>
+  }
+</p-floatlabel>

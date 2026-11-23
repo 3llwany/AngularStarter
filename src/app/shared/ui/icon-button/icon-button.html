@@ -1,0 +1,17 @@
+<button
+  pButton
+  type="button"
+  [rounded]="shape() === 'circle'"
+  [class]="
+    'relative inline-flex items-center justify-center p-0 transition-all cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 ' +
+    containerClasses()
+  "
+  [disabled]="disabled()"
+  [attr.aria-label]="ariaLabel() | translate"
+  (click)="onClick.emit($event)"
+>
+  @if (size() === 'small') {
+    <span class="absolute -inset-1" aria-hidden="true"></span>
+  }
+  <ng-content />
+</button>

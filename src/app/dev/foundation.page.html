@@ -1,0 +1,893 @@
+<main
+  [attr.data-dev-marker]="removableMarker"
+  class="min-h-screen bg-slate-50 text-slate-900 py-8 px-4 sm:px-6 lg:px-8"
+>
+  <div class="mx-auto max-w-6xl flex flex-col gap-8">
+    <!-- Removable Dev Banner -->
+    <aside
+      class="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900 text-start"
+    >
+      {{ 'dev.foundation.removable_banner' | translate }}
+    </aside>
+
+    <!-- Page Header -->
+    <header class="flex flex-col gap-2 border-b border-slate-200 pb-6 text-start">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600">
+            {{ 'common.app_name' | translate }} — {{ 'common.tagline' | translate }}
+          </p>
+          <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-slate-900">
+            {{ 'dev.foundation.title' | translate }}
+          </h1>
+        </div>
+        <span
+          class="inline-flex items-center rounded-full bg-primary-600 px-3.5 py-1.5 text-xs font-semibold text-on-primary"
+        >
+          {{ 'dev.foundation.theme_section.contrast_badge' | translate }}
+        </span>
+      </div>
+      <p class="text-base text-slate-600">
+        {{ 'dev.foundation.subtitle' | translate }}
+      </p>
+    </header>
+
+    <!-- Section 1: Role Theme Switcher & Language Switcher -->
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <app-card
+        header="dev.foundation.theme_section.title"
+        subheader="dev.foundation.theme_section.description"
+      >
+        <div class="flex flex-col gap-4">
+          <p class="text-sm font-medium text-slate-700">
+            {{ 'common.roles.label' | translate }}:
+            <strong class="text-primary-600 ms-1">{{ activeRoleKey() | translate }}</strong>
+            <span class="text-xs text-slate-500 ms-1">
+              ({{ 'dev.foundation.theme_section.active_role' | translate }})
+            </span>
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            @for (item of roleOptions; track item.role) {
+              <app-button
+                [outlined]="themeService.role() !== item.role"
+                [label]="item.labelKey"
+                (onClick)="selectRole(item.role)"
+              />
+            }
+          </div>
+        </div>
+      </app-card>
+
+      <app-card
+        header="dev.foundation.i18n_section.title"
+        subheader="dev.foundation.i18n_section.description"
+      >
+        <div class="flex flex-col gap-4">
+          <p class="text-sm font-medium text-slate-700">
+            {{ 'common.language.label' | translate }}:
+            <strong class="text-primary-600 ms-1">
+              {{ 'common.language.current_dir' | translate }}
+            </strong>
+          </p>
+          <div class="grid grid-cols-2 gap-2">
+            @for (item of languageOptions; track item.lang) {
+              <app-button
+                [outlined]="localeService.lang() !== item.lang"
+                [label]="item.labelKey"
+                (onClick)="selectLanguage(item.lang)"
+              />
+            }
+          </div>
+        </div>
+      </app-card>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SECTION 7: Figma Design System Components (Phase 1.5 Alignment) -->
+    <!-- ================================================================= -->
+    <app-card
+      header="dev.foundation.figma_section.title"
+      subheader="dev.foundation.figma_section.subtitle"
+    >
+      <div class="flex flex-col gap-8">
+        <!-- Container Query Resizer Control -->
+        <div class="flex flex-col gap-3 rounded-2xl bg-surface-100 p-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="text-sm font-semibold text-surface-900">
+              {{ 'dev.foundation.figma_section.container_harness' | translate }}
+            </span>
+            <span class="font-mono text-xs text-primary-600 font-bold">
+              {{ 'dev.foundation.figma_section.current_max_width' | translate }} {{ selectedContainerWidth() }}
+            </span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            @for (opt of containerWidthOptions; track opt.value) {
+              <button
+                type="button"
+                class="rounded-full px-3.5 py-1 text-xs font-medium transition-colors"
+                [class.bg-primary-600]="selectedContainerWidth() === opt.value"
+                [class.text-on-primary]="selectedContainerWidth() === opt.value"
+                [class.bg-surface-0]="selectedContainerWidth() !== opt.value"
+                [class.text-surface-700]="selectedContainerWidth() !== opt.value"
+                [class.border]="selectedContainerWidth() !== opt.value"
+                [class.border-surface-300]="selectedContainerWidth() !== opt.value"
+                (click)="selectedContainerWidth.set(opt.value)"
+              >
+                {{ opt.label }}
+              </button>
+            }
+          </div>
+        </div>
+
+        <!-- The Responsive Container Query Box -->
+        <div
+          class="@container mx-auto w-full transition-all duration-300 rounded-3xl border border-surface-200 bg-surface-0/60 p-6 shadow-sm flex flex-col gap-8"
+          [style.max-width]="selectedContainerWidth()"
+        >
+          <!-- 1. Buttons & Variants (Figma Pill 56px / 44px / 36px) -->
+          <div class="flex flex-col gap-4">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_buttons' | translate }}
+            </h3>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-wrap items-center gap-3">
+                <app-button
+                  variant="primary"
+                  size="large"
+                  label="dev.foundation.figma_section.btn_primary_large"
+                />
+                <app-button
+                  variant="glass"
+                  size="large"
+                  label="dev.foundation.figma_section.btn_glass_large"
+                />
+                <app-button
+                  variant="tinted"
+                  size="large"
+                  label="dev.foundation.figma_section.btn_tinted_large"
+                />
+              </div>
+
+              <div class="flex flex-wrap items-center gap-3">
+                <app-button
+                  variant="primary"
+                  size="medium"
+                  label="dev.foundation.figma_section.btn_primary_med"
+                />
+                <app-button
+                  variant="glass"
+                  size="medium"
+                  label="dev.foundation.figma_section.btn_glass_med"
+                />
+                <app-button
+                  variant="tinted"
+                  size="medium"
+                  label="dev.foundation.figma_section.btn_tinted_med"
+                />
+                <app-button
+                  variant="primary"
+                  size="small"
+                  label="dev.foundation.figma_section.btn_small"
+                />
+                <app-button
+                  variant="primary"
+                  size="medium"
+                  [loading]="true"
+                  label="common.toast.info"
+                />
+                <app-button
+                  variant="primary"
+                  size="medium"
+                  [loading]="true"
+                  [loadingTrailing]="true"
+                  label="common.toast.info"
+                />
+                <app-button
+                  variant="primary"
+                  size="medium"
+                  [disabled]="true"
+                  label="dev.foundation.buttons_section.disabled"
+                />
+              </div>
+
+              <div>
+                <app-button
+                  variant="primary"
+                  size="large"
+                  [fullWidth]="true"
+                  label="dev.foundation.figma_section.btn_full"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Icon Buttons -->
+          <div class="flex flex-col gap-3 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_icon_buttons' | translate }}
+            </h3>
+            <div class="flex flex-wrap items-center gap-3">
+              <app-icon-button
+                variant="surface"
+                shape="circle"
+                ariaLabel="common.actions.confirm"
+              >
+                <i class="pi pi-bell text-sm"></i>
+              </app-icon-button>
+
+              <app-icon-button
+                variant="glass"
+                shape="circle"
+                ariaLabel="common.actions.search"
+              >
+                <i class="pi pi-search text-sm"></i>
+              </app-icon-button>
+
+              <app-icon-button
+                variant="tinted"
+                shape="square"
+                ariaLabel="common.app_name"
+              >
+                <i class="pi pi-bookmark text-sm"></i>
+              </app-icon-button>
+
+              <app-icon-button
+                variant="ghost"
+                shape="circle"
+                ariaLabel="dev.menu.settings"
+              >
+                <i class="pi pi-cog text-sm"></i>
+              </app-icon-button>
+            </div>
+          </div>
+
+          <!-- 3. Inputs, Selects, Phone & Upload (54px Touch Min-Height, Radius 18px) -->
+          <div class="flex flex-col gap-4 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_fields' | translate }}
+            </h3>
+            <div class="grid grid-cols-1 gap-4 @md:grid-cols-2">
+              <div class="flex flex-col gap-1">
+                <app-input
+                  [field]="demoForm.studentName"
+                  label="dev.foundation.inputs_section.name_label"
+                  placeholder="dev.foundation.inputs_section.name_placeholder"
+                />
+                <app-helper-error
+                  helper="dev.foundation.inputs_section.name_helper"
+                  [count]="studentNameLength()"
+                  [maxCount]="50"
+                />
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <app-select
+                  [field]="demoForm.selectedGrade"
+                  [options]="gradeOptions"
+                  optionLabel="labelKey"
+                  optionValue="value"
+                  label="dev.foundation.inputs_section.grade_label"
+                  placeholder="dev.foundation.inputs_section.grade_placeholder"
+                />
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <app-field-phone
+                  [value]="phoneValue()"
+                  (valueChange)="phoneValue.set($event)"
+                  label="common.fields.phone"
+                />
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <app-field-upload
+                  label="dev.foundation.figma_section.upload_label"
+                  title="dev.foundation.figma_section.upload_title"
+                  hint="dev.foundation.figma_section.upload_hint"
+                  accept=".pdf,.docx"
+                  [maxSizeBytes]="uploadMaxBytes"
+                  [progress]="uploadProgress()"
+                  (fileSelected)="simulateUpload()"
+                  (removed)="resetUpload()"
+                />
+                <p class="text-xs text-subdued">{{ 'dev.foundation.figma_section.upload_try' | translate }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3b. Field / Upload — all Figma states side by side, LTR and RTL -->
+          <div class="flex flex-col gap-4 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_upload' | translate }}
+            </h3>
+            @for (direction of uploadDirections; track direction) {
+              <div class="grid grid-cols-1 gap-5 @md:grid-cols-2" [attr.dir]="direction">
+                <app-field-upload
+                  label="dev.foundation.figma_section.upload_label"
+                  title="dev.foundation.figma_section.upload_title"
+                  hint="dev.foundation.figma_section.upload_hint"
+                />
+                <app-field-upload
+                  label="dev.foundation.figma_section.upload_label"
+                  title="dev.foundation.figma_section.upload_title"
+                  hint="dev.foundation.figma_section.upload_hint"
+                  [fileName]="sampleFileName"
+                  [progress]="60"
+                />
+                <app-field-upload
+                  label="dev.foundation.figma_section.upload_label"
+                  title="dev.foundation.figma_section.upload_title"
+                  hint="dev.foundation.figma_section.upload_hint"
+                  [fileName]="sampleFileName"
+                  [fileSize]="sampleFileSize"
+                />
+                <app-field-upload
+                  label="dev.foundation.figma_section.upload_label"
+                  title="dev.foundation.figma_section.upload_title"
+                  hint="dev.foundation.figma_section.upload_hint"
+                  [maxSizeBytes]="uploadMaxBytes"
+                  error="common.upload.errors.size"
+                />
+              </div>
+            }
+            <app-field-upload
+              label="dev.foundation.figma_section.upload_label"
+              title="dev.foundation.figma_section.upload_title"
+              hint="dev.foundation.figma_section.upload_hint"
+              error="dev.foundation.figma_section.upload_failed"
+              [disabled]="true"
+            />
+          </div>
+
+          <!-- 4. Tags & Badges (6 tones × 2 sizes) -->
+          <div class="flex flex-col gap-3 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_tags' | translate }}
+            </h3>
+            <div class="flex flex-wrap items-center gap-2">
+              <app-tag tone="primary" label="dev.foundation.figma_section.tag_primary" [showDot]="true" />
+              <app-tag tone="neutral" label="dev.foundation.figma_section.tag_neutral" />
+              <app-tag tone="success" label="dev.foundation.figma_section.tag_success" [showDot]="true" />
+              <app-tag tone="warning" label="dev.foundation.figma_section.tag_warning" [showDot]="true" />
+              <app-tag tone="orange" label="dev.foundation.figma_section.tag_orange" />
+              <app-tag tone="error" label="dev.foundation.figma_section.tag_error" [showDot]="true" />
+              <app-tag tone="success" size="small" label="dev.foundation.figma_section.tag_small_success" />
+              <app-tag tone="primary" size="small" label="dev.foundation.figma_section.tag_small_primary" />
+            </div>
+          </div>
+
+          <!-- 5. Banners & Notifications -->
+          <div class="flex flex-col gap-3 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_banners' | translate }}
+            </h3>
+            <div class="flex flex-col gap-3">
+              <app-banner
+                tone="info"
+                title="dev.foundation.figma_section.banner_info_title"
+                message="dev.foundation.figma_section.banner_info_msg"
+              />
+              <app-banner
+                tone="warning"
+                title="dev.foundation.figma_section.banner_warn_title"
+                message="dev.foundation.figma_section.banner_warn_msg"
+              />
+              <app-banner
+                tone="error"
+                title="dev.foundation.figma_section.banner_error_title"
+                message="dev.foundation.figma_section.banner_error_msg"
+                [dismissible]="true"
+              />
+            </div>
+          </div>
+
+          <!-- 6. Choice Cards & Checkbox Cards -->
+          <div class="flex flex-col gap-4 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_cards' | translate }}
+            </h3>
+            <div class="grid grid-cols-1 gap-3 @md:grid-cols-2">
+              <app-choice-card
+                [selected]="selectedPlan() === 'standard'"
+                title="dev.foundation.figma_section.plan_standard_title"
+                description="dev.foundation.figma_section.plan_standard_desc"
+                (onSelect)="selectedPlan.set('standard')"
+              />
+              <app-choice-card
+                [selected]="selectedPlan() === 'premium'"
+                title="dev.foundation.figma_section.plan_premium_title"
+                description="dev.foundation.figma_section.plan_premium_desc"
+                (onSelect)="selectedPlan.set('premium')"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 gap-3 @md:grid-cols-2">
+              <app-checkbox-card
+                [checked]="checkboxCard1()"
+                title="dev.foundation.figma_section.notif_lessons_title"
+                description="dev.foundation.figma_section.notif_lessons_desc"
+                (checkedChange)="checkboxCard1.set($event)"
+              />
+              <app-checkbox-card
+                [checked]="checkboxCard2()"
+                title="dev.foundation.figma_section.notif_digest_title"
+                description="dev.foundation.figma_section.notif_digest_desc"
+                (checkedChange)="checkboxCard2.set($event)"
+              />
+            </div>
+          </div>
+
+          <!-- 7. Selection Chips -->
+          <div class="flex flex-col gap-3 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_chips' | translate }}
+            </h3>
+            <div class="flex flex-wrap items-center gap-2">
+              <app-chip-select
+                label="dev.foundation.figma_section.chip_math"
+                [active]="chip1()"
+                (activeChange)="chip1.set($event)"
+              />
+              <app-chip-select
+                label="dev.foundation.figma_section.chip_physics"
+                [active]="chip2()"
+                (activeChange)="chip2.set($event)"
+              />
+              <app-chip-select
+                label="dev.foundation.figma_section.chip_chemistry"
+                [active]="chip3()"
+                (activeChange)="chip3.set($event)"
+              />
+            </div>
+          </div>
+
+          <!-- 8. Progress Steps -->
+          <div class="flex flex-col gap-3 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_steps' | translate }}
+            </h3>
+            <app-progress-steps [steps]="steps" />
+          </div>
+
+          <!-- 9. Skeletons -->
+          <div class="flex flex-col gap-3 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_skeletons' | translate }}
+            </h3>
+            <div class="flex items-center gap-3">
+              <app-skeleton shape="circle" width="48px" height="48px" />
+              <div class="flex flex-1 flex-col gap-2">
+                <app-skeleton shape="line" width="60%" height="16px" />
+                <app-skeleton shape="line" width="90%" height="12px" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Links, Divider "Or", Social Buttons & Bottom Nav Tab -->
+          <div class="flex flex-col gap-4 border-t border-surface-200 pt-6">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-surface-500">
+              {{ 'dev.foundation.figma_section.sec_nav_links' | translate }}
+            </h3>
+            <div class="flex flex-wrap items-center gap-4">
+              <app-link label="dev.foundation.figma_section.link_primary" />
+              <app-link label="dev.foundation.figma_section.link_muted" variant="muted" />
+              <app-link label="dev.foundation.figma_section.link_delete" variant="destructive" />
+            </div>
+
+            <app-divider-or />
+
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <app-social-button provider="google" />
+              <app-social-button provider="facebook" />
+            </div>
+
+            <div class="flex items-center justify-around rounded-full bg-surface-100 p-2">
+              <app-bottom-nav-tab
+                label="dev.foundation.figma_section.nav_home"
+                [active]="true"
+              >
+                <i class="pi pi-home text-lg"></i>
+              </app-bottom-nav-tab>
+              <app-bottom-nav-tab
+                label="dev.foundation.figma_section.nav_lessons"
+                [active]="false"
+              >
+                <i class="pi pi-book text-lg"></i>
+              </app-bottom-nav-tab>
+              <app-bottom-nav-tab
+                label="dev.foundation.figma_section.nav_profile"
+                [active]="false"
+              >
+                <i class="pi pi-user text-lg"></i>
+              </app-bottom-nav-tab>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-card>
+
+    <!-- Section 2: Buttons Showcase (Legacy / PrimeNG app-button) -->
+    <app-card header="dev.foundation.buttons_section.title">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+        <app-button severity="primary" label="dev.foundation.buttons_section.primary" />
+        <app-button severity="secondary" label="dev.foundation.buttons_section.secondary" />
+        <app-button
+          severity="primary"
+          [outlined]="true"
+          label="dev.foundation.buttons_section.outlined"
+        />
+        <app-button
+          severity="primary"
+          variant="text"
+          label="dev.foundation.buttons_section.ghost"
+        />
+        <app-button severity="danger" label="dev.foundation.buttons_section.danger" />
+        <app-button
+          severity="primary"
+          [disabled]="true"
+          label="dev.foundation.buttons_section.disabled"
+        />
+        <app-button
+          severity="primary"
+          [loading]="true"
+          label="dev.foundation.buttons_section.loading"
+        />
+        <app-button
+          severity="primary"
+          icon="arrow-right"
+          iconPos="right"
+          [directionalIcon]="true"
+          label="dev.foundation.buttons_section.directional"
+        />
+      </div>
+      <svg data-p-icon="arrow-right" class="hidden" aria-hidden="true"></svg>
+    </app-card>
+
+    <!-- Section 3: Inputs & Selects Showcase (app-input & app-select) -->
+    <app-card header="dev.foundation.inputs_section.title">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div class="flex flex-col gap-1">
+          <app-input
+            [field]="demoForm.studentName"
+            label="dev.foundation.inputs_section.name_label"
+            placeholder="dev.foundation.inputs_section.name_placeholder"
+          />
+          <p class="text-xs text-slate-500 text-start ms-1">
+            {{ 'dev.foundation.inputs_section.name_helper' | translate }}
+          </p>
+        </div>
+
+        <app-select
+          [field]="demoForm.selectedGrade"
+          [options]="gradeOptions"
+          optionLabel="labelKey"
+          optionValue="value"
+          label="dev.foundation.inputs_section.grade_label"
+          placeholder="dev.foundation.inputs_section.grade_placeholder"
+        />
+
+        <app-input
+          [field]="demoForm.invalidSample"
+          label="dev.foundation.inputs_section.invalid_label"
+          placeholder="dev.foundation.inputs_section.invalid_placeholder"
+        />
+
+        <app-input
+          [field]="demoForm.disabledSample"
+          label="dev.foundation.inputs_section.disabled_label"
+          placeholder="dev.foundation.inputs_section.disabled_placeholder"
+        />
+      </div>
+    </app-card>
+
+    <!-- Section 4: Cards & Dialogs Showcase (app-card & app-dialog) -->
+    <app-card
+      header="dev.foundation.cards_dialog_section.title"
+      subheader="dev.foundation.cards_dialog_section.card_subtitle"
+    >
+      <div class="flex flex-col gap-3">
+        <h2 class="text-base font-semibold text-slate-900">
+          {{ 'dev.foundation.cards_dialog_section.card_title' | translate }}
+        </h2>
+        <p class="text-sm text-slate-600">
+          {{ 'dev.foundation.cards_dialog_section.card_body' | translate }}
+        </p>
+      </div>
+      <div cardFooter class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <app-button severity="primary" [outlined]="true" label="common.actions.submit" />
+        <app-button severity="secondary" label="common.actions.next_step" />
+        <app-button
+          severity="primary"
+          label="common.actions.open_dialog"
+          (onClick)="openDialog()"
+        />
+      </div>
+    </app-card>
+
+    <!-- Section 5: Utilities & Core Services Showcase -->
+    <app-card
+      header="dev.foundation.utilities_section.title"
+      subheader="dev.foundation.utilities_section.subtitle"
+    >
+      <div class="flex flex-col gap-8">
+        <!-- 5.1 Toast Notification -->
+        <div class="flex flex-col gap-3">
+          <h3 class="text-base font-semibold text-slate-900 text-start">
+            {{ 'dev.foundation.utilities_section.toast_title' | translate }}
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <app-button
+              severity="success"
+              label="dev.foundation.utilities_section.toast_success_btn"
+              (onClick)="showToast('success')"
+            />
+            <app-button
+              severity="danger"
+              label="dev.foundation.utilities_section.toast_error_btn"
+              (onClick)="showToast('error')"
+            />
+            <app-button
+              severity="warn"
+              label="dev.foundation.utilities_section.toast_warn_btn"
+              (onClick)="showToast('warn')"
+            />
+            <app-button
+              severity="info"
+              label="dev.foundation.utilities_section.toast_info_btn"
+              (onClick)="showToast('info')"
+            />
+          </div>
+        </div>
+
+        <!-- 5.2 Confirm Dialog -->
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-base font-semibold text-slate-900 text-start">
+              {{ 'dev.foundation.utilities_section.confirm_title' | translate }}
+            </h3>
+            <span class="text-xs text-slate-500">
+              {{ 'dev.foundation.utilities_section.confirm_result_label' | translate }}:
+              <strong class="text-primary-600 font-mono ms-1">{{ confirmResult() }}</strong>
+            </span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <app-button
+              severity="primary"
+              [outlined]="true"
+              label="dev.foundation.utilities_section.confirm_prompt_btn"
+              (onClick)="triggerConfirm()"
+            />
+            <app-button
+              severity="danger"
+              label="dev.foundation.utilities_section.confirm_delete_btn"
+              (onClick)="triggerDeleteConfirm()"
+            />
+          </div>
+        </div>
+
+        <!-- 5.3 Programmatic Dialog (DialogService) -->
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-base font-semibold text-slate-900 text-start">
+              {{ 'dev.foundation.utilities_section.dialog_title' | translate }}
+            </h3>
+            <span class="text-xs text-slate-500">
+              {{ 'dev.foundation.utilities_section.dialog_result_label' | translate }}:
+              <strong class="text-primary-600 font-mono ms-1">{{ dynamicDialogResult() }}</strong>
+            </span>
+          </div>
+          <div>
+            <app-button
+              severity="primary"
+              label="dev.foundation.utilities_section.dialog_open_btn"
+              (onClick)="openDynamicDialog()"
+            />
+          </div>
+        </div>
+
+        <!-- 5.4 Loading Service -->
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-base font-semibold text-slate-900 text-start">
+              {{ 'dev.foundation.utilities_section.loading_title' | translate }}
+            </h3>
+            <span
+              class="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium"
+              [class.bg-emerald-100]="!loadingService.isLoading()"
+              [class.text-emerald-800]="!loadingService.isLoading()"
+              [class.bg-amber-100]="loadingService.isLoading()"
+              [class.text-amber-800]="loadingService.isLoading()"
+            >
+              @if (loadingService.isLoading()) {
+                {{ 'dev.foundation.utilities_section.loading_status_active' | translate }}
+                ({{ loadingService.activeCount() }})
+              } @else {
+                {{ 'dev.foundation.utilities_section.loading_status_idle' | translate }}
+              }
+            </span>
+          </div>
+          <div>
+            <app-button
+              severity="primary"
+              [loading]="loadingService.isLoading()"
+              label="dev.foundation.utilities_section.loading_trigger_btn"
+              (onClick)="simulateLoading()"
+            />
+          </div>
+        </div>
+
+        <!-- 5.5 File Service -->
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-6">
+          <h3 class="text-base font-semibold text-slate-900 text-start">
+            {{ 'dev.foundation.utilities_section.file_title' | translate }}
+          </h3>
+          <div class="flex flex-wrap items-center gap-4">
+            <app-button
+              severity="secondary"
+              [outlined]="true"
+              label="dev.foundation.utilities_section.file_download_btn"
+              (onClick)="downloadSampleFile()"
+            />
+            <label class="inline-flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+              <span class="font-medium text-primary-600 underline">
+                {{ 'dev.foundation.utilities_section.file_upload_label' | translate }}
+              </span>
+              <input
+                type="file"
+                class="hidden"
+                (change)="onFileSelected($event)"
+              />
+            </label>
+            @if (fileBase64Info() !== '—') {
+              <span class="text-xs font-mono text-slate-500">{{ fileBase64Info() }}</span>
+            }
+          </div>
+        </div>
+
+        <!-- 5.6 Img Fallback Directive -->
+        <div class="flex flex-col gap-3 border-t border-slate-200 pt-6">
+          <h3 class="text-base font-semibold text-slate-900 text-start">
+            {{ 'dev.foundation.utilities_section.fallback_title' | translate }}
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col items-center gap-2 p-4 rounded border border-dashed border-slate-300">
+              <img
+                src="data:image/png;base64,invalid"
+                [appImgFallback]="fallbackImgDataUri"
+                alt="Fallback Demo"
+                class="h-16 w-16 rounded-full object-cover border border-slate-200"
+              />
+              <p class="text-xs text-slate-600">
+                {{ 'dev.foundation.utilities_section.fallback_broken_label' | translate }}
+              </p>
+            </div>
+            <div class="flex flex-col items-center gap-2 p-4 rounded border border-dashed border-slate-300">
+              <img
+                [src]="validImgDataUri"
+                [appImgFallback]="fallbackImgDataUri"
+                alt="Valid Demo"
+                class="h-16 w-16 rounded-full object-cover border border-slate-200"
+              />
+              <p class="text-xs text-slate-600">
+                {{ 'dev.foundation.utilities_section.fallback_valid_label' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-card>
+
+    <!-- Section 6: Auth & Session Cycle Demo (Phase 2) -->
+    <app-card
+      header="dev.foundation.auth_section.title"
+      subheader="dev.foundation.auth_section.subtitle"
+    >
+      <div class="flex flex-col gap-6 text-start">
+        <div class="flex flex-col gap-3">
+          <p class="text-sm font-medium text-slate-700">
+            {{ 'dev.foundation.auth_section.select_role_label' | translate }}
+          </p>
+          <div class="flex flex-wrap gap-2">
+            @for (item of loginRoleOptions; track item.role) {
+              <app-button
+                [severity]="selectedLoginRole() === item.role ? 'primary' : 'secondary'"
+                [outlined]="selectedLoginRole() !== item.role"
+                [label]="item.labelKey"
+                (onClick)="selectLoginRole(item.role)"
+              />
+            }
+            <app-button
+              severity="secondary"
+              [outlined]="true"
+              label="dev.foundation.auth_section.fill_demo_btn"
+              (onClick)="fillDemoCredentials()"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <app-input
+            [field]="authDemoForm.identifier"
+            [label]="activeLoginMethod().labelKey"
+            [placeholder]="activeLoginMethod().placeholderKey"
+            [type]="activeIdentifierInputType()"
+            [autocomplete]="activeLoginMethod().autocomplete"
+          />
+          <app-input
+            [field]="authDemoForm.password"
+            label="dev.foundation.auth_section.password_label"
+            placeholder="dev.foundation.auth_section.password_placeholder"
+            type="password"
+          />
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <app-button
+            severity="primary"
+            [loading]="loadingService.isLoading()"
+            label="dev.foundation.auth_section.login_btn"
+            (onClick)="submitDemoLogin()"
+          />
+          <app-button
+            severity="secondary"
+            [outlined]="true"
+            label="dev.foundation.auth_section.logout_btn"
+            [disabled]="!authService.isAuthenticated()"
+            (onClick)="triggerDemoLogout()"
+          />
+          <app-button
+            severity="danger"
+            [outlined]="true"
+            label="dev.foundation.auth_section.expire_btn"
+            [disabled]="!authService.isAuthenticated()"
+            (onClick)="triggerDemoExpire()"
+          />
+        </div>
+
+        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col gap-2 text-sm">
+          <p class="font-semibold text-slate-900">
+            {{ 'dev.foundation.auth_section.state_title' | translate }}
+          </p>
+          <p class="text-slate-700">
+            <span class="font-medium">{{ 'dev.foundation.auth_section.status_label' | translate }}:</span>
+            <code class="ms-2 font-mono text-primary-700">{{ authService.status() }}</code>
+          </p>
+          <p class="text-slate-700">
+            <span class="font-medium">{{ 'dev.foundation.auth_section.user_label' | translate }}:</span>
+            <code class="ms-2 font-mono text-slate-800">{{ authUserDisplay() }}</code>
+          </p>
+          @if (authErrorKey(); as errorKey) {
+            <p class="text-red-600">
+              <span class="font-medium">{{ 'dev.foundation.auth_section.last_error_label' | translate }}:</span>
+              <span class="ms-2">{{ errorKey | translate }}</span>
+            </p>
+          }
+        </div>
+      </div>
+    </app-card>
+
+    <!-- Modal Dialog -->
+    <app-dialog
+      [(visible)]="dialogVisible"
+      header="dev.foundation.cards_dialog_section.dialog_header"
+      closeAriaLabel="common.actions.close"
+    >
+      <p class="text-sm text-slate-600">
+        {{ 'dev.foundation.cards_dialog_section.dialog_body' | translate }}
+      </p>
+      <div dialogFooter class="grid grid-cols-2 gap-2 w-full sm:w-auto">
+        <app-button
+          severity="primary"
+          [outlined]="true"
+          label="common.actions.close"
+          (onClick)="closeDialog()"
+        />
+        <app-button
+          severity="primary"
+          label="common.actions.confirm"
+          (onClick)="closeDialog()"
+        />
+      </div>
+    </app-dialog>
+  </div>
+</main>

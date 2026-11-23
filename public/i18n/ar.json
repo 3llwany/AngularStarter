@@ -1,0 +1,398 @@
+{
+  "common": {
+    "app_name": "مذاكرتي",
+    "tagline": "منصة التعلّم الاجتماعي المتمحورة حول الطالب",
+    "language": {
+      "label": "اللغة",
+      "ar": "العربية",
+      "en": "English",
+      "current_dir": "من اليمين إلى اليسار (RTL)"
+    },
+    "roles": {
+      "label": "اختر دور المستخدم لمعاينة السمة",
+      "student": "طالب (Student)",
+      "parent": "ولي أمر (Parent)",
+      "teacher": "معلم (Teacher)",
+      "school": "مدرسة (School)",
+      "partner": "شريك المتجر (Partner)",
+      "admin": "مدير النظام (Admin)"
+    },
+    "actions": {
+      "search": "بحث...",
+      "open_dialog": "فتح النافذة المنبثقة",
+      "close": "إغلاق",
+      "confirm": "تأكيد",
+      "submit": "إرسال",
+      "next_step": "الخطوة التالية",
+      "delete": "حذف",
+      "cancel": "إلغاء"
+    },
+    "upload": {
+      "title": "ارفع ملفاً",
+      "uploading": "جارٍ الرفع... {{percent}}٪",
+      "uploaded": "تم الرفع",
+      "remove": "إزالة الملف",
+      "errors": {
+        "size": "حجم الملف أكبر من {{max}}",
+        "type": "نوع الملف غير مدعوم"
+      }
+    },
+    "fields": {
+      "phone": "رقم الهاتف"
+    },
+    "progress": "التقدم",
+    "empty": {
+      "no_data": "لا توجد بيانات متاحة للعرض"
+    },
+    "toast": {
+      "success": "تمت العملية بنجاح",
+      "error": "حدث خطأ",
+      "warning": "تنبيه",
+      "info": "معلومات"
+    },
+    "confirm": {
+      "delete_title": "تأكيد الحذف",
+      "delete_msg": "هل أنت متأكد من رغبتك في الحذف؟ لا يمكن التراجع عن هذا الإجراء.",
+      "delete_entity_msg": "هل أنت متأكد من رغبتك في حذف هذا العنصر؟"
+    },
+    "labels": {
+      "or": "أو"
+    },
+    "auth": {
+      "continue_with_google": "المتابعة باستخدام Google",
+      "continue_with_facebook": "المتابعة باستخدام Facebook"
+    }
+  },
+  "auth": {
+    "fields": {
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "student@example.com",
+        "error": "يرجى إدخال بريد إلكتروني صحيح."
+      },
+      "mobile_number": {
+        "label": "رقم الموبايل",
+        "placeholder": "01012345678",
+        "error": "يرجى إدخال رقم موبايل مصري صحيح مكون من 11 رقماً."
+      },
+      "teacher_id": {
+        "label": "كود المعلم",
+        "placeholder": "TCH-1042",
+        "error": "يرجى إدخال كود معلم صحيح (أحرف إنجليزية وأرقام فقط)."
+      },
+      "school_code": {
+        "label": "كود المدرسة",
+        "placeholder": "SCH-2026",
+        "error": "يرجى إدخال كود مدرسة صحيح."
+      },
+      "business_email": {
+        "label": "البريد الإلكتروني للعمل",
+        "placeholder": "partner@company.com",
+        "error": "يرجى إدخال بريد إلكتروني صحيح للعمل."
+      }
+    },
+    "errors": {
+      "invalid_credentials": "بيانات الدخول غير صحيحة. يرجى المحاولة مرة أخرى."
+    }
+  },
+  "errors": {
+    "http": {
+      "network": "تعذر الاتصال بالخادم. تحقق من اتصالك بالإنترنت.",
+      "timeout": "انتهت مهلة الطلب. يرجى المحاولة مرة أخرى.",
+      "bad_request": "الطلب غير صالح. يرجى التحقق من البيانات المدخلة.",
+      "unauthorized": "انتهت جلستك أو غير مصرح لك. يرجى تسجيل الدخول مجدداً.",
+      "forbidden": "ليست لديك صلاحية للوصول إلى هذا المورد.",
+      "not_found": "المورد المطلوب غير موجود.",
+      "conflict": "حدث تعارض مع البيانات الحالية.",
+      "validation": "يرجى مراجعة الحقول المدخلة وإعادة المحاولة.",
+      "rate_limited": "تم إرسال طلبات كثيرة جداً. يرجى الانتظار قليلاً.",
+      "server": "حدث خطأ في الخادم. يرجى المحاولة لاحقاً."
+    },
+    "unexpected": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+    "not_found": {
+      "badge": "404",
+      "seo_title": "الصفحة غير موجودة (404)",
+      "title": "عذراً، الصفحة غير موجودة",
+      "description": "الصفحة التي تبحث عنها ربما تم نقلها أو حذفها أو أن الرابط غير صحيح.",
+      "back_home": "العودة إلى الصفحة الرئيسية"
+    }
+  },
+  "dev": {
+    "foundation": {
+      "removable_banner": "صفحة تحقق مؤقتة للتطوير فقط (TEMPORARY — مستبعدة تلقائياً من بناء الإنتاج)",
+      "title": "التحقق من البنية الأساسية ونظام التصميم — المرحلة الأولى",
+      "subtitle": "معاينة حية لمكونات moz-* المغلِّفة لـ PrimeNG، وتبديل سمات الأدوار، ودعم العربية والإنجليزية.",
+      "theme_section": {
+        "title": "مبدّل سمات الأدوار (6 أدوار)",
+        "description": "يتغير اللون الأساسي فوراً عبر متغيرات CSS لكل من Tailwind و PrimeNG دون إعادة تحميل الصفحة.",
+        "active_role": "الدور النشط حالياً",
+        "contrast_badge": "تباين متوافق مع WCAG AA"
+      },
+      "i18n_section": {
+        "title": "مبدّل اللغة والاتجاه (RTL / LTR)",
+        "description": "يضبط خاصيتي lang و dir على عنصر html ويحفظ الاختيار في ملف تعريف الارتباط (Cookie) متوافق مع SSR."
+      },
+      "buttons_section": {
+        "title": "الأزرار (moz-button)",
+        "primary": "زر أساسي",
+        "secondary": "زر ثانوي",
+        "outlined": "زر بإطار",
+        "ghost": "زر شفاف",
+        "danger": "زر تحذيري",
+        "disabled": "زر معطّل",
+        "loading": "جارٍ التحميل",
+        "directional": "استمرار (أيقونة اتجاهية)"
+      },
+      "inputs_section": {
+        "title": "حقول الإدخال والقوائم (moz-input & moz-select)",
+        "name_label": "اسم الطالب",
+        "name_placeholder": "أدخل اسم الطالب...",
+        "name_helper": "حقل نصي قياسي مرتبط بإشارات Angular",
+        "invalid_label": "حقل بحالة خطأ",
+        "invalid_placeholder": "قيمة غير صالحة",
+        "invalid_error": "يرجى إدخال قيمة صحيحة في هذا الحقل.",
+        "disabled_label": "حقل معطّل",
+        "disabled_placeholder": "غير متاح للتعديل",
+        "grade_label": "المرحلة الدراسية",
+        "grade_placeholder": "اختر المرحلة الدراسية",
+        "grade_options": {
+          "primary": "المرحلة الابتدائية",
+          "preparatory": "المرحلة الإعدادية",
+          "secondary": "المرحلة الثانوية"
+        }
+      },
+      "cards_dialog_section": {
+        "title": "البطاقات والنوافذ الحوارية (moz-card & moz-dialog)",
+        "card_title": "بطاقة نظام التصميم الموحّد",
+        "card_subtitle": "تغليف كامل لمكونات الطرف الثالث داخل shared/ui",
+        "card_body": "لا تستورد ميزات التطبيق مكتبة PrimeNG مباشرة؛ بل تستخدم مكونات moz-* فقط لضمان الاتساق وسهولة الصيانة.",
+        "dialog_header": "نافذة حوارية تجريبية (moz-dialog)",
+        "dialog_body": "تتحقق هذه النافذة من إدارة التركيز، ودعم الاتجاه من اليمين إلى اليسار، وتطبيق سمة الدور النشط."
+      },
+      "utilities_section": {
+        "title": "عرض الأدوات والخدمات المشتركة",
+        "subtitle": "خدمات التوست، التأكيد، الدايلوج البرمجي، التحميل، الملفات والبديل التلقائي للصور",
+        "toast_title": "نظام التوست (ToastService و AppToast)",
+        "toast_success_btn": "توست نجاح",
+        "toast_error_btn": "توست خطأ",
+        "toast_warn_btn": "توست تحذير",
+        "toast_info_btn": "توست معلومة",
+        "confirm_title": "نافذة التأكيد (ConfirmService و AppConfirmDialog)",
+        "confirm_prompt_btn": "طلب تأكيد عادي",
+        "confirm_delete_btn": "طلب تأكيد حذف",
+        "confirm_result_label": "نتيجة آخر تأكيد",
+        "dialog_title": "الدايلوج البرمجي (DialogService.openAsync)",
+        "dialog_open_btn": "فتح نافذة برمجياً",
+        "dialog_header": "نافذة منبثقة برمجية",
+        "dialog_body": "تم فتح هذه النافذة برمجياً باستخدام DialogService.openAsync وبدعم كامل للأنواع.",
+        "dialog_result_label": "نتيجة إغلاق النافذة",
+        "loading_title": "خدمة التحميل (مبنية على الـ Signals)",
+        "loading_trigger_btn": "محاكاة عملية تحميل (1.5 ثانية)",
+        "loading_status_active": "جاري التحميل حالياً",
+        "loading_status_idle": "في وضع الاستعداد (خامل)",
+        "file_title": "خدمة الملفات (تحميل وتحويل Base64)",
+        "file_download_btn": "تحميل ملف تجريبي",
+        "file_upload_label": "اختر ملفاً لتحويله إلى Base64",
+        "fallback_title": "معالجة خطأ الصور (appImgFallback)",
+        "fallback_broken_label": "صورة برابط غير صالح (تم تفعيل البديل)",
+        "fallback_valid_label": "صورة برابط صالح"
+      },
+      "auth_section": {
+        "title": "تجربة دورة تسجيل الدخول والجلسة (AuthService & LOGIN_METHODS)",
+        "subtitle": "جرّب تغيير الدور لترى كيف يتغير حقل الإدخال والتحقق تلقائياً، ثم سجّل الدخول لمشاهدة تحديث الجلسة والثيم والأحداث مباشرة.",
+        "select_role_label": "١. اختر دور الدخول (يتغير الحقل حسب LOGIN_METHODS)",
+        "fill_demo_btn": "ملء بيانات تجريبية صالحة",
+        "password_label": "كلمة المرور (للتجربة: Password123!)",
+        "password_placeholder": "أدخل كلمة المرور...",
+        "login_btn": "تسجيل الدخول (login)",
+        "logout_btn": "تسجيل الخروج (logout)",
+        "expire_btn": "محاكاة انتهاء الجلسة 401",
+        "state_title": "حالة الجلسة الحية (AuthService Signals)",
+        "status_label": "الحالة (status)",
+        "user_label": "المستخدم الحالي (user)",
+        "last_error_label": "آخر خطأ تحقق / دخول"
+      },
+      "figma_section": {
+        "title": "المرحلة 1.5 — مكونات نظام تصميم فيجما وحاوية الاستجابة",
+        "subtitle": "مطابقة جميع العناصر مع وثائق التصميم ومعاينتها داخل حاويات الاستجابة",
+        "container_harness": "حاوية فحص الاستجابة (@container):",
+        "current_max_width": "الحد الأقصى للعرض الحالي:",
+        "btn_primary_large": "أساسي كبير (56px)",
+        "btn_glass_large": "زجاجي كبير",
+        "btn_tinted_large": "مظلل كبير",
+        "btn_primary_med": "أساسي متوسط (44px)",
+        "btn_glass_med": "زجاجي متوسط",
+        "btn_tinted_med": "مظلل متوسط",
+        "btn_small": "صغير (36px)",
+        "btn_full": "زر أساسي بعرض كامل",
+        "sec_buttons": "1. الأزرار (توهج أساسي، زجاجي، مظلل × كبير، متوسط، صغير)",
+        "sec_icon_buttons": "2. أزرار الأيقونات (مساحة لمس >= 44px)",
+        "sec_fields": "3. الحقول (ارتفاع 54px، زوايا 18px، حشوة 18px)",
+        "sec_tags": "4. الوسوم (6 نغمات × حجمين، زوايا كبسولية 9999px)",
+        "sec_banners": "5. لافتات التنبيه (معلومات، تحذير، خطأ)",
+        "sec_cards": "6. بطاقات الاختيار الفردي والمتعدد",
+        "sec_chips": "7. رقائق الاختيار (ارتفاع أدنى 44px)",
+        "sec_steps": "8. تتبع الخطوات",
+        "sec_skeletons": "9. الهياكل المؤقتة (دائرة، خط، صف، بطاقة)",
+        "sec_nav_links": "10. الروابط، الفواصل، التسجيل الاجتماعي والشريط السفلي",
+        "banner_info_title": "معلومة دراسية هامة",
+        "banner_info_msg": "تم تحديث جدول الامتحانات للفصل الدراسي الأول.",
+        "banner_warn_title": "تنبيه بالموعد النهائي",
+        "banner_warn_msg": "يتبقى يومان على انتهاء فترة تسجيل المواد.",
+        "banner_error_title": "تعذر الاتصال بالخادم",
+        "banner_error_msg": "يرجى التحقق من اتصالك بالإنترنت وإعادة المحاولة.",
+        "plan_standard_title": "الباقة القياسية",
+        "plan_standard_desc": "وصول كامل للمحاضرات وبنك الأسئلة التفاعلي",
+        "plan_premium_title": "الباقة المميزة",
+        "plan_premium_desc": "متابعة دورية مع المعلم ومراجعات مباشرة أسبوعية",
+        "notif_lessons_title": "إشعارات الدروس والمواعيد",
+        "notif_lessons_desc": "استلام تنبيهات فورية عند إضافة محتوى دراسي جديد",
+        "notif_digest_title": "الملخصات الأسبوعية عبر البريد",
+        "notif_digest_desc": "تقرير أسبوعي مفصل بتقدم الطالب ونتائج الواجبات",
+        "chip_math": "الرياضيات",
+        "chip_physics": "الفيزياء",
+        "chip_chemistry": "الكيمياء",
+        "link_primary": "رابط أساسي",
+        "link_muted": "رابط فرعي",
+        "link_delete": "حذف أو إلغاء",
+        "nav_home": "الرئيسية",
+        "nav_lessons": "الدروس",
+        "nav_profile": "حسابي",
+        "tag_primary": "وسم أساسي",
+        "tag_neutral": "محايد",
+        "tag_success": "ناجح",
+        "tag_warning": "تحذير",
+        "tag_orange": "برتقالي",
+        "tag_error": "خطأ",
+        "tag_small_success": "نجاح صغير",
+        "tag_small_primary": "أساسي صغير",
+        "step_personal": "البيانات الشخصية",
+        "step_stage": "المرحلة الدراسية",
+        "step_confirm": "تأكيد الحساب",
+        "sec_upload": "رفع الملفات — كل الحالات باتجاهي اليسار واليمين",
+        "upload_label": "السيرة الذاتية",
+        "upload_title": "ارفع سيرتك الذاتية",
+        "upload_hint": "PDF أو DOCX · الحد الأقصى 5 MB",
+        "upload_try": "جرّبها: اختر ملف PDF أو DOCX أقل من 5 MB",
+        "upload_failed": "فشل الرفع. تحقق من اتصالك وحاول مرة أخرى."
+      }
+    },
+    "i18n_ssr": {
+      "title": "اختبار العرض على الخادم (SSR) للترجمة",
+      "description": "تم عرض هذا النص على الخادم باستخدام ملف تعريف الارتباط ونقله عبر TransferState دون طلب الشبكة مرة أخرى.",
+      "stream_label": "قيمة مشتقة عبر toSignal(translate.stream(...))"
+    },
+    "menu": {
+      "overview": "الرئيسية",
+      "courses": "المقررات",
+      "lessons": "الدروس المسجلة",
+      "assignments": "الواجبات",
+      "exams": "الاختبارات",
+      "students": "الطلاب",
+      "calendar": "الجدول الدراسي",
+      "wallet": "المحفظة والمدفوعات",
+      "certificates": "الشهادات",
+      "messages": "الرسائل",
+      "notifications": "الإشعارات",
+      "analytics": "الإحصائيات",
+      "reports": "التقارير",
+      "support": "الدعم الفني",
+      "settings": "الإعدادات"
+    }
+  },
+  "shell": {
+    "actions": {
+      "toggle_sidebar": "فتح أو إغلاق القائمة الجانبية",
+      "collapse_sidebar": "طي القائمة الجانبية",
+      "expand_sidebar": "توسيع القائمة الجانبية",
+      "switch_language": "تغيير اللغة",
+      "sign_in": "تسجيل الدخول",
+      "sign_out": "تسجيل الخروج"
+    },
+    "layout": {
+      "skip_to_content": "الانتقال إلى المحتوى الرئيسي",
+      "sidebar_label": "قائمة التنقل الجانبية"
+    }
+  },
+  "mock": {
+    "students": {
+      "nav_title": "الطلاب (Mock)",
+      "title": "إدارة الطلاب (بيئة تجريبية)",
+      "subtitle": "استعراض عملي متكامل لأحدث تقنيات Angular 22: Signal Forms، و SignalStore، و BaseRepository، و HttpResource",
+      "stats": {
+        "total": "إجمالي الطلاب",
+        "active": "الطلاب النشطون",
+        "inactive": "الطلاب غير النشطين",
+        "avg_gpa": "متوسط المعدل التراكمي"
+      },
+      "table": {
+        "id": "الرقم التعريفي",
+        "name": "الطالب",
+        "contact": "بيانات الاتصال",
+        "grade": "المرحلة الدراسية",
+        "enrollment_date": "تاريخ القيد",
+        "gpa": "المعدل",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "grades": {
+        "first_sec": "الأول الثانوي",
+        "second_sec": "الثاني الثانوي",
+        "third_sec": "الثالث الثانوي"
+      },
+      "status": {
+        "active": "نشط",
+        "inactive": "غير نشط"
+      },
+      "actions": {
+        "add": "إضافة طالب جديد",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "view": "عرض التفاصيل",
+        "refresh": "تحديث البيانات",
+        "search_placeholder": "بحث بالاسم، البريد، أو الهاتف...",
+        "filter_all_grades": "جميع المراحل الدراسية",
+        "filter_all_statuses": "جميع الحالات"
+      },
+      "form": {
+        "add_title": "إضافة طالب جديد",
+        "edit_title": "تعديل بيانات الطالب",
+        "name_label": "الاسم الكامل",
+        "name_placeholder": "مثال: أحمد محمد علي",
+        "email_label": "البريد الإلكتروني",
+        "email_placeholder": "ahmed@example.com",
+        "phone_label": "رقم الهاتف",
+        "phone_placeholder": "01012345678",
+        "grade_label": "المرحلة الدراسية",
+        "grade_placeholder": "اختر المرحلة الدراسية",
+        "enrollment_date_label": "تاريخ القيد",
+        "gpa_label": "المعدل التراكمي (GPA)",
+        "gpa_placeholder": "مثال: 3.85",
+        "status_label": "حساب نشط"
+      },
+      "delete_confirm": {
+        "title": "تأكيد حذف الطالب",
+        "message": "هل أنت متأكد من حذف هذا الطالب نهائياً؟ لا يمكن التراجع عن هذا الإجراء."
+      },
+      "toast": {
+        "create_success": "تمت إضافة الطالب بنجاح",
+        "update_success": "تم تحديث بيانات الطالب بنجاح",
+        "delete_success": "تم حذف الطالب بنجاح"
+      },
+      "details": {
+        "title": "الملف التعريفي للطالب",
+        "academic_info": "المعلومات الدراسية",
+        "enrolled_courses": "المقررات المسجلة"
+      }
+    }
+  },
+  "VALIDATION": {
+    "REQUIRED": "هذا الحقل مطلوب",
+    "EMAIL": "البريد الإلكتروني غير صالح",
+    "MIN_LENGTH": "القيمة قصيرة جداً",
+    "MAX_LENGTH": "القيمة طويلة جداً",
+    "MIN": "القيمة أقل من الحد الأدنى",
+    "MAX": "القيمة أكبر من الحد الأقصى",
+    "PATTERN": "الصيغة غير صالحة"
+  }
+}

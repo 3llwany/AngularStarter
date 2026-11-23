@@ -1,0 +1,87 @@
+<p-stepper [value]="activeValue()" [attr.aria-label]="'common.progress' | translate" class="w-full">
+  <div class="w-full flex flex-col gap-3">
+    <!-- Top Segmented Progress Bars (Figma) -->
+    <div class="flex items-center gap-1.5 w-full">
+      @for (s of steps(); track s.id; let idx = $index) {
+        <div
+          class="h-1.5 flex-1 rounded-full transition-all duration-300"
+          [class]="
+            s.status === 'completed' || s.status === 'active'
+              ? 'bg-primary-600'
+              : 'bg-surface-200'
+          "
+        ></div>
+      }
+    </div>
+
+    <!-- Steps using PrimeNG p-step-list and p-step -->
+    <p-step-list class="flex items-start justify-between w-full !border-0 !p-0 !bg-transparent">
+      @for (s of steps(); track s.id; let idx = $index; let isLast = $last) {
+        <p-step
+          [value]="idx + 1"
+          [disabled]="s.status === 'upcoming'"
+          [attr.aria-current]="s.status === 'active' ? 'step' : null"
+          class="flex flex-col items-center flex-1 min-w-0 !p-0 !bg-transparent !border-0"
+        >
+          <div class="flex items-center w-full">
+            <!-- Left connecting line (for non-first steps) -->
+            <div
+              class="h-0.5 flex-1 transition-all duration-300"
+              [class]="
+                idx === 0
+                  ? 'invisible'
+                  : s.status === 'completed' || s.status === 'active'
+                    ? 'bg-primary-600'
+                    : 'bg-surface-200'
+              "
+            ></div>
+
+            <!-- 32x32 Step circle badge -->
+            <div
+              class="w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300"
+              [class]="
+                s.status === 'completed'
+                  ? 'bg-primary-600 text-white shadow-xs'
+                  : s.status === 'active'
+                    ? 'border-2 border-primary-600 bg-surface-0 text-primary-600 ring-4 ring-primary-100 shadow-xs'
+                    : 'border-2 border-surface-200 bg-surface-50 text-surface-400'
+              "
+            >
+              @if (s.status === 'completed') {
+                <i class="pi pi-check text-xs text-white" aria-hidden="true"></i>
+              } @else {
+                <span>{{ idx + 1 }}</span>
+              }
+            </div>
+
+            <!-- Right connecting line (for non-last steps) -->
+            <div
+              class="h-0.5 flex-1 transition-all duration-300"
+              [class]="
+                isLast
+                  ? 'invisible'
+                  : s.status === 'completed'
+                    ? 'bg-primary-600'
+                    : 'bg-surface-200'
+              "
+            ></div>
+          </div>
+
+          <!-- Step label below circle -->
+          <span
+            class="text-xs font-semibold mt-1.5 text-center truncate max-w-full px-1"
+            [class]="
+              s.status === 'active'
+                ? 'text-primary-700 font-bold'
+                : s.status === 'completed'
+                  ? 'text-surface-800'
+                  : 'text-surface-400'
+            "
+          >
+            {{ s.label | translate }}
+          </span>
+        </p-step>
+      }
+    </p-step-list>
+  </div>
+</p-stepper>

@@ -1,0 +1,22 @@
+<p-message
+  role="region"
+  [severity]="primeSeverity()"
+  [icon]="iconClass()"
+  [closable]="dismissible()"
+  (close)="onDismiss.emit()"
+  [class]="
+    'w-full !rounded-[18px] !border transition-all ' +
+    containerClasses()
+  "
+>
+  <div class="flex flex-col gap-0.5 text-start min-w-0">
+    @if (title()) {
+      <span class="text-sm font-bold text-surface-900">{{ title() | translate }}</span>
+    }
+    @if (message() || description()) {
+      <span class="text-xs leading-relaxed opacity-90">{{ (message() || description()) | translate }}</span>
+    } @else {
+      <ng-content />
+    }
+  </div>
+</p-message>

@@ -1,0 +1,398 @@
+{
+  "common": {
+    "app_name": "Mozakrety",
+    "tagline": "Student-Centered Social Learning Platform",
+    "language": {
+      "label": "Language",
+      "ar": "العربية",
+      "en": "English",
+      "current_dir": "Left-to-Right (LTR)"
+    },
+    "roles": {
+      "label": "Select user role to preview theme",
+      "student": "Student",
+      "parent": "Parent",
+      "teacher": "Teacher",
+      "school": "School",
+      "partner": "Mall Partner",
+      "admin": "System Admin"
+    },
+    "actions": {
+      "search": "Search...",
+      "open_dialog": "Open Modal Dialog",
+      "close": "Close",
+      "confirm": "Confirm",
+      "submit": "Submit",
+      "next_step": "Next Step",
+      "delete": "Delete",
+      "cancel": "Cancel"
+    },
+    "upload": {
+      "title": "Upload a file",
+      "uploading": "Uploading... {{percent}}%",
+      "uploaded": "Uploaded",
+      "remove": "Remove file",
+      "errors": {
+        "size": "File is larger than {{max}}",
+        "type": "This file type isn't supported"
+      }
+    },
+    "fields": {
+      "phone": "Phone Number"
+    },
+    "progress": "Progress",
+    "empty": {
+      "no_data": "No data available to display"
+    },
+    "toast": {
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Information"
+    },
+    "confirm": {
+      "delete_title": "Confirm Delete",
+      "delete_msg": "Are you sure you want to delete? This action cannot be undone.",
+      "delete_entity_msg": "Are you sure you want to delete this item?"
+    },
+    "labels": {
+      "or": "OR"
+    },
+    "auth": {
+      "continue_with_google": "Continue with Google",
+      "continue_with_facebook": "Continue with Facebook"
+    }
+  },
+  "auth": {
+    "fields": {
+      "email": {
+        "label": "Email Address",
+        "placeholder": "student@example.com",
+        "error": "Please enter a valid email address."
+      },
+      "mobile_number": {
+        "label": "Mobile Number",
+        "placeholder": "01012345678",
+        "error": "Please enter a valid 11-digit Egyptian mobile number."
+      },
+      "teacher_id": {
+        "label": "Teacher ID",
+        "placeholder": "TCH-1042",
+        "error": "Please enter a valid teacher ID."
+      },
+      "school_code": {
+        "label": "School Code",
+        "placeholder": "SCH-2026",
+        "error": "Please enter a valid school code."
+      },
+      "business_email": {
+        "label": "Business Email",
+        "placeholder": "partner@company.com",
+        "error": "Please enter a valid business email address."
+      }
+    },
+    "errors": {
+      "invalid_credentials": "Invalid credentials. Please check your details and try again."
+    }
+  },
+  "errors": {
+    "http": {
+      "network": "Unable to reach the server. Please check your internet connection.",
+      "timeout": "The request timed out. Please try again.",
+      "bad_request": "The request was invalid. Please check your input.",
+      "unauthorized": "Your session has expired or is unauthorized. Please sign in again.",
+      "forbidden": "You do not have permission to access this resource.",
+      "not_found": "The requested resource was not found.",
+      "conflict": "A conflict occurred with existing data.",
+      "validation": "Please review your input and try again.",
+      "rate_limited": "Too many requests sent. Please wait a moment and try again.",
+      "server": "A server error occurred. Please try again later."
+    },
+    "unexpected": "An unexpected error occurred. Please try again.",
+    "not_found": {
+      "badge": "404",
+      "seo_title": "Page Not Found (404)",
+      "title": "Page not found",
+      "description": "The page you are looking for might have been moved, removed, or does not exist.",
+      "back_home": "Back to home"
+    }
+  },
+  "dev": {
+    "foundation": {
+      "removable_banner": "TEMPORARY DEV-ONLY VERIFICATION PAGE (Automatically tree-shaken from production builds)",
+      "title": "Phase 1 Foundation & Design System Verification",
+      "subtitle": "Live showcase of moz-* PrimeNG wrappers, runtime role theming, and Arabic/English RTL/LTR mirroring.",
+      "theme_section": {
+        "title": "Role Palette Switcher (6 Roles)",
+        "description": "Primary shades update immediately via CSS variables across both Tailwind utilities and PrimeNG without reloading.",
+        "active_role": "Currently active role",
+        "contrast_badge": "WCAG AA Contrast Verified"
+      },
+      "i18n_section": {
+        "title": "Language & Direction Switcher (RTL / LTR)",
+        "description": "Updates html lang and dir attributes and persists the choice in an SSR-compatible cookie."
+      },
+      "buttons_section": {
+        "title": "Buttons (moz-button)",
+        "primary": "Primary Button",
+        "secondary": "Secondary Button",
+        "outlined": "Outlined Button",
+        "ghost": "Ghost Button",
+        "danger": "Danger Button",
+        "disabled": "Disabled Button",
+        "loading": "Loading State",
+        "directional": "Continue (Directional Icon)"
+      },
+      "inputs_section": {
+        "title": "Inputs & Selects (moz-input & moz-select)",
+        "name_label": "Student Name",
+        "name_placeholder": "Enter student name...",
+        "name_helper": "Standard text input bound via Angular model() signal",
+        "invalid_label": "Invalid State Input",
+        "invalid_placeholder": "Invalid value",
+        "invalid_error": "Please enter a valid value in this field.",
+        "disabled_label": "Disabled Input",
+        "disabled_placeholder": "Read-only / disabled",
+        "grade_label": "Academic Stage",
+        "grade_placeholder": "Select academic stage",
+        "grade_options": {
+          "primary": "Primary Stage",
+          "preparatory": "Preparatory Stage",
+          "secondary": "Secondary Stage"
+        }
+      },
+      "cards_dialog_section": {
+        "title": "Cards & Dialogs (moz-card & moz-dialog)",
+        "card_title": "Unified Design-System Card",
+        "card_subtitle": "Third-party UI encapsulated inside shared/ui",
+        "card_body": "Feature modules never import PrimeNG directly; they consume moz-* components for strict consistency and maintainability.",
+        "dialog_header": "Sample Modal Dialog (moz-dialog)",
+        "dialog_body": "This modal verifies keyboard focus management, RTL/LTR layout mirroring, and active role palette styling."
+      },
+      "utilities_section": {
+        "title": "Utilities & Core Services Showcase",
+        "subtitle": "Toast, Confirm, Dialog, Loading, File, and ImgFallback services",
+        "toast_title": "Toast Notifications (ToastService & AppToast)",
+        "toast_success_btn": "Success Toast",
+        "toast_error_btn": "Error Toast",
+        "toast_warn_btn": "Warning Toast",
+        "toast_info_btn": "Info Toast",
+        "confirm_title": "Confirm Dialog (ConfirmService & AppConfirmDialog)",
+        "confirm_prompt_btn": "Ask Confirmation",
+        "confirm_delete_btn": "Delete Confirmation",
+        "confirm_result_label": "Last Confirmation Result",
+        "dialog_title": "Programmatic Dialog (DialogService.openAsync)",
+        "dialog_open_btn": "Open Programmatic Modal",
+        "dialog_header": "Dynamic Modal Dialog",
+        "dialog_body": "This modal was opened programmatically via DialogService.openAsync with full typing.",
+        "dialog_result_label": "Modal Result",
+        "loading_title": "Loading Service (Signals-based)",
+        "loading_trigger_btn": "Simulate Async Action (1.5s)",
+        "loading_status_active": "Currently Loading",
+        "loading_status_idle": "Idle",
+        "file_title": "File Service (Download & Base64)",
+        "file_download_btn": "Download Sample File",
+        "file_upload_label": "Select File to Convert to Base64",
+        "fallback_title": "Image Fallback Directive (appImgFallback)",
+        "fallback_broken_label": "Broken Source Image (Fallback Active)",
+        "fallback_valid_label": "Valid Source Image"
+      },
+      "auth_section": {
+        "title": "Auth & Session Cycle Demo (AuthService & LOGIN_METHODS)",
+        "subtitle": "Switch the login role to see the input field and validation adapt, then sign in to watch signals, theme, and domain events update live.",
+        "select_role_label": "1. Choose Login Role (field adapts via LOGIN_METHODS)",
+        "fill_demo_btn": "Fill Valid Demo Credentials",
+        "password_label": "Password (Demo: Password123!)",
+        "password_placeholder": "Enter password...",
+        "login_btn": "Sign In (login)",
+        "logout_btn": "Sign Out (logout)",
+        "expire_btn": "Simulate 401 Expiry",
+        "state_title": "Live Session State (AuthService Signals)",
+        "status_label": "Status",
+        "user_label": "Current User",
+        "last_error_label": "Last Auth Error"
+      },
+      "figma_section": {
+        "title": "Phase 1.5 — Figma Design System Components & Container Harness",
+        "subtitle": "All 20 library primitives matched to Figma design tokens and verified in @container widths",
+        "container_harness": "Container Query Harness (@container):",
+        "current_max_width": "Current Max Width:",
+        "btn_primary_large": "Primary Large (56px)",
+        "btn_glass_large": "Glass Large",
+        "btn_tinted_large": "Tinted Large",
+        "btn_primary_med": "Primary Medium (44px)",
+        "btn_glass_med": "Glass Medium",
+        "btn_tinted_med": "Tinted Medium",
+        "btn_small": "Small (36px)",
+        "btn_full": "Full Width Primary Button",
+        "sec_buttons": "1. Buttons (Primary Glow, Glass, Tinted × Large, Medium, Small)",
+        "sec_icon_buttons": "2. Icon Buttons (>= 44px Touch Target)",
+        "sec_fields": "3. Fields (54px Min-Height, Radius 18px, Padding 18px)",
+        "sec_tags": "4. Tags (6 Tones × 2 Sizes, Radius 9999px)",
+        "sec_banners": "5. Banners (Info, Warning, Error)",
+        "sec_cards": "6. Choice Cards (Radio) & Checkbox Cards (Multi-select)",
+        "sec_chips": "7. Selection Chips (44px Min-Height)",
+        "sec_steps": "8. Progress Steps",
+        "sec_skeletons": "9. Skeletons (Circle, Line, Row, Card)",
+        "sec_nav_links": "10. Links, Divider, Social Auth & Bottom Nav",
+        "banner_info_title": "Important Academic Notice",
+        "banner_info_msg": "First semester examination schedule has been updated.",
+        "banner_warn_title": "Deadline Approaching",
+        "banner_warn_msg": "2 days remaining for course registration.",
+        "banner_error_title": "Connection Error",
+        "banner_error_msg": "Please check your internet connection and try again.",
+        "plan_standard_title": "Standard Plan",
+        "plan_standard_desc": "Full access to recorded lectures and interactive question bank",
+        "plan_premium_title": "Premium Plan",
+        "plan_premium_desc": "Periodic follow-up with teachers and weekly live reviews",
+        "notif_lessons_title": "Lesson & Schedule Notifications",
+        "notif_lessons_desc": "Receive instant alerts when new learning content is uploaded",
+        "notif_digest_title": "Weekly Email Digest",
+        "notif_digest_desc": "Detailed weekly report on student progress and homework scores",
+        "chip_math": "Mathematics",
+        "chip_physics": "Physics",
+        "chip_chemistry": "Chemistry",
+        "link_primary": "Primary Link",
+        "link_muted": "Muted Link",
+        "link_delete": "Delete or Cancel",
+        "nav_home": "Home",
+        "nav_lessons": "Lessons",
+        "nav_profile": "Profile",
+        "tag_primary": "Primary Tag",
+        "tag_neutral": "Neutral",
+        "tag_success": "Success",
+        "tag_warning": "Warning",
+        "tag_orange": "Orange",
+        "tag_error": "Error",
+        "tag_small_success": "Small Success",
+        "tag_small_primary": "Small Primary",
+        "step_personal": "Personal Info",
+        "step_stage": "Academic Stage",
+        "step_confirm": "Confirm Account",
+        "sec_upload": "Field / Upload — every state, LTR and RTL",
+        "upload_label": "CV / Resume",
+        "upload_title": "Upload File",
+        "upload_hint": "PDF or DOCX · Max 5 MB",
+        "upload_try": "Try it: pick a PDF or DOCX under 5 MB",
+        "upload_failed": "Upload failed. Check your connection and try again."
+      }
+    },
+    "i18n_ssr": {
+      "title": "Server-Side Rendering (SSR) Translation Probe",
+      "description": "This text was rendered on the server using the request cookie and transferred via TransferState without browser refetching.",
+      "stream_label": "Reactive value via toSignal(translate.stream(...))"
+    },
+    "menu": {
+      "overview": "Overview",
+      "courses": "Courses",
+      "lessons": "Lessons",
+      "assignments": "Assignments",
+      "exams": "Exams",
+      "students": "Students",
+      "calendar": "Schedule",
+      "wallet": "Wallet & Payments",
+      "certificates": "Certificates",
+      "messages": "Messages",
+      "notifications": "Notifications",
+      "analytics": "Analytics",
+      "reports": "Reports",
+      "support": "Support",
+      "settings": "Settings"
+    }
+  },
+  "shell": {
+    "actions": {
+      "toggle_sidebar": "Toggle navigation sidebar",
+      "collapse_sidebar": "Collapse sidebar",
+      "expand_sidebar": "Expand sidebar",
+      "switch_language": "Switch language",
+      "sign_in": "Sign In",
+      "sign_out": "Sign Out"
+    },
+    "layout": {
+      "skip_to_content": "Skip to main content",
+      "sidebar_label": "Sidebar navigation"
+    }
+  },
+  "mock": {
+    "students": {
+      "nav_title": "Students (Mock)",
+      "title": "Student Management (Mock Environment)",
+      "subtitle": "Comprehensive practical showcase of modern Angular 22: Signal Forms, SignalStore, BaseRepository, and HttpResource",
+      "stats": {
+        "total": "Total Students",
+        "active": "Active Students",
+        "inactive": "Inactive Students",
+        "avg_gpa": "Average GPA"
+      },
+      "table": {
+        "id": "Student ID",
+        "name": "Student",
+        "contact": "Contact Info",
+        "grade": "Grade Level",
+        "enrollment_date": "Enrollment Date",
+        "gpa": "GPA",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "grades": {
+        "first_sec": "1st Secondary",
+        "second_sec": "2nd Secondary",
+        "third_sec": "3rd Secondary"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "actions": {
+        "add": "Add New Student",
+        "edit": "Edit",
+        "delete": "Delete",
+        "view": "View Details",
+        "refresh": "Refresh Data",
+        "search_placeholder": "Search by name, email, or phone...",
+        "filter_all_grades": "All Grade Levels",
+        "filter_all_statuses": "All Statuses"
+      },
+      "form": {
+        "add_title": "Add New Student",
+        "edit_title": "Edit Student Details",
+        "name_label": "Full Name",
+        "name_placeholder": "e.g. Ahmed Mohamed Ali",
+        "email_label": "Email Address",
+        "email_placeholder": "ahmed@example.com",
+        "phone_label": "Phone Number",
+        "phone_placeholder": "01012345678",
+        "grade_label": "Grade Level",
+        "grade_placeholder": "Select grade level",
+        "enrollment_date_label": "Enrollment Date",
+        "gpa_label": "Grade Point Average (GPA)",
+        "gpa_placeholder": "e.g. 3.85",
+        "status_label": "Active Account"
+      },
+      "delete_confirm": {
+        "title": "Confirm Delete Student",
+        "message": "Are you sure you want to permanently delete this student? This action cannot be undone."
+      },
+      "toast": {
+        "create_success": "Student added successfully",
+        "update_success": "Student details updated successfully",
+        "delete_success": "Student deleted successfully"
+      },
+      "details": {
+        "title": "Student Profile",
+        "academic_info": "Academic Information",
+        "enrolled_courses": "Enrolled Courses"
+      }
+    }
+  },
+  "VALIDATION": {
+    "REQUIRED": "This field is required",
+    "EMAIL": "Invalid email address",
+    "MIN_LENGTH": "Value is too short",
+    "MAX_LENGTH": "Value is too long",
+    "MIN": "Value is below minimum",
+    "MAX": "Value is above maximum",
+    "PATTERN": "Invalid format"
+  }
+}

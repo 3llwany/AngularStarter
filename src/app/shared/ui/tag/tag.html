@@ -1,0 +1,17 @@
+<p-tag
+  [rounded]="true"
+  [severity]="primeSeverity()"
+  [class]="
+    'inline-flex items-center font-medium border rounded-full ' +
+    computedClasses()
+  "
+>
+  @if (showDot()) {
+    <span [class]="'w-1.5 h-1.5 rounded-full shrink-0 ' + dotClass()"></span>
+  }
+  @if (label()) {
+    <span>{{ label() | translate }}</span>
+  } @else {
+    <ng-content />
+  }
+</p-tag>

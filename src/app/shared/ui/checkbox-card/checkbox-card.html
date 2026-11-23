@@ -1,0 +1,43 @@
+<div
+  role="checkbox"
+  [attr.aria-checked]="isChecked()"
+  [attr.tabindex]="disabled() ? -1 : 0"
+  (click)="toggle()"
+  (keydown.space)="$event.preventDefault(); toggle()"
+  [class]="
+    'flex cursor-pointer items-start gap-3.5 rounded-[18px] p-4 transition-all ' +
+    containerClasses()
+  "
+>
+  @if (field(); as f) {
+    <p-checkbox
+      [formField]="f"
+      [binary]="binary()"
+      [value]="value()"
+      [inputId]="inputId()"
+      [disabled]="disabled()"
+      (click)="$event.stopPropagation()"
+    />
+  } @else {
+    <p-checkbox
+      [binary]="binary()"
+      [value]="value()"
+      [inputId]="inputId()"
+      [ngModel]="checked()"
+      (ngModelChange)="checked.set($event); onToggle.emit($event)"
+      [disabled]="disabled()"
+      (click)="$event.stopPropagation()"
+    />
+  }
+
+  <div class="flex-1 min-w-0 text-start">
+    <label [for]="inputId()" class="text-sm font-semibold text-surface-900 cursor-pointer">
+      {{ title() | translate }}
+    </label>
+    @if (description()) {
+      <p class="text-xs text-surface-500 mt-1 leading-relaxed">
+        {{ description() | translate }}
+      </p>
+    }
+  </div>
+</div>

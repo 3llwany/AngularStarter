@@ -1,0 +1,91 @@
+<p-floatlabel [variant]="variant()" class="mt-3">
+  <p-iconfield>
+    @if (isPrefix()) {
+      <p-inputicon>
+         <svg class="w-4! h-4!" [pIcon]="icon()!"></svg>
+        <!-- <ng-content select="[prefixIcon]"></ng-content> -->
+      </p-inputicon>
+    }
+
+    <!-- text / email / date / number input -->
+    @if (type() === 'text' || type() === 'email' || type() === 'date' || type() === 'number') {
+      <input
+        pInputText
+        [formField]="field()"
+        [type]="type()"
+        [id]="inputId()"
+        [step]="type() === 'number' && isDecimalNumber() ? 'any' : step()"
+        [autocomplete]="autocomplete() ?? ''"
+        [class.p-filled]="hasValue()"
+        [class.p-invalid]="showError()"
+        [attr.aria-invalid]="showError()"
+        [attr.aria-describedby]="showError() ? errorId() : null"
+        [attr.placeholder]="placeholder() | translate"
+        (keyup.enter)="onKeyEnter()"
+        class="w-full min-h-[54px] rounded-[18px] ps-[18px] pe-[18px] transition-all"
+        [dir]="dir()"
+      />
+    }
+
+    <!-- password input -->
+    @else if (type() === 'password') {
+      <input
+        pInputPassword
+        [formField]="field()"
+        [mask]="mask()"
+        [id]="inputId()"
+        [autocomplete]="autocomplete() ?? ''"
+        [class.p-filled]="hasValue()"
+        [class.p-invalid]="showError()"
+        [attr.aria-invalid]="showError()"
+        [attr.aria-describedby]="showError() ? errorId() : null"
+        [attr.placeholder]="placeholder() | translate"
+        (keyup.enter)="onKeyEnter()"
+        class="w-full min-h-[54px] rounded-[18px] ps-[18px] pe-[18px] transition-all"
+        [dir]="dir()"
+      />
+      <p-inputicon (click)="mask.update(v => !v)" style="cursor: pointer">
+        @if (mask()) {
+          <svg data-p-icon="eye"></svg>
+        } @else {
+          <svg data-p-icon="eye-slash"></svg>
+        }
+      </p-inputicon>
+    }
+
+    @if (isSuffix()) {
+      <p-inputicon>
+         <svg class="w-4! h-4!" [pIcon]="icon()!"></svg>
+        <!-- <ng-content select="[suffixIcon]"></ng-content> -->
+      </p-inputicon>
+    }
+  </p-iconfield>
+
+  <label [for]="inputId()">
+    {{ label() | translate }}
+  </label>
+</p-floatlabel>
+
+<!-- Validation error message -->
+@if (showError()) {
+  <div
+    [id]="errorId()"
+    role="alert"
+    class="text-red-500 text-xs font-medium mt-1.5 ms-1 flex items-center gap-1"
+  >
+    <svg
+      class="w-3.5 h-3.5 shrink-0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span>{{ errorMessage() | translate }}</span>
+  </div>
+}

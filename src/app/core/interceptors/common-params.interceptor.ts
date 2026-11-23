@@ -1,0 +1,35 @@
+import { HttpInterceptorFn } from '@angular/common/http';
+import { inject } from '@angular/core';
+import { SKIP_COMMON_PARAMS } from '../http/http.context';
+import { LocaleService } from '../i18n/locale.service';
+import { ThemeService } from '../theme/theme.service';
+
+const STATIC_PREFIXES = ['assets/', '/assets/', 'i18n/', '/i18n/', 'fonts/', '/fonts/'];
+
+export const commonParamsInterceptor: HttpInterceptorFn = (req, next) => {
+  if (req.context.get(SKIP_COMMON_PARAMS)) {
+    return next(req);
+  }
+
+  const url = req.url;
+  if (url === '/config.json' || STATIC_PREFIXES.some((prefix) => url.startsWith(prefix))) {
+    return next(req);
+  }
+
+  const localeService = inject(LocaleService, { optional: true });
+  const themeService = inject(ThemeService, { optional: true });
+
+  let params = req.params;
+
+  // Automatically attach active language if not explicitly provided
+  if (localeService && !params.has('lang')) {
+    params = params.set('lang', localeService.lang());
+  }
+
+  // Automatically attach active user role if not explicitly provided
+  if (themeService && !params.has('role')) {
+    params = params.set('role', themeService.role());
+  }
+
+  return next(req.clone({ params }));
+};

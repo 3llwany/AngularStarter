@@ -1,0 +1,15 @@
+@layer theme, base, tailwind-base, primeng, components, utilities, tailwind-utilities;
+
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import 'primeicons/primeicons.css';
+@import './styles/fonts.css';
+@import './styles/roles.css';
+@import './styles/theme.css';
+@import './styles/ui-library.css';
+
+@custom-variant dark (&:where(.app-dark, .app-dark *));
+
+/* .p-button:not(.p-button-outlined, .p-button-secondary, .p-button-text) {
+  color: white;
+} */
